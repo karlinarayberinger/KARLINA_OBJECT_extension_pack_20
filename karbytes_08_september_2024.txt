@@ -17,3 +17,5 @@ Requirements for being a member of karbytes' (real or imaginary) club:
 // This note (which is named karbytes_08_september_2024) is a follow-up to the previous note (which is named karbytes_07_september_2024).
 
 // Note that members of the aforementioned club are not required to ever interact with each other "in person" nor even "online" (nor telepathically remotely). What makes such persons members of that club are those persons simply fulfilling all three of the aforementioned club membership requirements.
+
+// Generally speaking, a "geek" (according to karbytes) is a person who is enthusiastically and intensively immersed in science (especially physics), technology (especially computer-centric technologies (using a computer to manipulate, distribute, and access information)), engineering, and mathematics (and also competent beyond what is considered to be merely "beginner level" in such domains).
