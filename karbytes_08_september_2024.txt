@@ -1,0 +1,19 @@
+/**
+ * file: karbytes_08_september_2024.txt
+ * type: plain-text
+ * date: 07_SEPTEMBER_2024
+ * author: karbytes
+ * license: PUBLIC_DOMAIN
+ */
+
+Requirements for being a member of karbytes' (real or imaginary) club:
+
+1. Each member of that club must be voluntarily single for the remainder of its lifespan.
+
+2. Each member of that club must have zero children (whether biological offspring or adopted) and be voluntarily childless for the remainder of its lifespan.
+
+3. Each member of that club must be a geek with well-established "geek qualifications" in the form of relevant hobbies and/or relevant career (as determined by karbytes).
+
+// This note (which is named karbytes_08_september_2024) is a follow-up to the previous note (which is named karbytes_07_september_2024).
+
+// Note that members of the aforementioned club are not required to ever interact with each other "in person" nor even "online" (nor telepathically remotely). What makes such persons members of that club are those persons simply fulfilling all three of the aforementioned club membership requirements.
