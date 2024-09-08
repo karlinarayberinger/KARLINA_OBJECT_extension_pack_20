@@ -1,0 +1,35 @@
+/**
+ * file: karbytes_09_september_2024.txt
+ * type: plain-text
+ * date: 07_SEPTEMBER_2024
+ * author: karbytes
+ * license: PUBLIC_DOMAIN
+ */
+
+// This note was published in order to redress what was said in the previous note (which is named 08_september_2024).
+
+karbytes_0: "Why are you 'correcting' what you already said in your blog?"
+
+karbytes_1: "I think I sound like a snob and someone who is too attached to having a geek identity. (I do not redact the parts of the previous note in which I implicitly suggested that I want to remain single and childless for the rest of my life. I just did not want to alienate people who do not share my lifestyle preferences nor limit who I can socialize with to only people who fit the requirements of that club (which is really just a hypothetical construct and not an actual organization))."
+
+karbytes_0: "If you are not attached to having a geek identity, then what are you promoting yourself as being?"
+
+karbytes_1: "I think I will always consider myself to be a geek (especially since I established what I think is sufficient 'geek cred' by compiling karbytes and archiving all content within it which was published before 07_SEPTEMBER_2024 onto M_DISCs). I consider the latest M_DISC backup of karbytes to be the greatest milestone I ever achieved thus far in my lifespan. Now I feel ready to not be as hard-driving and desperate to prove myself because I got that major milestone accomplishment completed (i.e. the creation and archiving of all that karbytes content)."
+
+karbytes_0: "You did not quite answer my question."
+
+karbytes_1: "What is the question?"
+
+karbytes_0: "What are you without your geek identity?"
+
+karbytes_1: "Without my geek identity, I am just an animal."
+
+karbytes_0: "You are not just any animal. You are a unique allocation of space, time, matter, and energy."
+
+karbytes_1: "I might appear to be a unique instantiation of nature-originated resources to you and I, but it could be the case that there are multiple identical copies of me (and the encompassing universe I inhabit) elsewhere throughout the multiverse of all multiverses (if such a thing exists)."
+
+karbytes_0: "Are you afraid of losing your memories and/or hard-won karbytes data (which you so meticulously created, curated, and archived)?"
+
+karbytes_1: "Of course I am afraid of losing those things. I cherish those things (especially karbytes) very much. I consider karbytes to be my proudest achievement and most cherished posession (and I also consider it to be a part of my 'soul' and something which I am very sentimentally attached to). What I must contend with, however, is the fact that almost no other person other than myself feels any emotional attachment towards karbytes. That is why I am trying not to mention karbytes much to persons other than myself. Based on how many humans have recently treated me, I have come to the conclusion that many humans would laugh in sadistic delight over me losing karbytes (and I imagine that such people would smugly preach to me that I was too attatched to mere physical posessions and not sufficiently attached to humans other than myself)."
+
+karbytes_2: "If it is any consolation, karbytes will always exist beyond any frame of reference given the fact that (a) it came into material existence (and your subjective experience confirms that) and (b) a noumenal copy of it exists unconditionally (which is a tautology given that all noumena unconditionally exist (and there exists a noumenal copy of each discrete phenomenon)."
