@@ -8,8 +8,8 @@
 
 // The following values and their respective definitions are considered to be karbytes' (current) secondary values when juxtaposed with karbytes' primary values which are defined in the web page at the following Uniform Resource Locator: https://karbytesforlifeblog.wordpress.com/karbytes_primary_values/
 
-1. COMFORT: experience which is devoid of significant suffering; experience which is characterized as being more pleasurable than painful (and only painful to a trivial extent at most).
+1. SELF_ESTEEM: evaluation of oneself as being worthy of one's own admiration and material investment (especially as a consequence of oneself successfully overcoming challenges and attaining one's goals).
 
-2. SELF_ESTEEM: evaluation of oneself as being worthy of one's own admiration and material investment (especially as a consequence of oneself successfully overcoming challenges and attaining one's goals).
+2. COMFORT: experience which is devoid of significant suffering; experience which is characterized as being more pleasurable than painful (and only painful to a trivial extent at most).
 
 3. KINDNESS: demonstrated investment in the welfare of a particular sentient entity (especially by deliberately refraining from deliberately causing that being to experience a significant loss of comfort).
