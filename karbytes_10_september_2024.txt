@@ -13,3 +13,7 @@
 2. COMFORT: experience which is devoid of significant suffering; experience which is characterized as being more pleasurable than painful (and only painful to a trivial extent at most).
 
 3. KINDNESS: demonstrated investment in the welfare of a particular sentient entity (especially by deliberately refraining from deliberately causing that being to experience a significant loss of comfort).
+
+// Note that, like the referenced web page named karbytes_primary_values, the three values which are defined on this page (which is named karbytes_10_september_2024) are listed in descending order in terms of priority (which means that SELF_ESTEEM is considered by karbytes to be a higher-priority value than is COMFORT while COMFORT is considered by karbytes to be a higher-priority value  than is KINDNESS).
+
+// Overall (and when considering both the aforementioned web page named karbytes_primary_values and this web page), karbytes considers TRUTH to be a higher-priority personal value than is FREEDOM (while karbytes considers FREEDOM to be a higher-priority personal value than is INNOVATION (while karbytes considers INNOVATION to be a higher-priority personal value than is SELF_ESTEEM (while karbytes considers SELF_ESTEEM to be a higher-priority personal value than is COMFORT (while karbytes considers COMFORT to be a higher-priority personal value than KINDNESS)))).
