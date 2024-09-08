@@ -26,7 +26,7 @@ karbytes_1: “Without my geek identity, I am just an animal.”
 
 karbytes_0: “You are not just any animal. You are a unique allocation of space, time, matter, and energy.”
 
-karbytes_1: “I might appear to be a unique instantiation of nature-originated resources to you and I, but it could be the case that there are multiple identical copies of me (and the encompassing universe I inhabit) elsewhere throughout the multiverse of all multiverses (if such a thing exists).”
+karbytes_1: “I might appear to be a unique instantiation of nature-originated resources to you and me, but it could be the case that there are multiple identical copies of me (and the encompassing universe I inhabit) elsewhere throughout the multiverse of all multiverses (if such a thing exists).”
 
 karbytes_0: “Are you afraid of losing your memories and/or hard-won karbytes data (which you so meticulously created, curated, and archived)?”
 
