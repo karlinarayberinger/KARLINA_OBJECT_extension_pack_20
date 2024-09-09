@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Three-Track Beats Machine</title>
+    <title>Beats Machine</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -20,181 +20,101 @@
             padding: 10px 20px;
             margin-top: 20px;
         }
-        .track-container {
-            margin: 20px;
-        }
     </style>
 </head>
 <body>
-    <h1>Three-Track Beats Machine</h1>
+    <h1>Beats Machine</h1>
 
-    <!-- Track 1 -->
-    <div class="track-container">
-        <h3>Track 1</h3>
-        <label for="track1-duration">Select Beat Duration:</label>
-        <select id="track1-duration">
-            <option value="0.0625">1/16 second</option>
-            <option value="0.25">1/4 second</option>
-            <option value="0.5">1/2 second</option>
-            <option value="0.75">3/4 second</option>
-            <option value="1">1 second</option>
-        </select>
-        <br>
-        <label for="track1-pitch">Select Beat Pitch:</label>
-        <select id="track1-pitch">
-            <option value="0">Do Not Play</option>
-            <option value="200">200 Hz</option>
-            <option value="245">245 Hz</option>
-            <option value="290">290 Hz</option>
-            <option value="335">335 Hz</option>
-            <option value="380">380 Hz</option>
-            <option value="425">425 Hz</option>
-            <option value="470">470 Hz</option>
-            <option value="515">515 Hz</option>
-            <option value="560">560 Hz</option>
-            <option value="605">605 Hz</option>
-            <option value="650">650 Hz</option>
-            <option value="695">695 Hz</option>
-            <option value="740">740 Hz</option>
-            <option value="785">785 Hz</option>
-            <option value="830">830 Hz</option>
-            <option value="875">875 Hz</option>
-            <option value="920">920 Hz</option>
-            <option value="965">965 Hz</option>
-            <option value="1010">1010 Hz</option>
-        </select>
-    </div>
+    <!-- Dropdown menu for selecting beat duration -->
+    <label for="beat-duration">Select Beat Duration:</label>
+    <select id="beat-duration">
+        <option value="0.0625">1/16 second</option>
+        <option value="0.25">1/4 second</option>
+        <option value="0.5">1/2 second</option>
+        <option value="0.75">3/4 second</option>
+        <option value="1">1 second</option>
+    </select>
+    <br>
 
-    <!-- Track 2 -->
-    <div class="track-container">
-        <h3>Track 2</h3>
-        <label for="track2-duration">Select Beat Duration:</label>
-        <select id="track2-duration">
-            <option value="0.0625">1/16 second</option>
-            <option value="0.25">1/4 second</option>
-            <option value="0.5">1/2 second</option>
-            <option value="0.75">3/4 second</option>
-            <option value="1">1 second</option>
-        </select>
-        <br>
-        <label for="track2-pitch">Select Beat Pitch:</label>
-        <select id="track2-pitch">
-            <option value="0">Do Not Play</option>
-            <option value="200">200 Hz</option>
-            <option value="245">245 Hz</option>
-            <option value="290">290 Hz</option>
-            <option value="335">335 Hz</option>
-            <option value="380">380 Hz</option>
-            <option value="425">425 Hz</option>
-            <option value="470">470 Hz</option>
-            <option value="515">515 Hz</option>
-            <option value="560">560 Hz</option>
-            <option value="605">605 Hz</option>
-            <option value="650">650 Hz</option>
-            <option value="695">695 Hz</option>
-            <option value="740">740 Hz</option>
-            <option value="785">785 Hz</option>
-            <option value="830">830 Hz</option>
-            <option value="875">875 Hz</option>
-            <option value="920">920 Hz</option>
-            <option value="965">965 Hz</option>
-            <option value="1010">1010 Hz</option>
-        </select>
-    </div>
+    <!-- Dropdown menu for selecting beat pitch -->
+    <label for="beat-pitch">Select Beat Pitch:</label>
+    <select id="beat-pitch">
+        <!-- Frequencies equally spaced between 200 Hz and 1000 Hz -->
+        <option value="200">200 Hz</option>
+        <option value="245">245 Hz</option>
+        <option value="290">290 Hz</option>
+        <option value="335">335 Hz</option>
+        <option value="380">380 Hz</option>
+        <option value="425">425 Hz</option>
+        <option value="470">470 Hz</option>
+        <option value="515">515 Hz</option>
+        <option value="560">560 Hz</option>
+        <option value="605">605 Hz</option>
+        <option value="650">650 Hz</option>
+        <option value="695">695 Hz</option>
+        <option value="740">740 Hz</option>
+        <option value="785">785 Hz</option>
+        <option value="830">830 Hz</option>
+        <option value="875">875 Hz</option>
+        <option value="920">920 Hz</option>
+        <option value="965">965 Hz</option>
+        <option value="1010">1010 Hz</option>
+    </select>
+    <br>
 
-    <!-- Track 3 -->
-    <div class="track-container">
-        <h3>Track 3</h3>
-        <label for="track3-duration">Select Beat Duration:</label>
-        <select id="track3-duration">
-            <option value="0.0625">1/16 second</option>
-            <option value="0.25">1/4 second</option>
-            <option value="0.5">1/2 second</option>
-            <option value="0.75">3/4 second</option>
-            <option value="1">1 second</option>
-        </select>
-        <br>
-        <label for="track3-pitch">Select Beat Pitch:</label>
-        <select id="track3-pitch">
-            <option value="0">Do Not Play</option>
-            <option value="200">200 Hz</option>
-            <option value="245">245 Hz</option>
-            <option value="290">290 Hz</option>
-            <option value="335">335 Hz</option>
-            <option value="380">380 Hz</option>
-            <option value="425">425 Hz</option>
-            <option value="470">470 Hz</option>
-            <option value="515">515 Hz</option>
-            <option value="560">560 Hz</option>
-            <option value="605">605 Hz</option>
-            <option value="650">650 Hz</option>
-            <option value="695">695 Hz</option>
-            <option value="740">740 Hz</option>
-            <option value="785">785 Hz</option>
-            <option value="830">830 Hz</option>
-            <option value="875">875 Hz</option>
-            <option value="920">920 Hz</option>
-            <option value="965">965 Hz</option>
-            <option value="1010">1010 Hz</option>
-        </select>
-    </div>
-
-    <!-- Buttons to start and stop playing the beats -->
+    <!-- Button to start playing the beats -->
     <button onclick="startBeats()">Start Beats</button>
     <button onclick="stopBeats()">Stop Beats</button>
 
     <script>
         let audioContext;
-        let intervalIds = [];
+        let oscillator;
+        let gainNode;
+        let intervalId; // To keep track of the interval that plays the beats
 
         // Function to start the beats
         function startBeats() {
-            // Initialize the audio context if not already created
+            // Get the selected beat duration and pitch from the dropdown menus
+            const beatDuration = parseFloat(document.getElementById("beat-duration").value);
+            const beatPitch = parseFloat(document.getElementById("beat-pitch").value);
+
+            // Initialize the audio context and oscillator if not already created
             if (!audioContext) {
                 audioContext = new (window.AudioContext || window.webkitAudioContext)();
             }
 
-            // Start all three tracks
-            startTrack(1);
-            startTrack(2);
-            startTrack(3);
-        }
-
-        // Function to stop all beats
-        function stopBeats() {
-            intervalIds.forEach(id => clearInterval(id)); // Clear all intervals
-            intervalIds = []; // Reset interval ids array
-        }
-
-        // Function to start an individual track (trackNumber can be 1, 2, or 3)
-        function startTrack(trackNumber) {
-            const durationSelect = document.getElementById(`track${trackNumber}-duration`);
-            const pitchSelect = document.getElementById(`track${trackNumber}-pitch`);
-
-            const beatDuration = parseFloat(durationSelect.value);
-            const beatPitch = parseFloat(pitchSelect.value);
-
-            if (beatPitch === 0) return; // "Do Not Play" option selected, so don't play this track
-
+            // Function to play a single beat
             function playBeat() {
-                const oscillator = audioContext.createOscillator();
-                const gainNode = audioContext.createGain();
+                oscillator = audioContext.createOscillator(); // Create a new oscillator
+                gainNode = audioContext.createGain(); // Create a gain node to control volume
 
+                // Set the oscillator's frequency (pitch)
                 oscillator.frequency.value = beatPitch;
+
+                // Connect the oscillator to the gain node, and the gain node to the destination (speakers)
                 oscillator.connect(gainNode);
                 gainNode.connect(audioContext.destination);
 
+                // Set the initial volume to 0, ramp it up to 1, and then back down to 0 to create the beat
                 gainNode.gain.setValueAtTime(0, audioContext.currentTime);
                 gainNode.gain.linearRampToValueAtTime(1, audioContext.currentTime + 0.01);
                 gainNode.gain.linearRampToValueAtTime(0, audioContext.currentTime + beatDuration);
 
+                // Start and stop the oscillator (for a short "beat")
                 oscillator.start(audioContext.currentTime);
                 oscillator.stop(audioContext.currentTime + beatDuration);
             }
 
-            // Set the interval to play the beat at the selected duration
-            const intervalId = setInterval(playBeat, beatDuration * 1000);
-            intervalIds.push(intervalId);
+            // Play the beat repeatedly at the selected beat duration
+            intervalId = setInterval(playBeat, beatDuration * 1000);
+        }
+
+        // Function to stop the beats
+        function stopBeats() {
+            clearInterval(intervalId); // Clear the interval that plays the beats
+            if (oscillator) {
+                oscillator.stop(); // Stop the oscillator if it's playing
+            }
         }
     </script>
 </body>
