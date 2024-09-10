@@ -61,15 +61,15 @@ function startTrack(trackNumber) {
     // Play the respective track using the built-in sound generating capabilities of the web browser.
     function playBeat() {
         const oscillator = audioContext.createOscillator();
-	const gainNode = audioContext.createGain();
-	oscillator.frequency.value = beatPitch;
-	oscillator.connect(gainNode);
-	gainNode.connect(audioContext.destination);
-	gainNode.gain.setValueAtTime(0, audioContext.currentTime);
-	gainNode.gain.linearRampToValueAtTime(1, audioContext.currentTime + 0.01);
-	gainNode.gain.linearRampToValueAtTime(0, audioContext.currentTime + beatDuration);
-	oscillator.start(audioContext.currentTime);
-	oscillator.stop(audioContext.currentTime + beatDuration);
+	    const gainNode = audioContext.createGain();
+	    oscillator.frequency.value = beatPitch;
+	    oscillator.connect(gainNode);
+	    gainNode.connect(audioContext.destination);
+	    gainNode.gain.setValueAtTime(0, audioContext.currentTime);
+	    gainNode.gain.linearRampToValueAtTime(1, audioContext.currentTime + 0.01);
+	    gainNode.gain.linearRampToValueAtTime(0, audioContext.currentTime + beatDuration);
+	    oscillator.start(audioContext.currentTime);
+	    oscillator.stop(audioContext.currentTime + beatDuration);
     }
     // Set the interval to play the beat at the selected duration.
     const intervalId = setInterval(playBeat, beatDuration * 1000);
