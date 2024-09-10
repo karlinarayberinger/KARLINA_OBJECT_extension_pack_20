@@ -121,28 +121,32 @@ function generate_pitch_frequency_menu_select_html_element(select_id) {
  * @return {String} a sequence of text characters which is used to instantiate an expandable list menu (SELECT) web page element.
  */
 function generate_beat_frequency_menu_select_html_element(select_id) {
-    let select_menu = '', option = '', i = 0, N = 200;
-    let default_menu_option_label = "Do Not Play (i.e. 0 Hz)";
+    let select_menu = '', option = '', i = 0;
+    let default_menu_option_label = "1/16 second (i.e. 0.0625 second)";
+    let menu_option_values = [0.0625, 0.25, 0.5, 0.75, 1, 1.0625, 1.25, 1.5, 1.75, 2];
+    let menu_option_label_prefaces = ["1/16", "1/4", "1/2", "3/4", "1", "17/16", "5/4", "3/2", "7/4", "2"];
     try {
         if (typeof select_id.length !== "number") throw 'The expression (typeof select_id.length !== "number") was evaluated to be true.';
-        if ((select_id !== "track_0_pitch") ||
-            (select_id !== "track_1_pitch") ||
-            (select_id !== "track_2_pitch"))
-        throw 'select_id must either be "track_0_pitch" or else "track_1_pitch" or "track_2_pitch".';
+        if ((select_id !== "track_0_duration") ||
+            (select_id !== "track_1_duration") ||
+            (select_id !== "track_2_duration"))
+        throw 'select_id must either be "track_0_duration" or else "track_1_duration" or "track_2_duration".';
         select_menu = ('<' + 'select id="' + select_id + '" style="text-align:center"' + '>');
-        for (i = 0; i < 20; i += 1) {
-            if (i === 0) option = (('<' + 'option value="0" selected' + '>') + default_menu_option_label + ('<' + '/' + '>'));
+        for (i = 0; i < 10; i += 1) {
+            if (i === 0) option = (('<' + 'option value="' + menu_option_values[0] + '" selected' + '>') + default_menu_option_label + ('<' + '/' + '>'));
             else {
-            	option = ('<' + 'option value="' + N + '"' + '>');
-            	option += (N + ' Hz' + ('<' + '/' + 'option' + '>'));
+            	option = ('<' + 'option value="' + menu_option_values[i] + '"' + '>');
+            	option += menu_option_label_prefaces[i];
+            	if (i > 4) option += (' seconds (' + menu_option_values[i] + ' seconds)');
+            	else option += (' second (' + menu_option_values[i] + ' second)');
+            	option += ('<' + '/' + 'option' + '>');
         	}
         	select_menu += option;
-        	N += 45;
         }
         select_menu += ('<' + '/' + 'select' + '>');
         return select_menu;
     }
     catch(exception) {
-        console.log("An exception to normal functioning occurred during the runtime of generate_sound_frequency_menu_select_html_element(select_id): " + exception);
+        console.log("An exception to normal functioning occurred during the runtime of generate_beat_frequency_menu_select_html_element(select_id): " + exception);
     } 
 }
