@@ -83,86 +83,28 @@
             of those three sound tracks.
         </p>
     </div>
-
     <!-- Track 0 -->
     <div>
         <h3>TRACK_0</h3>
         <p>Select Beat Duration:&nbsp;<span id="duration_0_container">???</span></p>
         <p>Select Beat Pitch:&nbsp;<span id="pitch_0_container">???</span></p>
     </div>
-
     <!-- Track 1 -->
     <div>
         <h3>TRACK_1</h3>
         <p>Select Beat Duration:&nbsp;<span id="duration_1_container">???</span></p>
         <p>Select Beat Pitch:&nbsp;<span id="pitch_1_container">???</span></p>
     </div>
-
     <!-- Track 2 -->
     <div>
         <h3>TRACK_2</h3>
         <p>Select Beat Duration:&nbsp;<span id="duration_2_container">???</span></p>
         <p>Select Beat Pitch:&nbsp;<span id="pitch_2_container">???</span></p>
     </div>
-
     <!-- Button to start playing the beats -->
     <button id="start_button" onclick="startBeats()">START_BEATS</button>
     <button id="stop_button" onclick="stopBeats()">STOP_BEATS</button>
-
-    <script>
-        let audioContext;
-        let intervalIds = [];
-
-        // Function to start the beats
-        function startBeats() {
-            // Initialize the audio context if not already created
-            if (!audioContext) {
-                audioContext = new (window.AudioContext || window.webkitAudioContext)();
-            }
-
-            // Start all three tracks
-            startTrack(0);
-            startTrack(1);
-            startTrack(2);
-        }
-
-        // Function to stop all beats
-        function stopBeats() {
-            intervalIds.forEach(id => clearInterval(id)); // Clear all intervals
-            intervalIds = []; // Reset interval ids array
-        }
-
-        // Function to start an individual track (trackNumber can be 0, 1, or 2)
-        function startTrack(trackNumber) {
-            const durationSelect = document.getElementById(`track${trackNumber}-duration`);
-            const pitchSelect = document.getElementById(`track${trackNumber}-pitch`);
-
-            const beatDuration = parseFloat(durationSelect.value);
-            const beatPitch = parseFloat(pitchSelect.value);
-
-            if (beatPitch === 0) return; // "Do Not Play" option selected, so don't play this track
-
-            function playBeat() {
-                const oscillator = audioContext.createOscillator();
-                const gainNode = audioContext.createGain();
-
-                oscillator.frequency.value = beatPitch;
-                oscillator.connect(gainNode);
-                gainNode.connect(audioContext.destination);
-
-                gainNode.gain.setValueAtTime(0, audioContext.currentTime);
-                gainNode.gain.linearRampToValueAtTime(1, audioContext.currentTime + 0.01);
-                gainNode.gain.linearRampToValueAtTime(0, audioContext.currentTime + beatDuration);
-
-                oscillator.start(audioContext.currentTime);
-                oscillator.stop(audioContext.currentTime + beatDuration);
-            }
-
-            // Set the interval to play the beat at the selected duration
-            const intervalId = setInterval(playBeat, beatDuration * 1000);
-            intervalIds.push(intervalId);
-        }
-    </script>
+    <!-- CONSOLE -->
     <div class="console" id="console">???</div>
 </body>
 </html>
