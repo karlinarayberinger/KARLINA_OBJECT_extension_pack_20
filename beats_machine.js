@@ -67,7 +67,7 @@ function generate_paragraph_html_element(inner_html) {
  * 
  * @return {String} a sequence of text characters which is used to instantiate an expandable list menu (SELECT) web page element.
  */
-function generate_pitch_frequency_menu_select_html_element(select_id) {
+function generate_pitch_menu_select_html_element(select_id) {
     let select_menu = '', option = '', i = 0, N = 200;
     let default_menu_option_label = "Do Not Play (i.e. 0 Hz)";
     try {
@@ -76,7 +76,7 @@ function generate_pitch_frequency_menu_select_html_element(select_id) {
             (select_id !== "track_1_pitch") &&
             (select_id !== "track_2_pitch"))
         throw 'select_id must either be "track_0_pitch" or else "track_1_pitch" or "track_2_pitch".';
-        select_menu = ('<' + 'select id="' + select_id + '" style="text-align:center"' + '>');
+        select_menu = ('<' + 'select id="' + select_id + '" style="text-align:left"' + '>');
         for (i = 0; i < 20; i += 1) {
             if (i === 0) option = (('<' + 'option value="0" selected' + '>') + default_menu_option_label + ('<' + '/' + '>'));
             else {
@@ -90,7 +90,7 @@ function generate_pitch_frequency_menu_select_html_element(select_id) {
         return select_menu;
     }
     catch(exception) {
-        console.log("An exception to normal functioning occurred during the runtime of generate_pitch_frequency_menu_select_html_element(select_id): " + exception);
+        console.log("An exception to normal functioning occurred during the runtime of generate_pitch_menu_select_html_element(select_id): " + exception);
     } 
 }
 
@@ -130,7 +130,7 @@ function generate_beat_duration_menu_select_html_element(select_id) {
             (select_id !== "track_1_duration") &&
             (select_id !== "track_2_duration"))
         throw 'select_id must either be "track_0_duration" or else "track_1_duration" or "track_2_duration".';
-        select_menu = ('<' + 'select id="' + select_id + '" style="text-align:center"' + '>');
+        select_menu = ('<' + 'select id="' + select_id + '" style="text-align:left"' + '>');
         for (i = 0; i < 10; i += 1) {
             if (i === 0) option = (('<' + 'option value="' + menu_option_values[0] + '" selected' + '>') + default_menu_option_label + ('<' + '/' + '>'));
             else {
@@ -172,11 +172,9 @@ function generate_beat_duration_menu_select_html_element(select_id) {
 function initialize_application() {
     // Initialize variables which are local to this function.
     let time_stamped_message = "";
-    let duration_0_container = undefined;
-    let canvas_container_div = undefined, output_div = undefined, console_div = undefined, generate_button_container_paragraph = undefined;
-    let a_x_menu_container_paragraph = undefined, a_y_menu_container_paragraph = undefined;
-    let b_x_menu_container_paragraph = undefined, b_y_menu_container_paragraph = undefined;
-    let c_x_menu_container_paragraph = undefined, c_y_menu_container_paragraph = undefined;
+    let duration_0_container = undefined, pitch_0_container = undefined;
+    let duration_1_container = undefined, pitch_1_container = undefined;
+    let duration_2_container = undefined, pitch_2_container = undefined;
 
     // Execute a try-catch block. If runtime exceptions are found, exit the try block and print an error message to the web browser console.
     try {
@@ -186,10 +184,30 @@ function initialize_application() {
         time_stamped_message = generate_paragraph_html_element(time_stamped_message);
         console_div = document.getElementById("console");
         console_div.innerHTML = time_stamped_message;
-        
+
         // Populate the "duration_0_container" span element with a select menu for choosing a duration for TRACK_0.
         duration_0_container_span = document.getElementById("duration_0_container");
-        duration_0_container_span.innerHTML = generate_beat_duration_menu_select_html_element("track_duration_0"); 
+        duration_0_container_span.innerHTML = generate_beat_duration_menu_select_html_element("track_0_duration"); 
+
+        // Populate the "pitch_0_container" span element with a select menu for choosing a pitch for TRACK_0.
+        pitch_0_container_span = document.getElementById("pitch_0_container");
+        pitch_0_container_span.innerHTML = generate_pitch_menu_select_html_element("track_0_pitch"); 
+
+        // Populate the "duration_1_container" span element with a select menu for choosing a duration for TRACK_1.
+        duration_1_container_span = document.getElementById("duration_1_container");
+        duration_1_container_span.innerHTML = generate_beat_duration_menu_select_html_element("track_0_duration"); 
+
+        // Populate the "pitch_1_container" span element with a select menu for choosing a pitch for TRACK_1.
+        pitch_1_container_span = document.getElementById("pitch_1_container");
+        pitch_1_container_span.innerHTML = generate_pitch_menu_select_html_element("track_1_pitch"); 
+
+        // Populate the "duration_2_container" span element with a select menu for choosing a duration for TRACK_2.
+        duration_2_container_span = document.getElementById("duration_2_container");
+        duration_2_container_span.innerHTML = generate_beat_duration_menu_select_html_element("track_2_duration"); 
+
+        // Populate the "pitch_2_container" span element with a select menu for choosing a pitch for TRACK_2.
+        pitch_2_container_span = document.getElementById("pitch_2_container");
+        pitch_2_container_span.innerHTML = generate_pitch_menu_select_html_element("track_2_pitch"); 
     }
     catch(exception) {
         console.log("An exception to normal functioning occurred during the runtime of initialize_application(): " + exception);
