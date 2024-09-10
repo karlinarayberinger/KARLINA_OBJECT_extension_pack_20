@@ -24,6 +24,11 @@ function startBeats() {
      * Initialize the audio context if it has not already been created.
      * Note that the audio context makes it possible to play the beats offline.
      * That is because the web browser has built-in sound generating capabilities.
+     * 
+     * According to ChatGPT-4o, the AudioContext manages a flow of audio data buffers, 
+     * which are processed and sent to the output device (e.g., speakers). When creating an 
+     * AudioContext, the browser communicates with the system's sound hardware, requesting 
+     * access to manage audio streams.
      */
     if (!audioContext) {
 	audioContext = new (window.AudioContext || window.webkitAudioContext)();
@@ -58,7 +63,20 @@ function startTrack(trackNumber) {
     // If the "Do Not Play" option is selected, then do not play the respective track.
     if (beatPitch === 0) return; 
 
-    // Play the respective track using the built-in sound generating capabilities of the web browser.
+    /**
+     * Play the respective track using the built-in sound generating capabilities of the web browser.
+     * 
+     * According to ChatGPT-4o, the oscillator generates a periodic waveform (like a sine wave). 
+     * Physically, an oscillator in sound represents variations in air pressure over time, which, 
+     * when processed digitally, corresponds to a series of numerical samples. These samples are 
+     * fed into the system's audio buffer, which is sent to the speakers to produce sound.
+     * 
+     * According to ChatGPT-4o, the gain node adjusts the volume of the sound by scaling the 
+     * amplitude of the waveform. At the machine level, this means multiplying each sample in 
+     * the audio buffer by a constant factor before sending it to the output device.
+     * 
+     * The GainNode controls the amplitude of the tone, creating a short beat that ramps up and down in volume.
+     */
     function playBeat() {
         const oscillator = audioContext.createOscillator();
 	    const gainNode = audioContext.createGain();
