@@ -20,18 +20,18 @@ let intervalIds = [];
  * this file (i.e. beats_machine.js) and the file named karbytes_aesthetic.css).
  */
 function startBeats() {
-  /**
-   * Initialize the audio context if it has not already been created.
-   * Note that the audio context makes it possible to play the beats offline.
-   * That is because the web browser has built-in sound generating capabilities.
-   */
-  if (!audioContext) {
-    audioContext = new (window.AudioContext || window.webkitAudioContext)();
-  }
-  // Begin playing all three tracks (for an indefinitely long period of time).
-  startTrack(0);
-  startTrack(1);
-  startTrack(2);
+    /**
+     * Initialize the audio context if it has not already been created.
+     * Note that the audio context makes it possible to play the beats offline.
+     * That is because the web browser has built-in sound generating capabilities.
+     */
+    if (!audioContext) {
+	audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    }
+    // Begin playing all three tracks (for an indefinitely long period of time).
+    startTrack(0);
+    startTrack(1);
+    startTrack(2);
 }
 
 /**
