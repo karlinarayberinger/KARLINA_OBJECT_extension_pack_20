@@ -70,10 +70,10 @@ function startTrack(trackNumber) {
 		gainNode.gain.linearRampToValueAtTime(0, audioContext.currentTime + beatDuration);
 		oscillator.start(audioContext.currentTime);
 		oscillator.stop(audioContext.currentTime + beatDuration);
-    }
-    // Set the interval to play the beat at the selected duration.
-    const intervalId = setInterval(playBeat, beatDuration * 1000);
-    intervalIds.push(intervalId);
+	}
+	// Set the interval to play the beat at the selected duration.
+	const intervalId = setInterval(playBeat, beatDuration * 1000);
+	intervalIds.push(intervalId);
 }
 
 /**
