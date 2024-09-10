@@ -65,7 +65,7 @@ function generate_paragraph_html_element(inner_html) {
  * 
  * @return {String} a sequence of text characters which is used to instantiate an expandable list menu (SELECT) web page element.
  */
-function generate_coordinate_menu_select_html_element(select_id) {
+function generate_sound_frequency_menu_select_html_element(select_id) {
     let select_menu = '', option = '', i = 0, N = 200;
     let default_menu_option_label = "Do Not Play (i.e. 0 Hz)";
     try {
@@ -88,6 +88,6 @@ function generate_coordinate_menu_select_html_element(select_id) {
         return select_menu;
     }
     catch(exception) {
-        console.log("An exception to normal functioning occurred during the runtime of generate_coordinate_menu_select_html_element(select_id): " + exception);
+        console.log("An exception to normal functioning occurred during the runtime of generate_sound_frequency_menu_select_html_element(select_id): " + exception);
     } 
 }
