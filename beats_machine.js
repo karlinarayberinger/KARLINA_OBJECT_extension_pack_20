@@ -154,7 +154,7 @@ function generate_pitch_menu_select_html_element(select_id) {
             	option += (N + ' Hz' + ('<' + '/' + 'option' + '>'));
         	}
         	select_menu += option;
-        	N += 45;
+        	if (i > 0) N += 45;
         }
         select_menu += ('<' + '/' + 'select' + '>');
         return select_menu;
@@ -265,7 +265,7 @@ function initialize_application() {
 
         // Populate the "duration_1_container" span element with a select menu for choosing a duration for TRACK_1.
         duration_1_container_span = document.getElementById("duration_1_container");
-        duration_1_container_span.innerHTML = generate_beat_duration_menu_select_html_element("track_0_duration"); 
+        duration_1_container_span.innerHTML = generate_beat_duration_menu_select_html_element("track_1_duration"); 
 
         // Populate the "pitch_1_container" span element with a select menu for choosing a pitch for TRACK_1.
         pitch_1_container_span = document.getElementById("pitch_1_container");
