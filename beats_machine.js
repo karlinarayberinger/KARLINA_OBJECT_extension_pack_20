@@ -18,8 +18,26 @@ let intervalIds = [];
  * Assume that this function is called in response to the event of the START_BUTTON being clicked on
  * the web page named beats_machine.html (which is assumed to be in the same local directory as
  * this file (i.e. beats_machine.js) and the file named karbytes_aesthetic.css).
+ * 
+ * This function also prints a time-stamped message indicating when the START_BUTTON was last 
+ * clicked in a DIV element on that web page whose identifier is "console" (and that time-stamped
+ * message is appended to the message that should already be printed in that DIV during the
+ * most recent web page load).
  */
 function startBeats() {
+    let time_stamped_message = "", console_div = undefined;
+    try {
+        // Populate the div whose identifier is "console" with a time stamped message indicating that this function was called (and when it was called).
+        time_stamped_message = ("The function named startBeats() was called at time: " + generate_time_stamp());
+        console.log(time_stamped_message);
+        time_stamped_message = generate_paragraph_html_element(time_stamped_message);
+        console_div = document.getElementById("console");
+        console_div.innerHTML += time_stamped_message;
+    }
+    catch(exception) {
+        console.log("An exception to normal functioning occurred during the runtime of startBeats(): " + exception);
+    }
+
     /**
      * Initialize the audio context if it has not already been created.
      * Note that the audio context makes it possible to play the beats offline.
@@ -45,8 +63,25 @@ function startBeats() {
  * Assume that this function is called in response to the event of the STOP_BUTTON being clicked on
  * the web page named beats_machine.html (which is assumed to be in the same local directory as
  * this file (i.e. beats_machine.js) and the file named karbytes_aesthetic.css).
+ * 
+ * This function also prints a time-stamped message indicating when the STOP_BUTTON was last 
+ * clicked in a DIV element on that web page whose identifier is "console" (and that time-stamped
+ * message is appended to the message that should already be printed in that DIV during the
+ * most recent web page load).
  */
 function stopBeats() {
+    let time_stamped_message = "", console_div = undefined;
+    try {
+        // Populate the div whose identifier is "console" with a time stamped message indicating that this function was called (and when it was called).
+        time_stamped_message = ("The function named stopBeats() was called at time: " + generate_time_stamp());
+        console.log(time_stamped_message);
+        time_stamped_message = generate_paragraph_html_element(time_stamped_message);
+        console_div = document.getElementById("console");
+        console_div.innerHTML += time_stamped_message;
+    }
+    catch(exception) {
+        console.log("An exception to normal functioning occurred during the runtime of stopBeats(): " + exception);
+    }
     intervalIds.forEach(id => clearInterval(id)); // Clear all intervals.
     intervalIds = []; // Reset interval ids array.
 }
