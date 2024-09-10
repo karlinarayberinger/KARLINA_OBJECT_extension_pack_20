@@ -25,15 +25,27 @@
             border-radius: 5px;
         }
         button {
+            border-color: #ff9000;
+            border-width: 2px;
+            border-style: solid;
             background: #00ff00;
             color: #000000;
             padding: 10px;
             margin: 10px;
             border-radius: 5px;
+            font-size: 14pt;
         }
-        button:hover {
+        #start_button {
+            background: #00ff00;
+        }
+        #stop_button {
+            background: #ff0000;
+        }
+        #start_button:hover {
             background: #00ffff;
-            color: #000000;
+        }
+        #stop_button:hover {
+            background: #00ffff;
         }
     </style>
 </head>
@@ -171,8 +183,8 @@
     <!-- <input type="button" class="green_button" onclick="startBeats()" value="STOP_BEATS"> -->
 
     <!-- Button to start playing the beats -->
-    <button onclick="startBeats()">Start Beats</button>
-    <button onclick="stopBeats()">Stop Beats</button>
+    <button id="start_button" onclick="startBeats()">START_BEATS</button>
+    <button id="stop_button" onclick="stopBeats()">STOP_BEATS</button>
 
     <script>
         let audioContext;
