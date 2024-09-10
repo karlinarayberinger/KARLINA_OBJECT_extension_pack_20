@@ -54,10 +54,10 @@ function generate_paragraph_html_element(inner_html) {
  * (in units named hertz (which is abreviated as Hz (and which indicates some number of cycles per second)))
  * which are nonnegative integers denoting the number of oscillations per second for each of those twenty beat frequencies.
  * 
- * Each of the twenty beat frequencies listed in the drop-down menu are arranged in acending order 
+ * Each of the twenty beat pitch frequencies listed in the drop-down menu are arranged in acending order 
  * starting with the menu option at the top of the list (which is 0 Hz) 
  * and then, starting with the second option in the list (which is 200 Hz),
- * incrementing the sound frequency value by some constant positive integer number of Hz (i.e. 45)
+ * incrementing the beat pitch frequency value by some constant positive integer number of Hz (i.e. 45)
  * until the menu option at the bottom of the list (which is 1010 Hz) is reached.
  * 
  * @param {String} select_id is assumed to be either 
@@ -95,24 +95,28 @@ function generate_pitch_frequency_menu_select_html_element(select_id) {
 }
 
 /**
+ * Generate a drop-down menu of various beat frequencies 
+ * (and a beat frequency is a particular number of times 
+ * a particular sound (whose duration is finite) is played per time interval).
+ * 
  * Return a String type value which is used to instantiate a select type web page element such that
  * the String type value which is passed into this function as its only input is that select menu element's
  * id property value.
  * 
- * When clicked on, the select menu interface element will expand to display a list of all sound frequencies
- * (in units named hertz (which is abreviated as Hz (and which indicates some number of cycles per second)))
- * which are nonnegative integers denoting the number of oscillations per second for each of those twenty beat frequencies.
+ * When clicked on, the select menu interface element will expand to display a list of all beat frequencies
+ * (in units named seconds (and, according to the International System of Units (SI), the second is defined 
+ * scientifically as the duration of 9,192,631,770 periods of the radiation corresponding to the transition 
+ * between the two hyperfine levels of the ground state of the cesium-133 atom)).
  * 
- * Each of the twenty beat frequencies listed in the drop-down menu are arranged in acending order 
- * starting with the menu option at the top of the list (which is 0 Hz) 
- * and then, starting with the second option in the list (which is 200 Hz),
- * incrementing the sound frequency value by some constant positive integer number of Hz (i.e. 45)
- * until the menu option at the bottom of the list (which is 1010 Hz) is reached.
+ * Each of the ten beat frequencies listed in the drop-down menu are arranged in acending order 
+ * starting with the menu option at the top of the list (which is 1/16 second (i.e. 0.0625 second)) 
+ * and then incrementing the beat frequency by some positive number of seconds (between 0.0625 seconds and 1 second)
+ * until the menu option at the bottom of the list (which is 2 seconds) is reached.
  * 
  * @param {String} select_id is assumed to be either 
- *                 "track_0_pitch" or else
- *                 "track_1_pitch" or else
- *                 "track_2_pitch".
+ *                 "track_0_duration" or else
+ *                 "track_1_duration" or else
+ *                 "track_2_dutation".
  * 
  * @return {String} a sequence of text characters which is used to instantiate an expandable list menu (SELECT) web page element.
  */
