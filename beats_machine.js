@@ -95,22 +95,21 @@ function generate_pitch_frequency_menu_select_html_element(select_id) {
 }
 
 /**
- * Generate a drop-down menu of various beat frequencies 
- * (and a beat frequency is a particular number of times 
- * a particular sound (whose duration is finite) is played per time interval).
+ * Generate a drop-down menu of various beat durations (and a beat duration is the time interval 
+ * in which the same tone is played immediately in succession).
  * 
  * Return a String type value which is used to instantiate a select type web page element such that
  * the String type value which is passed into this function as its only input is that select menu element's
  * id property value.
  * 
- * When clicked on, the select menu interface element will expand to display a list of all beat frequencies
+ * When clicked on, the select menu interface element will expand to display a list of all beat durations
  * (in units named seconds (and, according to the International System of Units (SI), the second is defined 
  * scientifically as the duration of 9,192,631,770 periods of the radiation corresponding to the transition 
  * between the two hyperfine levels of the ground state of the cesium-133 atom)).
  * 
- * Each of the ten beat frequencies listed in the drop-down menu are arranged in acending order 
+ * Each of the ten beat durations listed in the drop-down menu are arranged in acending order 
  * starting with the menu option at the top of the list (which is 1/16 second (i.e. 0.0625 second)) 
- * and then incrementing the beat frequency by some positive number of seconds (between 0.0625 seconds and 1 second)
+ * and then incrementing the beat duration by some positive number of seconds (between 0.0625 seconds and 1 second)
  * until the menu option at the bottom of the list (which is 2 seconds) is reached.
  * 
  * @param {String} select_id is assumed to be either 
@@ -149,4 +148,73 @@ function generate_beat_frequency_menu_select_html_element(select_id) {
     catch(exception) {
         console.log("An exception to normal functioning occurred during the runtime of generate_beat_frequency_menu_select_html_element(select_id): " + exception);
     } 
+}
+
+/**
+ * Respond to the event of the web page named beats_machine.html being loaded by a web browser.
+ * 
+ * This function populates the six select menus on that web page with their respective menu options
+ * (and those select menus have the HTML element identifiers (ids) are as follows:
+ * 		"track_0_duration",
+ * 		"track_0_pitch",
+ * 		"track_1_duration",
+ * 		"track_1_pitch",
+ * 		"track_2_duration", and
+ * 		"track_2_pitch").
+ * 
+ * This function also prints a time-stamped message indicating when the web page was last 
+ * loaded by the web browser in a DIV element on that web page whose identifier is "console".
+ * 
+ * Assume that all three files which constitute this single web page application are located
+ * in the same local file directory (and those file are 
+ * karbytes_aesthetic.css, beats_machine.js, and beats_machine.html).
+ */
+function initialize_application() {
+    // Initialize variables which are local to this function.
+    let time_stamped_message = "", initial_output_message = "";
+    let canvas_container_div = undefined, output_div = undefined, console_div = undefined, generate_button_container_paragraph = undefined;
+    let a_x_menu_container_paragraph = undefined, a_y_menu_container_paragraph = undefined;
+    let b_x_menu_container_paragraph = undefined, b_y_menu_container_paragraph = undefined;
+    let c_x_menu_container_paragraph = undefined, c_y_menu_container_paragraph = undefined;
+
+    // Execute a try-catch block. If runtime exceptions are found, exit the try block and print an error message to the web browser console.
+    try {
+        // Populate the div whose identifier is "console" with a time stamped message indicating that this function was called (and when it was called).
+        time_stamped_message = ("The function named initialize_application() was called at time: " + generate_time_stamp());
+        console.log(time_stamped_message);
+        time_stamped_message = generate_paragraph_html_element(time_stamped_message);
+        console_div = document.getElementById("console");
+        console_div.innerHTML = time_stamped_message;
+        
+        // Populate the "a_x_menu_container" paragraph element with a select menu for choosing an integer value for the X property of POINT object A.
+        a_x_menu_container_paragraph = document.getElementById("a_x_menu_container");
+        a_x_menu_container_paragraph.innerHTML = ('A.X := ' + generate_coordinate_menu_select_html_element("a_x_menu") + '. // horizontal position of two-dimensional POINT labeled A.'); 
+
+        // Populate the "a_y_menu_container" paragraph element with a select menu for choosing an integer value for the Y property of POINT object A.
+        a_y_menu_container_paragraph = document.getElementById("a_y_menu_container");
+        a_y_menu_container_paragraph.innerHTML = ('A.Y := ' + generate_coordinate_menu_select_html_element("a_y_menu") + '. // vertical position of two-dimensional POINT labeled A.');  
+
+        // Populate the "b_x_menu_container" paragraph element with a select menu for choosing an integer value for the X property of POINT object B.
+        b_x_menu_container_paragraph = document.getElementById("b_x_menu_container");
+        b_x_menu_container_paragraph.innerHTML = ('B.X := ' + generate_coordinate_menu_select_html_element("b_x_menu") + '. // horizontal position of two-dimensional POINT labeled B.'); 
+
+        // Populate the "B_y_menu_container" paragraph element with a select menu for choosing an integer value for the Y property of POINT object B.
+        b_y_menu_container_paragraph = document.getElementById("b_y_menu_container");
+        b_y_menu_container_paragraph.innerHTML = ('B.Y := ' + generate_coordinate_menu_select_html_element("b_y_menu") + '. // vertical position of two-dimensional POINT labeled B.');  
+
+        // Populate the "c_x_menu_container" paragraph element with a select menu for choosing an integer value for the X property of POINT object C.
+        c_x_menu_container_paragraph = document.getElementById("c_x_menu_container");
+        c_x_menu_container_paragraph.innerHTML = ('C.X := ' + generate_coordinate_menu_select_html_element("c_x_menu") + '. // horizontal position of two-dimensional POINT labeled C.'); 
+
+        // Populate the "C_y_menu_container" paragraph element with a select menu for choosing an integer value for the Y property of POINT object B.
+        c_y_menu_container_paragraph = document.getElementById("c_y_menu_container");
+        c_y_menu_container_paragraph.innerHTML = ('C.Y := ' + generate_coordinate_menu_select_html_element("c_y_menu") + '. // vertical position of two-dimensional POINT labeled C.'); 
+
+        // Populate the "generate_button_container" paragraph element with a button input web page element which calls the function named generate_triangle_using_input_coordinates().
+        generate_button_container = document.getElementById("generate_button_container");
+        generate_button_container.innerHTML = ('<' + 'input type="button" value="GENERATE" style="text-align:center" onclick="generate_triangle_using_input_coordinates()"' + '/' + '>'); 
+    }
+    catch(exception) {
+        console.log("An exception to normal functioning occurred during the runtime of initialize_application(): " + exception);
+    }
 }
