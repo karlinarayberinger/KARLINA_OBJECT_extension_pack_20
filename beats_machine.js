@@ -42,38 +42,38 @@ function startBeats() {
  * this file (i.e. beats_machine.js) and the file named karbytes_aesthetic.css).
  */
 function stopBeats() {
-	intervalIds.forEach(id => clearInterval(id)); // Clear all intervals.
-	intervalIds = []; // Reset interval ids array.
+    intervalIds.forEach(id => clearInterval(id)); // Clear all intervals.
+    intervalIds = []; // Reset interval ids array.
 }
 
 /**
  * Start playing an individual track (whose trackNumber is assumed to be 0, 1, or 2).
  */
 function startTrack(trackNumber) {
-	const durationSelect = document.getElementById(`track_${trackNumber}_duration`);
-	const pitchSelect = document.getElementById(`track_${trackNumber}_pitch`);
-	const beatDuration = parseFloat(durationSelect.value);
-	const beatPitch = parseFloat(pitchSelect.value);
+    const durationSelect = document.getElementById(`track_${trackNumber}_duration`);
+    const pitchSelect = document.getElementById(`track_${trackNumber}_pitch`);
+    const beatDuration = parseFloat(durationSelect.value);
+    const beatPitch = parseFloat(pitchSelect.value);
 
-	// If the "Do Not Play" option is selected, then do not play the respective track.
-	if (beatPitch === 0) return; 
+    // If the "Do Not Play" option is selected, then do not play the respective track.
+    if (beatPitch === 0) return; 
 
-	// Play the respective track using the built-in sound generating capabilities of the web browser.
-	function playBeat() {
-		const oscillator = audioContext.createOscillator();
-		const gainNode = audioContext.createGain();
-		oscillator.frequency.value = beatPitch;
-		oscillator.connect(gainNode);
-		gainNode.connect(audioContext.destination);
-		gainNode.gain.setValueAtTime(0, audioContext.currentTime);
-		gainNode.gain.linearRampToValueAtTime(1, audioContext.currentTime + 0.01);
-		gainNode.gain.linearRampToValueAtTime(0, audioContext.currentTime + beatDuration);
-		oscillator.start(audioContext.currentTime);
-		oscillator.stop(audioContext.currentTime + beatDuration);
-	}
-	// Set the interval to play the beat at the selected duration.
-	const intervalId = setInterval(playBeat, beatDuration * 1000);
-	intervalIds.push(intervalId);
+    // Play the respective track using the built-in sound generating capabilities of the web browser.
+    function playBeat() {
+        const oscillator = audioContext.createOscillator();
+	const gainNode = audioContext.createGain();
+	oscillator.frequency.value = beatPitch;
+	oscillator.connect(gainNode);
+	gainNode.connect(audioContext.destination);
+	gainNode.gain.setValueAtTime(0, audioContext.currentTime);
+	gainNode.gain.linearRampToValueAtTime(1, audioContext.currentTime + 0.01);
+	gainNode.gain.linearRampToValueAtTime(0, audioContext.currentTime + beatDuration);
+	oscillator.start(audioContext.currentTime);
+	oscillator.stop(audioContext.currentTime + beatDuration);
+    }
+    // Set the interval to play the beat at the selected duration.
+    const intervalId = setInterval(playBeat, beatDuration * 1000);
+    intervalIds.push(intervalId);
 }
 
 /**
