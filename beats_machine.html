@@ -73,11 +73,19 @@
         }
     </style>
 </head>
-<body>
-    <h1>Beats Machine</h1>
+<body onload="initialize_application()">
+    <div>
+        <h1>BEATS_MACHINE</h1>
+        <p>
+            This application plays zero, one, two, or three sound tracks simultaneously and such that the 
+            user can customize the beat pitch (i.e. monotone sound wave frequency) and the beat duration 
+            (i.e. time interval in which the same tone is played immediately in succession) of each one 
+            of those three sound tracks.
+        </p>
+    </div>
 
     <!-- Track 1 -->
-    <div class="track-container">
+    <div>
         <h3>Track 1</h3>
         <label for="track1-duration">Select Beat Duration:</label>
         <select id="track1-duration">
@@ -264,5 +272,6 @@
             intervalIds.push(intervalId);
         }
     </script>
+    <div class="console" id="console">???</div>
 </body>
 </html>
