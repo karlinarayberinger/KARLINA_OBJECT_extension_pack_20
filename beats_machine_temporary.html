@@ -40,6 +40,7 @@
     <label for="beat-pitch">Select Beat Pitch:</label>
     <select id="beat-pitch">
         <!-- Frequencies equally spaced between 200 Hz and 1000 Hz -->
+        <option value="0">Do Not Play (i.e. 0 Hz)</option> 
         <option value="200">200 Hz</option>
         <option value="245">245 Hz</option>
         <option value="290">290 Hz</option>
@@ -77,6 +78,8 @@
             // Get the selected beat duration and pitch from the dropdown menus
             const beatDuration = parseFloat(document.getElementById("beat-duration").value);
             const beatPitch = parseFloat(document.getElementById("beat-pitch").value);
+
+            if (beatDuration == 0) return;
 
             // Initialize the audio context and oscillator if not already created
             if (!audioContext) {
