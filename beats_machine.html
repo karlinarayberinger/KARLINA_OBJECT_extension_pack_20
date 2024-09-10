@@ -24,14 +24,14 @@
             margin: 10px;
             border-radius: 5px;
         }
-        .green_button {
+        button {
             background: #00ff00;
             color: #000000;
             padding: 10px;
             margin: 10px;
             border-radius: 5px;
         }
-        .green_button:hover {
+        button:hover {
             background: #00ffff;
             color: #000000;
         }
@@ -167,8 +167,12 @@
     </div>
 
     <!-- Buttons to start and stop playing the beats -->
-    <input type="button" class="green_button" onclick="startBeats()" value="START_BEATS">
-    <input type="button" class="green_button" onclick="startBeats()" value="STOP_BEATS">
+    <!-- <input type="button" class="green_button" onclick="startBeats()" value="START_BEATS"> -->
+    <!-- <input type="button" class="green_button" onclick="startBeats()" value="STOP_BEATS"> -->
+
+    <!-- Button to start playing the beats -->
+    <button onclick="startBeats()">Start Beats</button>
+    <button onclick="stopBeats()">Stop Beats</button>
 
     <script>
         let audioContext;
