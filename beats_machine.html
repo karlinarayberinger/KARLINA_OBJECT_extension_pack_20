@@ -13,9 +13,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BEATS_MACHINE</title>
+    <!-- 
+        /**
+         * The linked Cascading-Style-Sheet file named karbytes_aesthetic.css 
+         * defines how this web page (which is named beats_machine.html) appears 
+         * when this web page is (re)loaded by the web browser. 
+         */
+     -->
     <link rel="stylesheet" href="karbytes_aesthetic.css">
+    <!-- 
+        /**
+         * The linked JavaScript file named beats_machine.js 
+         * defines how this web page (which is named beats_machine.html) behaves 
+         * when the user clicks on the menus and start and stop buttons 
+         * (and when this web page is (re)loaded by the web browser). 
+         */
+     -->
     <script src="beats_machine.js"></script>
     <style>
+        /** Give DIV elements on this web page rounded corners and a MAGENTA border which is 2 pixels thick. */
         div {
             border-color: #ff00ff;
             border-width: 2px;
@@ -24,6 +40,10 @@
             margin: 10px;
             border-radius: 5px;
         }
+        /** 
+         * Set the button elements on this web page to have a similar visual appearance as other HTML elements 
+         * defined in the linked Cascading-Style-Sheet file (i.e. karbytes_aesthetic.css). 
+         */
         button {
             border-color: #ff9000;
             border-width: 2px;
@@ -35,15 +55,19 @@
             border-radius: 5px;
             font-size: 14pt;
         }
+        /** Set the start button's background color to GREEN. */
         #start_button {
             background: #00ff00;
         }
+        /** Set the stop button's background color to RED. */
         #stop_button {
             background: #ff0000;
         }
+        /** Cause the start button's background color to turn CYAN when the cursor hovers over it. */
         #start_button:hover {
             background: #00ffff;
         }
+        /** Cause the stop button's background color to turn CYAN when the cursor hovers over it. */
         #stop_button:hover {
             background: #00ffff;
         }
