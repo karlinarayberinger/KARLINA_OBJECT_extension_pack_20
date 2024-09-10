@@ -72,8 +72,8 @@ function generate_pitch_frequency_menu_select_html_element(select_id) {
     let default_menu_option_label = "Do Not Play (i.e. 0 Hz)";
     try {
         if (typeof select_id.length !== "number") throw 'The expression (typeof select_id.length !== "number") was evaluated to be true.';
-        if ((select_id !== "track_0_pitch") ||
-            (select_id !== "track_1_pitch") ||
+        if ((select_id !== "track_0_pitch") &&
+            (select_id !== "track_1_pitch") &&
             (select_id !== "track_2_pitch"))
         throw 'select_id must either be "track_0_pitch" or else "track_1_pitch" or "track_2_pitch".';
         select_menu = ('<' + 'select id="' + select_id + '" style="text-align:center"' + '>');
@@ -119,15 +119,15 @@ function generate_pitch_frequency_menu_select_html_element(select_id) {
  * 
  * @return {String} a sequence of text characters which is used to instantiate an expandable list menu (SELECT) web page element.
  */
-function generate_beat_frequency_menu_select_html_element(select_id) {
+function generate_beat_duration_menu_select_html_element(select_id) {
     let select_menu = '', option = '', i = 0;
     let default_menu_option_label = "1/16 second (i.e. 0.0625 second)";
     let menu_option_values = [0.0625, 0.25, 0.5, 0.75, 1, 1.0625, 1.25, 1.5, 1.75, 2];
     let menu_option_label_prefaces = ["1/16", "1/4", "1/2", "3/4", "1", "17/16", "5/4", "3/2", "7/4", "2"];
     try {
         if (typeof select_id.length !== "number") throw 'The expression (typeof select_id.length !== "number") was evaluated to be true.';
-        if ((select_id !== "track_0_duration") ||
-            (select_id !== "track_1_duration") ||
+        if ((select_id !== "track_0_duration") &&
+            (select_id !== "track_1_duration") &&
             (select_id !== "track_2_duration"))
         throw 'select_id must either be "track_0_duration" or else "track_1_duration" or "track_2_duration".';
         select_menu = ('<' + 'select id="' + select_id + '" style="text-align:center"' + '>');
@@ -146,7 +146,7 @@ function generate_beat_frequency_menu_select_html_element(select_id) {
         return select_menu;
     }
     catch(exception) {
-        console.log("An exception to normal functioning occurred during the runtime of generate_beat_frequency_menu_select_html_element(select_id): " + exception);
+        console.log("An exception to normal functioning occurred during the runtime of generate_beat_duration_menu_select_html_element(select_id): " + exception);
     } 
 }
 
@@ -171,7 +171,8 @@ function generate_beat_frequency_menu_select_html_element(select_id) {
  */
 function initialize_application() {
     // Initialize variables which are local to this function.
-    let time_stamped_message = "", initial_output_message = "";
+    let time_stamped_message = "";
+    let duration_0_container = undefined;
     let canvas_container_div = undefined, output_div = undefined, console_div = undefined, generate_button_container_paragraph = undefined;
     let a_x_menu_container_paragraph = undefined, a_y_menu_container_paragraph = undefined;
     let b_x_menu_container_paragraph = undefined, b_y_menu_container_paragraph = undefined;
@@ -186,33 +187,9 @@ function initialize_application() {
         console_div = document.getElementById("console");
         console_div.innerHTML = time_stamped_message;
         
-        // Populate the "a_x_menu_container" paragraph element with a select menu for choosing an integer value for the X property of POINT object A.
-        a_x_menu_container_paragraph = document.getElementById("a_x_menu_container");
-        a_x_menu_container_paragraph.innerHTML = ('A.X := ' + generate_coordinate_menu_select_html_element("a_x_menu") + '. // horizontal position of two-dimensional POINT labeled A.'); 
-
-        // Populate the "a_y_menu_container" paragraph element with a select menu for choosing an integer value for the Y property of POINT object A.
-        a_y_menu_container_paragraph = document.getElementById("a_y_menu_container");
-        a_y_menu_container_paragraph.innerHTML = ('A.Y := ' + generate_coordinate_menu_select_html_element("a_y_menu") + '. // vertical position of two-dimensional POINT labeled A.');  
-
-        // Populate the "b_x_menu_container" paragraph element with a select menu for choosing an integer value for the X property of POINT object B.
-        b_x_menu_container_paragraph = document.getElementById("b_x_menu_container");
-        b_x_menu_container_paragraph.innerHTML = ('B.X := ' + generate_coordinate_menu_select_html_element("b_x_menu") + '. // horizontal position of two-dimensional POINT labeled B.'); 
-
-        // Populate the "B_y_menu_container" paragraph element with a select menu for choosing an integer value for the Y property of POINT object B.
-        b_y_menu_container_paragraph = document.getElementById("b_y_menu_container");
-        b_y_menu_container_paragraph.innerHTML = ('B.Y := ' + generate_coordinate_menu_select_html_element("b_y_menu") + '. // vertical position of two-dimensional POINT labeled B.');  
-
-        // Populate the "c_x_menu_container" paragraph element with a select menu for choosing an integer value for the X property of POINT object C.
-        c_x_menu_container_paragraph = document.getElementById("c_x_menu_container");
-        c_x_menu_container_paragraph.innerHTML = ('C.X := ' + generate_coordinate_menu_select_html_element("c_x_menu") + '. // horizontal position of two-dimensional POINT labeled C.'); 
-
-        // Populate the "C_y_menu_container" paragraph element with a select menu for choosing an integer value for the Y property of POINT object B.
-        c_y_menu_container_paragraph = document.getElementById("c_y_menu_container");
-        c_y_menu_container_paragraph.innerHTML = ('C.Y := ' + generate_coordinate_menu_select_html_element("c_y_menu") + '. // vertical position of two-dimensional POINT labeled C.'); 
-
-        // Populate the "generate_button_container" paragraph element with a button input web page element which calls the function named generate_triangle_using_input_coordinates().
-        generate_button_container = document.getElementById("generate_button_container");
-        generate_button_container.innerHTML = ('<' + 'input type="button" value="GENERATE" style="text-align:center" onclick="generate_triangle_using_input_coordinates()"' + '/' + '>'); 
+        // Populate the "duration_0_container" span element with a select menu for choosing a duration for TRACK_0.
+        duration_0_container_span = document.getElementById("duration_0_container");
+        duration_0_container_span.innerHTML = generate_beat_duration_menu_select_html_element("track_duration_0"); 
     }
     catch(exception) {
         console.log("An exception to normal functioning occurred during the runtime of initialize_application(): " + exception);
