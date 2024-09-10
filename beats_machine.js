@@ -2,9 +2,79 @@
  * file: beats_machine.js
  * type: JavaScript
  * author: karbytes
- * date: 09_SEPTEMBER_2024
+ * date: 10_SEPTEMBER_2024
  * license: PUBLIC_DOMAIN
  */
+    
+// global program variables    
+let audioContext;
+let intervalIds = [];
+
+/**
+ * Start playing all three beat tracks with the pitch and duration parameters specified on
+ * the web page named beats_machine.html. Play all three of those tracks for an indefinitely
+ * long time period.
+ * 
+ * Assume that this function is called in response to the event of the START_BUTTON being clicked on
+ * the web page named beats_machine.html (which is assumed to be in the same local directory as
+ * this file (i.e. beats_machine.js) and the file named karbytes_aesthetic.css).
+ */
+function startBeats() {
+	/**
+	 * Initialize the audio context if it has not already been created.
+	 * Note that the audio context makes it possible to play the beats offline.
+	 * That is because the web browser has built-in sound generating capabilities.
+	 */
+	if (!audioContext) {
+		audioContext = new (window.AudioContext || window.webkitAudioContext)();
+	}
+	// Begin playing all three tracks (for an indefinitely long period of time).
+	startTrack(0);
+	startTrack(1);
+	startTrack(2);
+}
+
+/**
+ * Stop playing all three beat tracks simultaneously.
+ * 
+ * Assume that this function is called in response to the event of the STOP_BUTTON being clicked on
+ * the web page named beats_machine.html (which is assumed to be in the same local directory as
+ * this file (i.e. beats_machine.js) and the file named karbytes_aesthetic.css).
+ */
+function stopBeats() {
+	intervalIds.forEach(id => clearInterval(id)); // Clear all intervals.
+	intervalIds = []; // Reset interval ids array.
+}
+
+/**
+ * Start playing an individual track (whose trackNumber is assumed to be 0, 1, or 2).
+ */
+function startTrack(trackNumber) {
+	const durationSelect = document.getElementById(`track_${trackNumber}_duration`);
+	const pitchSelect = document.getElementById(`track_${trackNumber}_pitch`);
+	const beatDuration = parseFloat(durationSelect.value);
+	const beatPitch = parseFloat(pitchSelect.value);
+
+	// If the "Do Not Play" option is selected, then do not play the respective track.
+	if (beatPitch === 0) return; 
+
+	// Play the respective track using the built-in sound generating capabilities of the web browser.
+	function playBeat() {
+		const oscillator = audioContext.createOscillator();
+		const gainNode = audioContext.createGain();
+		oscillator.frequency.value = beatPitch;
+		oscillator.connect(gainNode);
+		gainNode.connect(audioContext.destination);
+		gainNode.gain.setValueAtTime(0, audioContext.currentTime);
+		gainNode.gain.linearRampToValueAtTime(1, audioContext.currentTime + 0.01);
+		gainNode.gain.linearRampToValueAtTime(0, audioContext.currentTime + beatDuration);
+		oscillator.start(audioContext.currentTime);
+		oscillator.stop(audioContext.currentTime + beatDuration);
+    }
+    // Set the interval to play the beat at the selected duration.
+    const intervalId = setInterval(playBeat, beatDuration * 1000);
+    intervalIds.push(intervalId);
+}
 
 /**
  * Return a String type value which describes the number of milliseconds which have elapsed since the Unix Epoch.
