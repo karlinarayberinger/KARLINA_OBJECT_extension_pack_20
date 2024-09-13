@@ -1,7 +1,7 @@
 /**
  * file: karbytes_social_media_posts.txt
  * type: plain-text
- * date: 11_SEPTEMBER_2024
+ * date: 13_SEPTEMBER_2024
  * author: karbytes
  * license: PUBLIC_DOMAIN
  */
@@ -582,3 +582,9 @@ https://www.theverge.com/2024/9/10/24241047/nhtsa-rule-pedestrian-safety-fmvss-s
 On 11_SEPTEMBER_2024 at approximately 3:00PM Pacific Standard Time, karbytes shared the following news article as a social media post on karbytes' Twitter dot Com page and on karbytes' Minds dot Com page:
 
 https://singularityhub.com/2024/09/09/meta-looks-to-next-gen-geothermal-to-fuel-increasingly-ravenous-data-centers/
+
+* * *
+
+On 13_SEPTEMBER_2024 at approximately 3:30AM Pacific Standard Time, karbytes shared the following karbytes-created web page as a social media post on karbytes' Twitter dot Com page, on karbytes' Minds dot Com page, on karbytes' LinkedIn dot Com page, and on karbytes' Patreon dot Com page:
+
+https://karbytesforlifeblog.wordpress.com/abridged_keyboard_musical_instrument/
