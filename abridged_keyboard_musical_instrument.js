@@ -153,11 +153,16 @@ function initialize_application() {
  *     'w' // 1046.50 Hz (C6)
  */
 function createKeyUI(key) {
-    const keyDiv = document.createElement('div');
-    keyDiv.classList.add('key');
-    keyDiv.textContent = key.toUpperCase();
-    keyDiv.id = key;
-    keyboardDiv.appendChild(keyDiv);
+    try {
+        const keyDiv = document.createElement('div');
+        keyDiv.classList.add('key');
+        keyDiv.textContent = key.toUpperCase();
+        keyDiv.id = key;
+        keyboardDiv.appendChild(keyDiv);
+    }
+    catch(exception) {
+        console.log("An exception to normal functioning occurred during the runtime of createKeyUI(key): " + exception);
+    }
 }
 
 /**
@@ -172,15 +177,28 @@ Object.keys(noteFrequencies).forEach(createKeyUI);
  * most recently pressed in the "console" DIV.
  */
 function playNote(frequency) {
-  const oscillator = audioContext.createOscillator();
-  const gainNode = audioContext.createGain();
-  oscillator.type = 'sine';
-  oscillator.frequency.setValueAtTime(frequency, audioContext.currentTime);
-  gainNode.gain.setValueAtTime(0.5, audioContext.currentTime);
-  oscillator.connect(gainNode);
-  gainNode.connect(audioContext.destination);
-  oscillator.start();
-  oscillator.stop(audioContext.currentTime + 0.5);  // Stop playing the note after 0.5 seconds elapses.
+    let time_stamped_message = "";
+    try {
+        const oscillator = audioContext.createOscillator();
+        const gainNode = audioContext.createGain();
+        oscillator.type = 'sine';
+        oscillator.frequency.setValueAtTime(frequency, audioContext.currentTime);
+        gainNode.gain.setValueAtTime(0.5, audioContext.currentTime);
+        oscillator.connect(gainNode);
+        gainNode.connect(audioContext.destination);
+        oscillator.start();
+        oscillator.stop(audioContext.currentTime + 0.5); // Stop playing the note after 0.5 seconds elapses. 
+
+        // Append the text in the div whose identifier is "console" with a time stamped message indicating that this function was called (and when it was called).
+        time_stamped_message = ("The function named playNote(frequency) (where frequency = " + frequency + ") was called at time: " + generate_time_stamp());
+        console.log(time_stamped_message);
+        time_stamped_message = generate_paragraph_html_element(time_stamped_message);
+        console_div = document.getElementById("console");
+        console_div.innerHTML += time_stamped_message;
+    }
+    catch(exception) {
+        console.log("An exception to normal functioning occurred during the runtime of playNote(frequency): " + exception);
+    }
 }
 
 /**
