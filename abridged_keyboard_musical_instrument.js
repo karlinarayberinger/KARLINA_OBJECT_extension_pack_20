@@ -2,12 +2,12 @@
  * file: abridged_keyboard_musical_instrument.js
  * type: JavaScript
  * author: karbytes
- * date: 12_SEPTEMBER_2024
+ * date: 13_SEPTEMBER_2024
  * license: PUBLIC_DOMAIN
  */
 
-// Create an audio context (which is a global program variable).
-const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+// Declare an audio context variable (which is a global program variable).
+let audioContext = new (window.AudioContext || window.webkitAudioContext)();
 
 /**
  * Define a global variable which is an (immutable) dictionary populated by key-value pairs (i.e. definitions)
@@ -91,6 +91,10 @@ function generate_paragraph_html_element(inner_html) {
  * This function prints a time-stamped message indicating when the web page was last 
  * loaded by the web browser in a DIV element on that web page whose identifier is "console".
  * 
+ * This function also initializes the audio context (which works offline and which utilizes the
+ * web browser's built-in sound-generating capabilities which correspond with the local machine's
+ * operating system (to control the hardware which causes sound waves to be emitted from the machine)).
+ * 
  * Assume that all three files which constitute this single web page application are located
  * in the same local file directory (and those file are 
  * karbytes_aesthetic.css, 
@@ -103,6 +107,9 @@ function initialize_application() {
 
     // Execute a try-catch block. If runtime exceptions are found, exit the try block and print an error message to the web browser console.
     try {
+        // If the audio context has not already been defined, then define it now.
+        if (!audioContext) audioContext = new (window.AudioContext || window.webkitAudioContext)();
+
         // Populate the div whose identifier is "console" with a time stamped message indicating that this function was called (and when it was called).
         time_stamped_message = ("The function named initialize_application() was called at time: " + generate_time_stamp());
         console.log(time_stamped_message);
@@ -116,7 +123,7 @@ function initialize_application() {
 }
 
 /** 
- * This function to dynamically instantiates each piano key in the piano user interface on the corresponding web page
+ * This function to dynamically instantiates each piano key in the piano user interface (UI) on the corresponding web page
  * (i.e. abridged_keyboard_musical_instrument.html).
  * 
  * Specifically, this function populates the HTML element whose identifier (id) is "keyboard" with the following labeled keyboard keys
@@ -153,45 +160,54 @@ function createKeyUI(key) {
     keyboardDiv.appendChild(keyDiv);
 }
 
-// Add keys in ascending note order
+/**
+ * This function adds keys to the keyboard DIV in ascending note order.
+ */
 Object.keys(noteFrequencies).forEach(createKeyUI);
 
-// Function to play a note
+/**
+ * This function generates physical sound waves whose frequencies are the values input by this function.
+ * 
+ * This function also prints a time-stamped message indicating when a UI keyboard key was
+ * most recently pressed in the "console" DIV.
+ */
 function playNote(frequency) {
   const oscillator = audioContext.createOscillator();
   const gainNode = audioContext.createGain();
-
   oscillator.type = 'sine';
   oscillator.frequency.setValueAtTime(frequency, audioContext.currentTime);
   gainNode.gain.setValueAtTime(0.5, audioContext.currentTime);
-
   oscillator.connect(gainNode);
   gainNode.connect(audioContext.destination);
-
   oscillator.start();
-  oscillator.stop(audioContext.currentTime + 0.5);  // Stop after 0.5 seconds
+  oscillator.stop(audioContext.currentTime + 0.5);  // Stop playing the note after 0.5 seconds elapses.
 }
 
-// Handle keydown event
+/**
+ * This function responds to the event of a UI keyboard key being pressed.
+ */
 document.addEventListener('keydown', (event) => {
-  const key = event.key.toLowerCase();
-  if (noteFrequencies[key]) {
-    playNote(noteFrequencies[key]);
-
-    // Add visual feedback to the key
-    const keyDiv = document.getElementById(key);
-    if (keyDiv) {
-      keyDiv.classList.add('pressed');
+    const key = event.key.toLowerCase();
+    if (noteFrequencies[key]) {
+        playNote(noteFrequencies[key]);
+        // Add visual feedback to the key (by changing the background color of the corresponding key).
+        const keyDiv = document.getElementById(key); 
+        if (keyDiv) {
+          keyDiv.classList.add('pressed');
+        }
     }
-  }
 });
 
-// Handle keyup event to remove visual feedback
+/**
+ * This function responds to the event of a UI keyboard key being unpressed.
+ * Specifically, this function changes the background color of the respective key back to light gray 
+ * (after temporarily being set to green (for 0.5 seconds)).
+ */
 document.addEventListener('keyup', (event) => {
-  const key = event.key.toLowerCase();
-  const keyDiv = document.getElementById(key);
-  if (keyDiv) {
-    keyDiv.classList.remove('pressed');
-  }
+    const key = event.key.toLowerCase();
+    const keyDiv = document.getElementById(key);
+    if (keyDiv) {
+      keyDiv.classList.remove('pressed');
+    }
 });
 
