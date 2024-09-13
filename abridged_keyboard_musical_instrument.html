@@ -3,7 +3,7 @@
  * file: abridged_keyboard_musical_instrument.html
  * type: Hyper-Text-Markup-Language
  * author: karbytes
- * date: 12_SEPTEMBER_2024
+ * date: 13_SEPTEMBER_2024
  * license: PUBLIC_DOMAIN
  */
  -->
@@ -42,6 +42,25 @@
       body {
           text-align: center;
           padding: 50px;
+      }
+      /**
+       * Make more padding on the left side than on the right side of the text inside of the 
+       * DIV element whose class is "console" and give that DIV element a two-pixel border 
+       * which is colored green and which has slightly rounded corners.
+       * 
+       * Pad the top of that DIV element with five pixels of margin space.
+       * 
+       * Pad the text inside of that DIV element with ten pixels of space between the 
+       * text and the borders of that DIV element.
+       */
+      .console {
+          text-align: left;
+          border-color: #00ff00;
+          border-style: solid;
+          border-radius: 5px;
+          border-width: 2px;
+          margin-top: 5px;
+          padding: 10px;
       }
       /**
        * Make the keyboard background dark gray with a two-pixel-thick GREEN border.
