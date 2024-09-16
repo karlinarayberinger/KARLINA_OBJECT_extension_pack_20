@@ -1,5 +1,3 @@
-
-
 /**
  * file: search_compare.cpp
  * type: C++ (source file)
