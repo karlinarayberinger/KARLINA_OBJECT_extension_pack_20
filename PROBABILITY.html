@@ -18,9 +18,94 @@
 <p><strong>PROBABILITY Hyper-Text-Markup-Language Code</strong></p>
 <hr>
 <p>The following Hyper-Text-Markup-Language (<a style="background: #ff9000;color: #000000" href="https://en.wikipedia.org/wiki/HTML" target="_blank" rel="noopener">HTML</a>) code defines the user interface component of the PROBABILITY web page application. Copy the HTML code from the source code file which is linked below into a text editor and save that file as <strong>probability.html</strong>. Use a web browser such as <a style="background: #ff9000;color: #000000" href="https://en.wikipedia.org/wiki/Firefox" target="_blank" rel="noopener">Firefox</a> to open that HTML file (and ensure that the JavaScript and Cascading-Style-Sheet files are in the same file directory as the HTML file).</p>
-<p><em>Note that the contents of the HTML file are not displayed in a preformatted text box on this web page due to the fact that the WordPress server makes no distinction between HTML code which is encapsulated inside of a preformatted text box and WordPress web page source code.</em></p>
+<p><em><strike>Note that the contents of the HTML file are not displayed in a preformatted text box on this web page due to the fact that the WordPress server makes no distinction between HTML code which is encapsulated inside of a preformatted text box and WordPress web page source code.</strike> <span style="background:#00ffff">(The HTML code has been formatted to be properly displayed on this web page as of 17_SEPTEMBER. For details on how that was accomplished, visit the web page of karbytes&#8217; blogging website named <a style="background:#000000;color:#ff9000" href="https://karbytesforlifeblog.wordpress.com/karbytes_17_september_2024/" target="_blank" rel="noopener">karbytes_17_september_2024</a>).</span></em></p>
 <p>Hyper-Text-Markup-Language_file: <a style="background: #000000;color: #00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/probability.html" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/probability.html</a></p>
 <p>image_link: <a style="background: #000000;color: #ff9000" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/probability_html_code_screenshot.png" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_packk/main/probability_html_code_screenshot.png</a></p>
+<hr>
+<pre>
+&lt;!--
+/**
+ * file: probability.html
+ * type: Hyper-Text-Markup-Language
+ * author: karbytes
+ * date: 10_JULY_2023
+ * license: PUBLIC_DOMAIN
+ */
+ --&gt;
+ &lt;!DOCTYPE html&gt;
+ &lt;html&gt;
+ &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;PROBABILITY&lt;/title&gt;
+    &lt;link rel="stylesheet" href="karbytes_aesthetic.css"&gt;
+    <a href="http://probability.js">http://probability.js</a>
+    &lt;style&gt;
+      hr {
+         border: 3px solid #ff00ff;
+         border-radius: 5px;
+      }
+      .yellow_highlight {
+         background: #ffff00;
+         color: #000000;
+      }
+    &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body onload="initialize_application()"&gt;
+   &lt;hr&gt;
+   &lt;h1&gt;PROBABILITY&lt;/h1&gt;
+   &lt;hr&gt;
+   &lt;p class="yellow_highlight"&gt;
+      STEP_0: Select a nonnegative integer quantity for each COLOR value
+      to store in an array of COLOR values named A.
+   &lt;/p&gt;
+   &lt;p&gt;
+      Note that A is an array consisting exclusively of the COLOR values
+      such that each unique COLOR value appears as an element of A for
+      some nonnegative integer number of times.
+   &lt;/p&gt;
+   &lt;p&gt;Note that the array named A is a JavaScript Object type value.&lt;/p&gt;
+   &lt;p&gt;Note that each of the elements of A are JavaScript String type values.&lt;/p&gt;
+   &lt;div id="c_menus" class="console"&gt;&lt;p&gt;#c_menus&lt;/p&gt;&lt;/div&gt;
+   &lt;hr&gt;
+   &lt;p class="yellow_highlight"&gt;
+      STEP_1: Specify whether to randomly remove elements from A until A is empty 
+      (PROBABILITY_WITHOUT_REPLACEMENT) or else to randomly remove elements from
+      A while replacing each of those elements with exactly one new randomly 
+      generated COLOR value from the list of all possible colors enumerated in 
+      STEP_0 for a total of N selections (PROBABILITY_WITH_REPLACEMENT).
+   &lt;/p&gt;
+   &lt;p&gt;Note that N is the total number of elements in the array named A.&lt;/p&gt;
+   &lt;p&gt;Note that N is a JavaScript Number type value.&lt;/p&gt;
+   &lt;p id="p_menu" class="console"&gt;#p_menu&lt;/p&gt;
+   &lt;hr&gt;
+   &lt;p class="yellow_highlight"&gt;
+      STEP_2: Click the GENERATE button to create the array named A, to
+      copy the contents of A into a new array named B, and to display statistics 
+      about each of the the random selections of exactly one element from B in 
+      chronological order.
+   &lt;/p&gt;
+   &lt;p&gt;Note that the array named B is a JavaScript Object type value.&lt;/p&gt;
+   &lt;p&gt;
+      Note that the array named B is comprised exclusively of all the elements 
+      of A arranged in a random order.
+   &lt;/p&gt;
+   &lt;p&gt;
+      Note that the elements of A are arranged such that the same COLOR values are 
+      adjacent to each other in A and such that the COLOR values are listed in the 
+      same order in A as those COLOR values are listed in STEP_0 of this web page.
+   &lt;/p&gt;
+   &lt;p&gt;
+      &lt;input class="console" id="generate_button" type="button" value="GENERATE" onclick="generate()"&gt;&nbsp;
+      &lt;input class="console" id="reset_button" type="button" value="RESET" onclick="initialize_application()"&gt;
+   &lt;/p&gt;
+   &lt;hr&gt;
+   &lt;div id="output"&gt;&lt;p&gt;#output&lt;/p&gt;&lt;/div&gt; 
+   &lt;hr&gt;
+   &lt;div class="console" id="events_log"&gt;&lt;p&gt;#events_log&lt;/p&gt;&lt;/div&gt; 
+   &lt;hr&gt;
+ &lt;/body&gt;
+ &lt;/html&gt;
+</pre>
 <hr>
 
 
@@ -803,5 +888,5 @@ function generate() {
 
 
 <hr>
-<p>This web page was last updated on 16_SEPTEMBER_2024. The content displayed on this web page is licensed as <a style="background:#000000;color:#ff9000" href="https://karlinaobject.wordpress.com/public_domain/" target="_blank" rel="noopener">PUBLIC_DOMAIN</a> intellectual property.</p>
-<hr>
+<p>This web page was last updated on 17_SEPTEMBER_2024. The content displayed on this web page is licensed as <a style="background:#000000;color:#ff9000" href="https://karlinaobject.wordpress.com/public_domain/" target="_blank" rel="noopener">PUBLIC_DOMAIN</a> intellectual property.</p>
+<hr>	
