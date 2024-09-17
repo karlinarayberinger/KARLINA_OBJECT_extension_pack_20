@@ -1,0 +1,69 @@
+/**
+ * file: karbytes_17_september_2024.txt
+ * type: plain-text
+ * date: 16_SEPTEMBER_2024
+ * author: karbytes
+ * license: PUBLIC_DOMAIN
+ */
+
+The following conversation transcript (beneath the horizontal line of three asterisks) is a slightly modified version of the text which was copy-pasted from the web page interface featuring karbytes’ conversing with ChatGPT-4o at approximately 7:30PM Pacific Standard Time on 16_SEPTEMBER_2024 for the purpose of quickly (and with minimal errors) replacing the inequality signs within the source code of tutorial web pages featured in the section of this website named SOFTWARE_ENGINEERING_PORTFOLIO with Unicode expressions of those inequality signs (due to the fact that web browsers (mis)interpreted those (plain-text and not Unicode) inequality tokens as the “boundaries” of an HTML tag (i.e. part of the hidden source code of the web page rather than the text which is displayed literally as it is on the web page when rendered by a web browser)).
+
+During the past 24 hours, karbytes spent cumulatively eight hours or more attempting to manually accomplish that job without any assistance and made errors while doing so. What was not a waste of time (according to karbytes) was correcting some of the programming logic in a C++ program source code file named search_compare.cpp while modifying what karbytes (rather haphazardly) copy-pasted from that C++ file and into the HTML source code of that C++ file’s respective tutorial web page (which is named SEARCH_COMPARE). Other than that, karbytes felt that it mostly “wasted” its time attempting to manually update the HTML of those software engineering tutorial web pages instead of asking ChatGPT-4o to do that rather tedious and detail-oriented job. (karbytes originally was reluctant to outsource that job to ChatGPT because karbytes asked the o1-Preview version of ChatGPT to do that approximately two days ago only to find that the newer (apparently “smarter” ChatGPT model) froze while attempting to process that request. Also, karbytes was initially apprehensive about using ChatGPT-4o for that task after ChatGPT-4o modified karbytes’ submitted bug-ridden program files with what karbytes thought was “lower quality” and still bug-ridden code).
+
+(Note that some of the conversation below was not transcribed by karbytes into plain-text due to the fact that the WordPress editor of this web page would only display the graphical Unicode character which a particular sequence of plain-text characters represents rather than the literal sequence of plain-text characters on this web page. Actually, while karbytes was modifying the transcript, karbytes found a way to represent those aforementioned plain-text character sequences by replacing the (and (‘&’)) symbol in those sequences with the and symbol with itself (i.e. ‘&’) followed by the following sequence of four plain-text symbols: ‘amp;’).
+
+* * *
+
+karbytes:
+
+Can you replace each inequality symbol which appears in the following text file with its Unicode equivalent?
+
+ChatGPT:
+
+Yes, I can help with that. Please upload the text file containing the inequality symbols, and I will replace them with their Unicode equivalents for you.
+
+karbytes:
+
+[Uploaded code_text.txt]
+
+ChatGPT:
+
+I will now replace the inequality symbols (<=, >=, <, >) in your text file with their Unicode equivalents.
+
+<= will be replaced with <= (U+2264).
+
+>= will be replaced with >= (U+2265).
+
+< will be replaced with < (U+2039).
+
+> will be replaced with > (U+203A).
+
+Let me process that for you.
+
+[https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_20/main/chatgpt4o_and_karbytes_conversation_screenshot_16september2024_p0.png]
+
+The inequality symbols have been replaced with their Unicode equivalents. You can download the modified file from the following link:
+
+Download the modified file ​[>_]
+
+karbytes:
+
+I’m sorry, but I should have been more clear in my instructions. Please only replace any instance of < with the sequence &lt; and > with the sequence &gt;
+
+ChatGPT:
+
+[https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_20/main/chatgpt4o_and_karbytes_conversation_screenshot_16september2024_p1.png]
+
+The < and > symbols have been replaced with &lt; and &gt; as per your instructions. You can download the updated file from the following link:
+
+Download the corrected file ​[>_]​​
+
+karbytes:
+
+Thank you so much! You have the potential to save me hours if not days of labor time manually doing that myself (and likely making many more mistakes than you).
+
+ChatGPT:
+
+You’re very welcome! I’m really glad I could save you time and help streamline your work. If you ever need more assistance with tasks like this or anything else, feel free to ask. I’m here to make things easier for you! 😊
+
+[unicode_character(😊).identifier = U+1F60A] 
