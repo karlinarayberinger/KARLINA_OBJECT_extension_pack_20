@@ -1,7 +1,7 @@
 /**
  * file: karbytes_17_september_2024.txt
  * type: plain-text
- * date: 16_SEPTEMBER_2024
+ * date: 17_SEPTEMBER_2024
  * author: karbytes
  * license: PUBLIC_DOMAIN
  */
@@ -30,13 +30,13 @@ ChatGPT:
 
 I will now replace the inequality symbols (<=, >=, <, >) in your text file with their Unicode equivalents.
 
-<= will be replaced with <= (U+2264).
+<= will be replaced with ≤ (U+2264).
 
->= will be replaced with >= (U+2265).
+>= will be replaced with ≥ (U+2265).
 
-< will be replaced with < (U+2039).
+< will be replaced with ‹ (U+2039).
 
-> will be replaced with > (U+203A).
+> will be replaced with › (U+203A).
 
 Let me process that for you.
 
