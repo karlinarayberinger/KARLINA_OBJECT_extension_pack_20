@@ -13,11 +13,86 @@
 <p><strong>Hyper-Text-Markup-Language Code</strong></p>
 <hr>
 <p>The following Hyper-Text-Markup-Language (<a style="background: #ff9000;color: #000000" href="https://en.wikipedia.org/wiki/HTML" target="_blank" rel="noopener">HTML</a>) code defines the user interface component of the WORD_COUNTER web page application. Copy the HTML code from the source code file which is linked below into a text editor and save that file as <strong>word_counter.html</strong>. Use a web browser such as <a style="background: #ff9000;color: #000000" href="https://en.wikipedia.org/wiki/Firefox" target="_blank" rel="noopener">Firefox</a> to open that HTML file (and ensure that the JavaScript and Cascading-Style-Sheet files are in the same file directory as the HTML file).</p>
-<p><em>Note that the contents of the HTML file are not displayed in a preformatted text box on this web page due to the fact that the WordPress server makes no distinction between HTML code which is encapsulated inside of a preformatted text box and WordPress web page source code.</em></p>
+<p><em><strike>Note that the contents of the HTML file are not displayed in a preformatted text box on this web page due to the fact that the WordPress server makes no distinction between HTML code which is encapsulated inside of a preformatted text box and WordPress web page source code.</strike> <span style="background:#00ffff">(The HTML code has been formatted to be properly displayed on this web page as of 17_SEPTEMBER. For details on how that was accomplished, visit the web page of karbytes&#8217; blogging website named <a style="background:#000000;color:#ff9000" href="https://karbytesforlifeblog.wordpress.com/karbytes_17_september_2024/" target="_blank" rel="noopener">karbytes_17_september_2024</a>).</span></em></p>
 <p>Hyper-Text-Markup-Language_file: <a style="background: #000000;color: #00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/word_counter.html" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/word_counter.html</a></p>
 <p>image_link: <a style="background: #000000;color: #ff9000" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/word_counter_html_code_screenshot.png" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/word_counter_html_code_screenshot.png</a></p>
 <hr>
-
+<pre>
+&lt;!--
+/**
+ * file: word_counter.html
+ * type: Hyper-Text-Markup-Language
+ * author: karbytes
+ * date: 10_JULY_2023
+ * license: PUBLIC_DOMAIN
+ */
+ --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;WORD_COUNTER&lt;/title&gt;
+    &lt;link rel="stylesheet" href="karbytes_aesthetic.css"&gt;
+    <a href="http://word_counter.js">http://word_counter.js</a>
+    &lt;style&gt;
+        #S_field {
+            width: 600px;
+            border-color: #00ff00;
+            border-width: 1px;
+            border-style: solid;
+            background: #000000;
+            color: #00ff00;
+        }
+        #S_field:hover {
+            background: #00ff00;
+            color: #000000;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body onload="initialize_page()"&gt;
+    &lt;h1&gt;WORD_COUNTER&lt;/h1&gt;
+    &lt;ol&gt;
+        &lt;li&gt;
+            &lt;p&gt;
+              Enter a sequence of text characters (which will be represented as the 
+              variable named S) into the text field below.
+            &lt;/p&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;p&gt;
+              Click the SUBMIT button to compute the number of times each 
+              unique word occurs in S.
+            &lt;/p&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;p&gt;
+              The application will then display the number of times each unique 
+              word occurs in S with in descending order of unique word frequencies 
+              such that the word with the highest frequency is displayed at the top 
+              of the list and the word with the lowest frequency is displayed at 
+              the bottom of the list.
+          &lt;/p&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;p&gt;
+              Click the RESET button to clear the word counter results from the 
+              display area and to return to the initial web page application state.
+            &lt;/p&gt;
+        &lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;p class="console" id="S_field_display"&gt;S := &lt;input type="textarea" id="S_field"&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;input type="button" id="submit_button" value="SUBMIT" onclick="submit()"&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;input type="button" id="reset_button" value="RESET" onclick="initialize_page()"&gt;&lt;/p&gt;
+    &lt;div id="output"&gt;
+      &lt;p&gt;
+        This sentence will disappear in response to the event of a SUBMIT button click.
+      &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="console" id="time_stamped_messages"&gt;&lt;p&gt;???&lt;/p&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<hr>
 
 <figure class="wp-block-image size-full"><img data-attachment-id="21968" data-permalink="https://karlinaobject.wordpress.com/word_counter/word_counter_html_code_screenshot-2/" data-orig-file="https://karlinaobject.wordpress.com/wp-content/uploads/2023/07/word_counter_html_code_screenshot.png" data-orig-size="1302,2572" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="word_counter_html_code_screenshot" data-image-description="" data-image-caption="" data-medium-file="https://karlinaobject.wordpress.com/wp-content/uploads/2023/07/word_counter_html_code_screenshot.png?w=152" data-large-file="https://karlinaobject.wordpress.com/wp-content/uploads/2023/07/word_counter_html_code_screenshot.png?w=518" tabindex="0" role="button" width="1302" height="2572" src="https://karlinaobject.wordpress.com/wp-content/uploads/2023/07/word_counter_html_code_screenshot.png" alt="" class="wp-image-21968" srcset="https://karlinaobject.wordpress.com/wp-content/uploads/2023/07/word_counter_html_code_screenshot.png 1302w, https://karlinaobject.wordpress.com/wp-content/uploads/2023/07/word_counter_html_code_screenshot.png?w=76&amp;h=150 76w, https://karlinaobject.wordpress.com/wp-content/uploads/2023/07/word_counter_html_code_screenshot.png?w=152&amp;h=300 152w, https://karlinaobject.wordpress.com/wp-content/uploads/2023/07/word_counter_html_code_screenshot.png?w=768&amp;h=1517 768w, https://karlinaobject.wordpress.com/wp-content/uploads/2023/07/word_counter_html_code_screenshot.png?w=518&amp;h=1024 518w" sizes="(max-width: 1302px) 100vw, 1302px" /></figure>
 
@@ -405,5 +480,5 @@ function submit() {
 
 
 <hr>
-<p>This web page was last updated on 16_SEPTEMBER_2024. The content displayed on this web page is licensed as <a style="background:#000000;color:#ff9000" href="https://karlinaobject.wordpress.com/public_domain/" target="_blank" rel="noopener">PUBLIC_DOMAIN</a> intellectual property.</p>
+<p>This web page was last updated on 17_SEPTEMBER_2024. The content displayed on this web page is licensed as <a style="background:#000000;color:#ff9000" href="https://karlinaobject.wordpress.com/public_domain/" target="_blank" rel="noopener">PUBLIC_DOMAIN</a> intellectual property.</p>
 <hr>	
