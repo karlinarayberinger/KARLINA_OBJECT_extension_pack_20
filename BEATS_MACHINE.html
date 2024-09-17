@@ -13,11 +13,123 @@
 <p><strong>Hyper-Text-Markup-Language Code</strong></p>
 <hr />
 <p>The following Hyper-Text-Markup-Language (<a style="background: #ff9000;color: #000000" href="https://en.wikipedia.org/wiki/HTML" target="_blank" rel="noopener">HTML</a>) code defines the user interface component of the BEATS_MACHINE web page application. Copy the HTML code from the source code file which is linked below into a text editor and save that file as <strong>beats_machine.html</strong>. Use a web browser such as <a style="background: #ff9000;color: #000000" href="https://en.wikipedia.org/wiki/Firefox" target="_blank" rel="noopener">Firefox</a> to open that HTML file (and ensure that the JavaScript and Cascading-Style-Sheet files are in the same file directory as the HTML file).</p>
-<p><em>Note that the contents of the HTML file are not displayed in a preformatted text box on this web page due to the fact that the WordPress server makes no distinction between HTML code which is encapsulated inside of a preformatted text box and WordPress web page source code.</em></p>
+<p><em><strike>Note that the contents of the HTML file are not displayed in a preformatted text box on this web page due to the fact that the WordPress server makes no distinction between HTML code which is encapsulated inside of a preformatted text box and WordPress web page source code.</strike> <span style="background:#00ffff">(The HTML code has been formatted to be properly displayed on this web page as of 17_SEPTEMBER. For details on how that was accomplished, visit the web page of this website named <a style="background:#000000;color:#ff9000" href="https://karbytesforlifeblog.wordpress.com/karbytes_17_september_2024/" target="_blank" rel="noopener">karbytes_17_september_2024</a>).</span></em></p>
 <p>Hyper-Text-Markup-Language_file: <a style="background: #000000;color: #00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_20/main/beats_machine.html" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_20/main/beats_machine.html</a></p>
 <p>image_link: <a style="background: #000000;color: #ff9000" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_20/main/beats_machine_html_screenshot.png" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_20/main/beats_machine_html_screenshot.png</a></p>
 <hr />
-
+<pre>
+&lt;!--
+/**
+ * file: beats_machine.html
+ * type: Hyper-Text-Markup-Language
+ * author: karbytes
+ * date: 09_SEPTEMBER_2024
+ * license: PUBLIC_DOMAIN
+ */
+ --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;BEATS_MACHINE&lt;/title&gt;
+    &lt;!-- 
+        /**
+         * The linked Cascading-Style-Sheet file named karbytes_aesthetic.css 
+         * defines how this web page (which is named beats_machine.html) appears 
+         * when this web page is (re)loaded by the web browser. 
+         */
+     --&gt;
+    &lt;link rel="stylesheet" href="karbytes_aesthetic.css"&gt;
+    &lt;!-- 
+        /**
+         * The linked JavaScript file named beats_machine.js 
+         * defines how this web page (which is named beats_machine.html) behaves 
+         * when the user clicks on the menus and start and stop buttons 
+         * (and when this web page is (re)loaded by the web browser). 
+         */
+     --&gt;
+    <a href="http://beats_machine.js">http://beats_machine.js</a>
+    &lt;style&gt;
+        /** Give DIV elements on this web page rounded corners and a MAGENTA border which is 2 pixels thick. */
+        div {
+            border-color: #ff00ff;
+            border-width: 2px;
+            border-style: solid;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+        /** 
+         * Set the button elements on this web page to have a similar visual appearance as other HTML elements 
+         * defined in the linked Cascading-Style-Sheet file (i.e. karbytes_aesthetic.css). 
+         */
+        button {
+            border-color: #ff9000;
+            border-width: 2px;
+            border-style: solid;
+            background: #00ff00;
+            color: #000000;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            font-size: 14pt;
+        }
+        /** Set the start button's background color to GREEN. */
+        #start_button {
+            background: #00ff00;
+        }
+        /** Set the stop button's background color to RED. */
+        #stop_button {
+            background: #ff0000;
+        }
+        /** Cause the start button's background color to turn CYAN when the cursor hovers over it. */
+        #start_button:hover {
+            background: #00ffff;
+        }
+        /** Cause the stop button's background color to turn CYAN when the cursor hovers over it. */
+        #stop_button:hover {
+            background: #00ffff;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body onload="initialize_application()"&gt;
+    &lt;div&gt;
+        &lt;h1&gt;BEATS_MACHINE&lt;/h1&gt;
+        &lt;p&gt;
+            This application plays zero, one, two, or three sound tracks simultaneously and such that the 
+            user can customize the beat pitch (i.e. monotone sound wave frequency) and the beat duration 
+            (i.e. time interval in which the same tone is played immediately in succession) of each one 
+            of those three sound tracks.
+        &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;!-- Track 0 --&gt;
+    &lt;div&gt;
+        &lt;h3&gt;TRACK_0&lt;/h3&gt;
+        &lt;p&gt;Select Beat Duration:&nbsp;&lt;span id="duration_0_container"&gt;???&lt;/span&gt;&lt;/p&gt;
+        &lt;p&gt;Select Beat Pitch:&nbsp;&lt;span id="pitch_0_container"&gt;???&lt;/span&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;!-- Track 1 --&gt;
+    &lt;div&gt;
+        &lt;h3&gt;TRACK_1&lt;/h3&gt;
+        &lt;p&gt;Select Beat Duration:&nbsp;&lt;span id="duration_1_container"&gt;???&lt;/span&gt;&lt;/p&gt;
+        &lt;p&gt;Select Beat Pitch:&nbsp;&lt;span id="pitch_1_container"&gt;???&lt;/span&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;!-- Track 2 --&gt;
+    &lt;div&gt;
+        &lt;h3&gt;TRACK_2&lt;/h3&gt;
+        &lt;p&gt;Select Beat Duration:&nbsp;&lt;span id="duration_2_container"&gt;???&lt;/span&gt;&lt;/p&gt;
+        &lt;p&gt;Select Beat Pitch:&nbsp;&lt;span id="pitch_2_container"&gt;???&lt;/span&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;!-- Buttons to start (or stop) playing the beats --&gt;
+    &lt;button id="start_button" onclick="startBeats()"&gt;START_BEATS&lt;/button&gt;
+    &lt;button id="stop_button" onclick="stopBeats()"&gt;STOP_BEATS&lt;/button&gt;
+    &lt;!-- CONSOLE --&gt;
+    &lt;div class="console" id="console"&gt;???&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<hr>
 
 <figure class="wp-block-image size-full"><img data-attachment-id="35074" data-permalink="https://karbytesforlifeblog.wordpress.com/beats_machine/beats_machine_html_screenshot/" data-orig-file="https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2024/09/beats_machine_html_screenshot.png" data-orig-size="1057,2298" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="beats_machine_html_screenshot" data-image-description="" data-image-caption="" data-medium-file="https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2024/09/beats_machine_html_screenshot.png?w=138" data-large-file="https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2024/09/beats_machine_html_screenshot.png?w=471" tabindex="0" role="button" width="1057" height="2298" src="https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2024/09/beats_machine_html_screenshot.png" alt="" class="wp-image-35074" /></figure>
 
@@ -90,6 +202,8 @@ td {
 <p><strong>JavaScript Code</strong></p>
 <hr />
 <p>The following JavaScript (<a style="background: #ff9000;color: #000000" href="https://en.wikipedia.org/wiki/JavaScript" target="_blank" rel="noopener">JS</a>) code defines the functions which control the behavior of the BEATS_MACHINE web page application. Copy the JS code from the source code file which is linked below into a text editor and save that file as <strong>beats_machine.js</strong>.</p>
+<p>The text in the preformatted text box below appears on this web page (while rendered correctly by the <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/HTML" target="_blank" rel="noopener">web browser</a>) to be identical to the content of the <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/JavaScript" target="_blank" rel="noopener">JavaScript</a> source code file whose <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/URL" target="_blank" rel="noopener">Uniform Resource Locator</a> is displayed in the green <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Hyperlink" target="_blank" rel="noopener">hyperlink</a> below.</p>
+<p><em>(Note that angle brackets which resemble <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/HTML" target="_blank" rel="noopener">HTML</a> tags (i.e. an &#8220;is less than&#8221; symbol (i.e. &#8216;&lt;&#8216;) followed by an &#8220;is greater than&#8221; symbol (i.e. &#8216;&gt;&#8217;) displayed in the aforementioned text box have been replaced (at the source code level of this web page) with Unicode symbols <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Less-than_sign" target="_blank" rel="noopener">U+003C</a> (which is rendered by the web browser as &#8216;&lt;&#8216;) and <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Greater-than_sign" target="_blank" rel="noopener">U+003E</a> (which is rendered by the web browser as &#8216;&gt;&#8217;). That is because the <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/WordPress.com" target="_blank" rel="noopener">WordPress</a> web page editor interprets a plain-text versions of an &#8220;is less than&#8221; symbol followed by an &#8220;is greater than&#8221; symbol as being an opening HTML tag (which means that the WordPress web page editor deletes the content between those (plain-text) inequality symbols)).</em></p>
 <p>JavaScript_file: <a style="background: #000000;color: #00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_20/main/beats_machine.js" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_20/main/beats_machine.js</a></p>
 <hr />
 <pre>/**
@@ -143,7 +257,7 @@ function startBeats() {
      * access to manage audio streams.
      */
     if (!audioContext) {
-	audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    audioContext = new (window.AudioContext || window.webkitAudioContext)();
     }
     // Begin playing all three tracks (for an indefinitely long period of time).
     startTrack(0);
@@ -208,15 +322,15 @@ function startTrack(trackNumber) {
      */
     function playBeat() {
         const oscillator = audioContext.createOscillator();
-	    const gainNode = audioContext.createGain();
-	    oscillator.frequency.value = beatPitch;
-	    oscillator.connect(gainNode);
-	    gainNode.connect(audioContext.destination);
-	    gainNode.gain.setValueAtTime(0, audioContext.currentTime);
-	    gainNode.gain.linearRampToValueAtTime(1, audioContext.currentTime + 0.01);
-	    gainNode.gain.linearRampToValueAtTime(0, audioContext.currentTime + beatDuration);
-	    oscillator.start(audioContext.currentTime);
-	    oscillator.stop(audioContext.currentTime + beatDuration);
+        const gainNode = audioContext.createGain();
+        oscillator.frequency.value = beatPitch;
+        oscillator.connect(gainNode);
+        gainNode.connect(audioContext.destination);
+        gainNode.gain.setValueAtTime(0, audioContext.currentTime);
+        gainNode.gain.linearRampToValueAtTime(1, audioContext.currentTime + 0.01);
+        gainNode.gain.linearRampToValueAtTime(0, audioContext.currentTime + beatDuration);
+        oscillator.start(audioContext.currentTime);
+        oscillator.stop(audioContext.currentTime + beatDuration);
     }
     // Set the interval to play the beat at the selected duration.
     const intervalId = setInterval(playBeat, beatDuration * 1000);
@@ -250,7 +364,7 @@ function generate_time_stamp() {
  * @return {String} a sequence of text characters which is used to instantiate a paragraph (P) web page element.
  */
 function generate_paragraph_html_element(inner_html) {
-    const opening_paragraph_tag = (''), closing_paragraph_tag = ('');
+    const opening_paragraph_tag = ('&lt;' + 'p' + '&gt;'), closing_paragraph_tag = ('&lt;' + '/' + 'p' + '&gt;');
     try {
         if (typeof inner_html.length !== "number") throw 'The expression (typeof inner_html.length !== "number") was evaluated to be true.';
         return opening_paragraph_tag + inner_html + closing_paragraph_tag;
@@ -293,17 +407,17 @@ function generate_pitch_menu_select_html_element(select_id) {
             (select_id !== "track_1_pitch") &amp;&amp;
             (select_id !== "track_2_pitch"))
         throw 'select_id must either be "track_0_pitch" or else "track_1_pitch" or "track_2_pitch".';
-        select_menu = ('');
+        select_menu = ('&lt;' + 'select id="' + select_id + '" style="text-align:left"' + '&gt;');
         for (i = 0; i &lt; 20; i += 1) {
-            if (i === 0) option = (('') + default_menu_option_label + (''));
+            if (i === 0) option = (('&lt;' + 'option value="0" selected' + '&gt;') + default_menu_option_label + ('&lt;' + '/' + '&gt;'));
             else {
-            	option = ('');
-            	option += (N + ' Hz' + (''));
-        	}
-        	select_menu += option;
-        	if (i &gt; 0) N += 45;
+                option = ('&lt;' + 'option value="' + N + '"' + '&gt;');
+                option += (N + ' Hz' + ('&lt;' + '/' + 'option' + '&gt;'));
+            }
+            select_menu += option;
+            if (i &gt; 0) N += 45;
         }
-        select_menu += ('');
+        select_menu += ('&lt;' + '/' + 'select' + '&gt;');
         return select_menu;
     }
     catch(exception) {
@@ -347,19 +461,19 @@ function generate_beat_duration_menu_select_html_element(select_id) {
             (select_id !== "track_1_duration") &amp;&amp;
             (select_id !== "track_2_duration"))
         throw 'select_id must either be "track_0_duration" or else "track_1_duration" or "track_2_duration".';
-        select_menu = ('');
+        select_menu = ('&lt;' + 'select id="' + select_id + '" style="text-align:left"' + '&gt;');
         for (i = 0; i &lt; 10; i += 1) {
-            if (i === 0) option = (('') + default_menu_option_label + (''));
+            if (i === 0) option = (('&lt;' + 'option value="' + menu_option_values[0] + '" selected' + '&gt;') + default_menu_option_label + ('&lt;' + '/' + '&gt;'));
             else {
-            	option = ('');
-            	option += menu_option_label_prefaces[i];
-            	if (i &gt; 4) option += (' seconds (' + menu_option_values[i] + ' seconds)');
-            	else option += (' second (' + menu_option_values[i] + ' second)');
-            	option += ('');
-        	}
-        	select_menu += option;
+                option = ('&lt;' + 'option value="' + menu_option_values[i] + '"' + '&gt;');
+                option += menu_option_label_prefaces[i];
+                if (i &gt; 4) option += (' seconds (' + menu_option_values[i] + ' seconds)');
+                else option += (' second (' + menu_option_values[i] + ' second)');
+                option += ('&lt;' + '/' + 'option' + '&gt;');
+            }
+            select_menu += option;
         }
-        select_menu += ('');
+        select_menu += ('&lt;' + '/' + 'select' + '&gt;');
         return select_menu;
     }
     catch(exception) {
@@ -372,12 +486,12 @@ function generate_beat_duration_menu_select_html_element(select_id) {
  * 
  * This function populates the six select menus on that web page with their respective menu options
  * (and those select menus have the HTML element identifiers (ids) are as follows:
- * 		"track_0_duration",
- * 		"track_0_pitch",
- * 		"track_1_duration",
- * 		"track_1_pitch",
- * 		"track_2_duration", and
- * 		"track_2_pitch").
+ *      "track_0_duration",
+ *      "track_0_pitch",
+ *      "track_1_duration",
+ *      "track_1_pitch",
+ *      "track_2_duration", and
+ *      "track_2_pitch").
  * 
  * This function also prints a time-stamped message indicating when the web page was last 
  * loaded by the web browser in a DIV element on that web page whose identifier is "console".
@@ -470,5 +584,5 @@ function initialize_application() {
 <p>The video file linked below shows karbytes using its finished BEATS_MACHINE application and provides some visual and auditory details about how that application works from the end user&#8217;s perspective.</p>
 <p>video_link: <a style="background: #000000;color: #ff9000" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_20/main/beats_machine_by_karbytes_use_case_10september2024.mp4" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_20/main/beats_machine_by_karbytes_use_case_10september2024.mp4</a></p>
 <hr>
-<p>This web page was last updated on 13_SEPTEMBER_2024. The content displayed on this web page is licensed as <a style="background:#000000;color:#ff9000" href="https://karlinaobject.wordpress.com/public_domain/" target="_blank" rel="noopener">PUBLIC_DOMAIN</a> intellectual property.</p>
-<hr>
+<p>This web page was last updated on 17_SEPTEMBER_2024. The content displayed on this web page is licensed as <a style="background:#000000;color:#ff9000" href="https://karlinaobject.wordpress.com/public_domain/" target="_blank" rel="noopener">PUBLIC_DOMAIN</a> intellectual property.</p>
+<hr>	
