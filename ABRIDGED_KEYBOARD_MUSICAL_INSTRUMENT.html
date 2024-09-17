@@ -13,11 +13,147 @@
 <p><strong>Hyper-Text-Markup-Language Code</strong></p>
 <hr />
 <p>The following Hyper-Text-Markup-Language (<a style="background: #ff9000;color: #000000" href="https://en.wikipedia.org/wiki/HTML" target="_blank" rel="noopener">HTML</a>) code defines the user interface component of the ABRIDGED_KEYBOARD_MUSICAL_INSTRUMENT web page application. Copy the HTML code from the source code file which is linked below into a text editor and save that file as <strong>abridged_keyboard_musical_instrument.html</strong>. Use a web browser such as <a style="background: #ff9000;color: #000000" href="https://en.wikipedia.org/wiki/Firefox" target="_blank" rel="noopener">Firefox</a> to open that HTML file (and ensure that the JavaScript and Cascading-Style-Sheet files are in the same file directory as the HTML file).</p>
-<p><em>Note that the contents of the HTML file are not displayed in a preformatted text box on this web page due to the fact that the WordPress server makes no distinction between HTML code which is encapsulated inside of a preformatted text box and WordPress web page source code.</em></p>
+<p><em><strike>Note that the contents of the HTML file are not displayed in a preformatted text box on this web page due to the fact that the WordPress server makes no distinction between HTML code which is encapsulated inside of a preformatted text box and WordPress web page source code.</strike> <span style="background:#00ffff">(The HTML code has been formatted to be properly displayed on this web page as of 17_SEPTEMBER. For details on how that was accomplished, visit the web page of this website named <a style="background:#000000;color:#ff9000" href="https://karbytesforlifeblog.wordpress.com/karbytes_17_september_2024/" target="_blank" rel="noopener">karbytes_17_september_2024</a>).</span></em></p>
 <p>Hyper-Text-Markup-Language_file: <a style="background: #000000;color: #00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_20/main/abridged_keyboard_musical_instrument.html" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_20/main/abridged_keyboard_musical_instrument.html</a></p>
 <p>image_link: <a style="background: #000000;color: #ff9000" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_20/main/abridged_keyboard_musical_instrument_html_screenshot.jpeg" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_20/main/abridged_keyboard_musical_instrument_html_screenshot.jpeg</a></p>
 <hr />
-
+<pre>
+&lt;!--
+/**
+ * file: abridged_keyboard_musical_instrument.html
+ * type: Hyper-Text-Markup-Language
+ * author: karbytes
+ * date: 13_SEPTEMBER_2024
+ * license: PUBLIC_DOMAIN
+ */
+ --&gt;
+&lt;!-- 
+/**
+ * Note that this application contains the word "ABRIDGED" in its title
+ * because the keyboard musical instrument which this application
+ * simulates is missing black keys (i.e. piano keys which correspond 
+ * with minor notes (as opposed to white keys which correspond with
+ * major notes)) and the full range of notes which "real" pianos
+ * typically include.
+ */
+--&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;ABRIDGED_KEYBOARD_MUSICAL_INSTRUMENT&lt;/title&gt;
+    &lt;!-- 
+    /**
+     * The linked Cascading-Style-Sheet file named karbytes_aesthetic.css 
+     * defines how this web page (which is named abridged_keyboard_musical_instrument.html) 
+     * appears when this web page is (re)loaded by the web browser. 
+     */
+   --&gt;
+   &lt;link rel="stylesheet" href="karbytes_aesthetic.css"&gt;
+   &lt;style&gt;
+      /** 
+       * Make the padding on the left and right side of each piece of text on this web page 
+       * equal in horizontal length within that piece of text's encompassing container element.
+       * 
+       * Make each container element on this web page have fifty pixels of padding on the top,
+       * bottom, left, and right side of that element.
+       */
+      body {
+          text-align: center;
+          padding: 50px;
+      }
+      /**
+       * Make more padding on the left side than on the right side of the text inside of the 
+       * DIV element whose class is "console" and give that DIV element a two-pixel border 
+       * which is colored green and which has slightly rounded corners.
+       * 
+       * Pad the top of that DIV element with five pixels of margin space.
+       * 
+       * Pad the text inside of that DIV element with ten pixels of space between the 
+       * text and the borders of that DIV element.
+       */
+      .console {
+          text-align: left;
+          border-color: #00ff00;
+          border-style: solid;
+          border-radius: 5px;
+          border-width: 2px;
+          margin-top: 5px;
+          padding: 10px;
+      }
+      /**
+       * Make the keyboard background dark gray with a two-pixel-thick GREEN border.
+       * 
+       * Make the keyboard have slightly rounded corners.
+       */
+      .keyboard {
+          background-color: #606060;
+          border-color: #00ff00;
+          border-style: solid;
+          border-radius: 5px;
+          border-width: 2px;
+          display: inline-block;
+          padding: 10px;
+      }
+      /**
+       * Make each keyboard key background light gray with a two-pixel-thick orange border.
+       * 
+       * Make the keyboard have slightly rounded corners.
+       * 
+       * Make the width of each keyboard key fifty pixels.
+       * 
+       * Make the height of each keyboard key two hundred pixels.
+       * 
+       * Create a gap of five pixels between adjacent keyboard keys.
+       * 
+       * Cause each adjacent keyboard key to be arranged horizontally rather than vertically
+       * (within the confines of the encompassing HTML container element 
+       * (which has a fixed width of 800 pixels)).
+       * 
+       * Make the text color of each keyboard key BLACK.
+       */
+      .key {
+          background-color: #b0b0b0;
+          border: 2px solid #ff9000;
+          border-radius: 5px;
+          width: 50px;
+          height: 200px;
+          margin: 5px;
+          display: inline-block;
+          color: #000000;
+      }
+      /** 
+       * Cause each keyboard key's background color to turn GREEN when it is pressed
+       * (i.e. when the key displayed on the web page's corresponding physical computer
+       * keyboard key (e.g. 'A') is pressed by the application user).
+       */
+      .key.pressed {
+          background-color: #00ff00;
+      }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body onload="initialize_application()"&gt;
+    &lt;h1&gt;ABRIDGED_KEYBOARD_MUSICAL_INSTRUMENT&lt;/h1&gt;
+    &lt;p&gt;Press keys on your computer's physical keyboard to play corresponding musical notes.&lt;/p&gt;
+    &lt;div class="keyboard" id="keyboard"&gt;
+        &lt;!-- Keys will be dynamically added here. --&gt;
+    &lt;/div&gt;
+    &lt;!-- CONSOLE (for recording event time stamps) --&gt;
+    &lt;div class="console" id="console"&gt;???&lt;/div&gt;
+    &lt;!-- 
+    /**
+     * The linked JavaScript file named abridged_keyboard_musical_instrument.js 
+     * defines how this web page (which is named abridged_keyboard_musical_instrument.html) 
+     * behaves when the user clicks on the menus and start and stop buttons 
+     * (and when this web page is (re)loaded by the web browser). 
+     */
+    --&gt;
+    <a href="http://abridged_keyboard_musical_instrument.js">http://abridged_keyboard_musical_instrument.js</a>
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<hr>
 
 <figure class="wp-block-image size-full"><img data-attachment-id="35136" data-permalink="https://karbytesforlifeblog.wordpress.com/abridged_keyboard_musical_instrument/abridged_keyboard_musical_instrument_html_screenshot/" data-orig-file="https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2024/09/abridged_keyboard_musical_instrument_html_screenshot.jpeg" data-orig-size="979,3470" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="abridged_keyboard_musical_instrument_html_screenshot" data-image-description="" data-image-caption="" data-medium-file="https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2024/09/abridged_keyboard_musical_instrument_html_screenshot.jpeg?w=85" data-large-file="https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2024/09/abridged_keyboard_musical_instrument_html_screenshot.jpeg?w=289" tabindex="0" role="button" width="979" height="3470" src="https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2024/09/abridged_keyboard_musical_instrument_html_screenshot.jpeg" alt="" class="wp-image-35136" /></figure>
 
@@ -90,6 +226,8 @@ td {
 <p><strong>JavaScript Code</strong></p>
 <hr />
 <p>The following JavaScript (<a style="background: #ff9000;color: #000000" href="https://en.wikipedia.org/wiki/JavaScript" target="_blank" rel="noopener">JS</a>) code defines the functions which control the behavior of the ABRIDGED_KEYBOARD_MUSICAL_INSTRUMENT web page application. Copy the JS code from the source code file which is linked below into a text editor and save that file as <strong>abridged_keyboard_musical_instrument.js</strong>.</p>
+<p>The text in the preformatted text box below appears on this web page (while rendered correctly by the <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/HTML" target="_blank" rel="noopener">web browser</a>) to be identical to the content of the <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/JavaScript" target="_blank" rel="noopener">JavaScript</a> source code file whose <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/URL" target="_blank" rel="noopener">Uniform Resource Locator</a> is displayed in the green <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Hyperlink" target="_blank" rel="noopener">hyperlink</a> below.</p>
+<p><em>(Note that angle brackets which resemble <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/HTML" target="_blank" rel="noopener">HTML</a> tags (i.e. an &#8220;is less than&#8221; symbol (i.e. &#8216;&lt;&#8216;) followed by an &#8220;is greater than&#8221; symbol (i.e. &#8216;&gt;&#8217;) displayed in the aforementioned text box have been replaced (at the source code level of this web page) with Unicode symbols <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Less-than_sign" target="_blank" rel="noopener">U+003C</a> (which is rendered by the web browser as &#8216;&lt;&#8216;) and <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Greater-than_sign" target="_blank" rel="noopener">U+003E</a> (which is rendered by the web browser as &#8216;&gt;&#8217;). That is because the <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/WordPress.com" target="_blank" rel="noopener">WordPress</a> web page editor interprets a plain-text versions of an &#8220;is less than&#8221; symbol followed by an &#8220;is greater than&#8221; symbol as being an opening HTML tag (which means that the WordPress web page editor deletes the content between those (plain-text) inequality symbols)).</em></p>
 <p>JavaScript_file: <a style="background: #000000;color: #00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_20/main/abridged_keyboard_musical_instrument.js" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_20/main/abridged_keyboard_musical_instrument.js</a></p>
 <hr />
 <pre>
@@ -170,7 +308,7 @@ function generate_time_stamp() {
  * @return {String} a sequence of text characters which is used to instantiate a paragraph (P) web page element.
  */
 function generate_paragraph_html_element(inner_html) {
-    const opening_paragraph_tag = (''), closing_paragraph_tag = ('');
+    const opening_paragraph_tag = ('&lt;' + 'p' + '&gt;'), closing_paragraph_tag = ('&lt;' + '/' + 'p' + '&gt;');
     try {
         if (typeof inner_html.length !== "number") throw 'The expression (typeof inner_html.length !== "number") was evaluated to be true.';
         return opening_paragraph_tag + inner_html + closing_paragraph_tag;
@@ -352,5 +490,5 @@ document.addEventListener('keyup', (event) =&gt; {
 <p>The video file linked below shows karbytes using its finished ABRIDGED_KEYBOARD_MUSICAL_INSTRUMENT application and provides some visual and auditory details about how that application works from the end user&#8217;s perspective.</p>
 <p>video_link: <a style="background: #000000;color: #ff9000" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_20/main/abridged_keyboard_by_karbytes_use_case_13sep2024.mp4" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_20/main/abridged_keyboard_by_karbytes_use_case_13sep2024.mp4</a></p>
 <hr>
-<p>This web page was last updated on 13_SEPTEMBER_2024. The content displayed on this web page is licensed as <a style="background:#000000;color:#ff9000" href="https://karlinaobject.wordpress.com/public_domain/" target="_blank" rel="noopener">PUBLIC_DOMAIN</a> intellectual property.</p>
-<hr>
+<p>This web page was last updated on 17_SEPTEMBER_2024. The content displayed on this web page is licensed as <a style="background:#000000;color:#ff9000" href="https://karlinaobject.wordpress.com/public_domain/" target="_blank" rel="noopener">PUBLIC_DOMAIN</a> intellectual property.</p>
+<hr>	
