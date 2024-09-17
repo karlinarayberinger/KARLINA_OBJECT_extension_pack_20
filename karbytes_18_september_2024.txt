@@ -1,0 +1,65 @@
+/**
+ * file: karbytes_18_september_2024.txt
+ * type: plain-text
+ * date: 18_SEPTEMBER_2024
+ * author: karbytes
+ * license: PUBLIC_DOMAIN
+ */
+
+The following conversation transcript (beneath the horizontal line of three asterisks) is a slightly modified version of the text which was copy-pasted from the web page interface featuring karbytes’ conversing with ChatGPT-4o at approximately 1:30PM Pacific Standard Time on 17_SEPTEMBER_2024 for the purpose of determining whether or not karbytes’ WordPress.com websites (e.g. Karlina Object dot WordPress dot Com and Karbytes For Life Blog dot WordPress dot Com) would continue to be hosted by WordPress.com if karbytes’ paid WordPress.com account “depreciates” to an unpaid (i.e. free) WordPress.com account. karbytes is moderately concerned that karbytes may die, become incapacitated (e.g. comatose), imprisoned, or held hostage at some point in the future and that karbytes’ aforementioned websites would no longer be associated with a paid WordPress.com account after the payment period for that account expires. karbytes wants to ensure that those websites remain on the (surface) World Wide Web for as long as possible (even if that means karbytes is no longer available to make updates to those websites).
+
+For more information on what karbytes’ content management policies are with regards to those aforementioned websites (including the policy of karbytes not authorizing any agent other than karbytes to make changes to those websites’ constituent source code and media files), see the web page of this website named KARBYTES_CODE_CONTINUES.
+
+* * *
+
+karbytes:
+
+Is it possible to pay for additional storage space for a WordPress dot Com website such as Karbytes For Life Blog dot WordPress dot Com (and is that payment for additional space a recurring fee or a one-time fee)?
+
+ChatGPT:
+
+Yes, it is possible to pay for additional storage space on a WordPress.com website such as Karbytes For Life Blog. WordPress.com offers different plans that provide varying levels of storage beyond the free tier.
+
+Here are the main options:
+
+1. WordPress.com Free Plan: Comes with 1 GB of storage.
+
+2. WordPress.com Personal, Premium, Business, or eCommerce Plans: These paid plans offer additional storage, ranging from 6 GB to unlimited depending on the plan.
+
+The payment for these plans is usually a recurring fee, which is charged either annually or monthly, depending on how you choose to subscribe. There isn’t a one-time fee option just to add extra storage without upgrading to one of the plans.
+
+For more specific details about your blog’s current plan and how to upgrade, you’d want to check the settings or pricing page on WordPress.com.
+
+karbytes:
+
+Suppose I upgrade from a free WordPress.com account to a Personal WordPress.com account and create a website whose domain name ends with “wordpress.com” with that Personal WordPress.com account. Suppose I add approximately 5GB of data to that website. Then suppose, after a year, I stop paying for the Personal plan. Will my 5GB of data or website disappear?
+
+ChatGPT:
+
+If you upgrade from a free WordPress.com account to a Personal plan and add 5 GB of data, but later stop paying for the plan and revert back to the free plan, here’s what happens:
+
+1. Storage Limit: The free plan has a storage limit of 1 GB. If your site contains 5 GB of data and you stop paying for the Personal plan (which offers 6 GB of storage), you will exceed the free plan’s storage limit.
+
+2. Access to Data: Your content will not immediately disappear. However, WordPress.com will restrict your ability to add new content or files to the site until your total storage usage falls back under the free plan’s 1 GB limit.
+
+3. Potential Restrictions: Your site will remain publicly accessible, but you may face restrictions or limitations, such as not being able to upload more files, add media, or even edit some content until you’re back within the free plan’s limits.
+
+4. Domain and Features: If you were using any premium features (such as a custom domain), those will no longer be available, and your site would revert back to a domain ending in “wordpress.com.”
+
+To avoid issues, you would need to either remove enough content to get under the 1 GB limit or resubscribe to a paid plan that accommodates your storage needs.
+
+karbytes:
+
+Are you suggesting that, if I make no further updates to that website which contains 5GB of cloud-hosted content files hosted on WordPress dot Com and stop paying for the non-free WordPress service, my website will be fully in-tact (for archival purposes)?
+
+ChatGPT:
+
+Yes, that’s correct! If you stop paying for the non-free WordPress.com plan (like the Personal plan), your website and its content will remain intact and publicly accessible. However, there are important considerations:
+
+1. Content Retention: The content you’ve already uploaded, including the 5 GB of files, won’t disappear. WordPress.com does not delete your existing content when you downgrade to the free plan.
+
+2. No New Uploads: Since the free plan has a 1 GB storage limit, you will not be able to upload any new files until your total storage usage is back under 1 GB. But the website as it exists, including your 5 GB of data, will still be viewable to others.
+
+3. Feature Downgrade: Some features exclusive to the Personal plan, like a custom domain or certain design and plugin features, would be lost, and the site would revert to its original free plan features (including a domain ending in “wordpress.com”).
+
+For archival purposes, your existing website should remain fully intact and accessible to visitors, even though you won’t be able to add more content or make major updates unless you free up storage space or re-upgrade your plan. 
