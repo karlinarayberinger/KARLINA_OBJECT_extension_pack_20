@@ -38,9 +38,150 @@
 <p><strong>Hyper-Text-Markup-Language Code</strong></p>
 <hr>
 <p>The following Hyper-Text-Markup-Language (<a style="background: #ff9000;color: #000000" href="https://en.wikipedia.org/wiki/HTML" target="_blank" rel="noopener">HTML</a>) code defines the user interface component of the BINARY_TO_DECIMAL web page application. Copy the HTML code from the source code file which is linked below into a text editor and save that file as <strong>binary_to_decimal.html</strong>. Use a web browser such as <a style="background: #ff9000;color: #000000" href="https://en.wikipedia.org/wiki/Firefox" target="_blank" rel="noopener">Firefox</a> to open that HTML file (and ensure that the JavaScript and Cascading-Style-Sheet files are in the same file directory as the HTML file).</p>
-<p><em>Note that the contents of the HTML file are not displayed in a preformatted text box on this web page due to the fact that the WordPress server makes no distinction between HTML code which is encapsulated inside of a preformatted text box and WordPress web page source code.</em></p>
+<p><em><strike>Note that the contents of the HTML file are not displayed in a preformatted text box on this web page due to the fact that the WordPress server makes no distinction between HTML code which is encapsulated inside of a preformatted text box and WordPress web page source code.</strike> <span style="background:#00ffff">(The HTML code has been formatted to be properly displayed on this web page as of 17_SEPTEMBER. For details on how that was accomplished, visit the web page of karbytes&#8217; blogging website named <a style="background:#000000;color:#ff9000" href="https://karbytesforlifeblog.wordpress.com/karbytes_17_september_2024/" target="_blank" rel="noopener">karbytes_17_september_2024</a>).</span></em></p>
 <p>Hyper-Text-Markup-Language_file: <a style="background: #000000;color: #00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/binary_to_decimal.html" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/binary_to_decimal.html</a></p>
 <p>image_link: <a style="background: #000000;color: #ff9000" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/binary_to_decimal_html_code_screenshot.png" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/binary_to_decimal_html_code_screenshot.png</a></p>
+<hr>
+<pre>
+&lt;!--
+/**
+ * file: binary_to_decimal.html
+ * type: Hyper-Text-Markup-Language
+ * date: 10_JULY_2023
+ * author: karbytes
+ * license: PUBLIC_DOMAIN
+ */
+--&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;BINARY_TO_DECIMAL&lt;/title&gt;
+    &lt;link rel="stylesheet" href="karbytes_aesthetic.css"&gt;
+    &lt;script s&#8203;rc&#x3D;"binary_to_decimal.js"&gt;&lt;/script&gt;
+    &lt;style&gt;
+        .highlight {
+            background: #ffff00;
+            color: #000000;
+        }
+        div {
+            padding-bottom: 10px;
+        }
+        hr {
+            border: 3px solid #00ff00;
+            border-radius: 5px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body onload="initialize_application()"&gt;
+    &lt;h1&gt;BINARY_TO_DECIMAL&lt;/h1&gt;
+    &lt;p class="highlight"&gt;
+        This single page web application allows the user to click switches which each
+        flip a single uniquely corresponding light bulb from "OFF" to "ON" and vice versa and, also,
+        to click a BINARY_TO_DECIMAL button which computes the binary number represented
+        by the light bulb array configuration at the time that button is clicked. Algebraic equations 
+        which are used to convert the base-two integer value represented by the sequence of eight light bulbs
+        to that base-two integer's base-ten equivalent value are displayed at the bottom of this web page.
+        (Clicking the RESET button will return this web page to its initial state such that each one of
+        the eight light bulbs is set to "OFF" and all buttons on this web page are set to visible).
+    &lt;/p&gt;
+    &lt;p&gt;
+        The binary integer value &lt;span class="highlight"&gt;0&lt;/span&gt; is an abstract representation of 
+        the relatively physical "OFF" (insufficiently high voltage) light bulb state.
+    &lt;/p&gt;
+    &lt;p&gt;
+        The binary integer value &lt;span class="highlight"&gt;1&lt;/span&gt; is an abstract representation of 
+        the relatively physical "ON" (sufficiently high voltage) light bulb state.
+    &lt;/p&gt;
+    &lt;hr&gt;
+    &lt;p&gt;Each one of the eight light bulbs displayed in the table below represents a particular power of two.&lt;/p&gt;
+    &lt;p&gt;(N in the table below represents a nonnegative integer value no larger than seven).
+    &lt;p&gt;While light_bulb_N is in its "ON" state, light_bulb_N represents two multiplied by itself N times.&lt;/p&gt;
+    &lt;p&gt;While light_bulb_N is in its "OFF" state, light_bulb_N represents zero.&lt;/p&gt;
+    &lt;hr&gt;
+    &lt;p&gt;
+        The nonnegative decimal integer value which the sequence of eight light bulbs represents is computed by 
+        adding up the nonnegative decimal integer values which each of those eight light bulbs represents.
+    &lt;/p&gt;
+    &lt;hr&gt;
+    &lt;p&gt;The largest decimal integer value which the sequence of eight light bulbs can represent is 255.&lt;/p&gt;
+    &lt;p&gt;The smallest decimal integer value which the sequence of eight light bulbs can represents is 0.&lt;/p&gt;
+    &lt;p&gt;The total number of unique states which the sequence of eight light bulbs can represent is 256.&lt;/p&gt;
+    &lt;hr&gt;
+    &lt;p&gt;The largest binary integer value which any one of the eight light bulbs can represent is &lt;span class="highlight"&gt;1&lt;/span&gt;.&lt;/p&gt;
+    &lt;p&gt;The smallest binary integer value which any one of the eight light bulbs can represent is &lt;span class="highlight"&gt;0&lt;/span&gt;.&lt;/p&gt;
+    &lt;p&gt;The total number of unqiue states which any one of the eight light bulbs can represent is 2.&lt;/p&gt;
+    &lt;hr&gt;
+    &lt;p&gt;The rightmost light bulb has an N value of 0.&lt;/p&gt;
+    &lt;p&gt;The rightmost light bulb represents the "lowest order bit" in the byte which the sequence of eight light bulb represents.&lt;/p&gt;
+    &lt;p class="console"&gt;lowest_order_bit(&lt;span class="highlight"&gt;ON&lt;/span&gt;) = &lt;span class="highlight"&gt;1&lt;/span&gt; * (2 ^ 0) = 1 * 1 = 1.&lt;/p&gt;
+    &lt;p class="console"&gt;lowest_order_bit(&lt;span class="highlight"&gt;OFF&lt;/span&gt;) = &lt;span class="highlight"&gt;0&lt;/span&gt; * (2 ^ 0) = 0 * 1 = 0.&lt;/p&gt;
+    &lt;hr&gt;
+    &lt;p&gt;The leftmost light bulb has an N value of 7.&lt;/p&gt;
+    &lt;p&gt;The leftmost light bulb represents the "highest order bit" in the byte which the sequence of eight light bulb represents.&lt;/p&gt;
+    &lt;p class="console"&gt;
+        highest_order_bit(&lt;span class="highlight"&gt;ON&lt;/span&gt;) = &lt;span class="highlight"&gt;1&lt;/span&gt; * (2 ^ 7) = 1 * 2 * 2 * 2 * 2 * 2 * 2 * 2 = 128.
+    &lt;/p&gt;
+    &lt;p class="console"&gt;
+        highest_order_bit(&lt;span class="highlight"&gt;OFF&lt;/span&gt;) = &lt;span class="highlight"&gt;0&lt;/span&gt; * (2 ^ 7) = 0 * 2 * 2 * 2 * 2 * 2 * 2 * 2 = 0.
+    &lt;/p&gt;
+    &lt;div&gt;
+        &lt;table style="text-align: center"&gt;
+            &lt;tr&gt;
+                &lt;td&gt;N&lt;/td&gt;
+                &lt;td&gt;7&lt;/td&gt;
+                &lt;td&gt;6&lt;/td&gt;
+                &lt;td&gt;5&lt;/td&gt;
+                &lt;td&gt;4&lt;/td&gt;
+                &lt;td&gt;3&lt;/td&gt;
+                &lt;td&gt;2&lt;/td&gt;
+                &lt;td&gt;1&lt;/td&gt;
+                &lt;td&gt;0&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;light_bulb_N&lt;/td&gt;
+                &lt;td id="light_bulb_7"&gt;&lt;img s&#8203;rc&#x3D;"light_bulb_off.png" width="60"&gt;&lt;/td&gt;
+                &lt;td id="light_bulb_6"&gt;&lt;img s&#8203;rc&#x3D;"light_bulb_off.png" width="60"&gt;&lt;/td&gt;
+                &lt;td id="light_bulb_5"&gt;&lt;img s&#8203;rc&#x3D;"light_bulb_off.png" width="60"&gt;&lt;/td&gt;
+                &lt;td id="light_bulb_4"&gt;&lt;img s&#8203;rc&#x3D;"light_bulb_off.png" width="60"&gt;&lt;/td&gt;
+                &lt;td id="light_bulb_3"&gt;&lt;img s&#8203;rc&#x3D;"light_bulb_off.png" width="60"&gt;&lt;/td&gt;
+                &lt;td id="light_bulb_2"&gt;&lt;img s&#8203;rc&#x3D;"light_bulb_off.png" width="60"&gt;&lt;/td&gt;
+                &lt;td id="light_bulb_1"&gt;&lt;img s&#8203;rc&#x3D;"light_bulb_off.png" width="60"&gt;&lt;/td&gt;
+                &lt;td id="light_bulb_0"&gt;&lt;img s&#8203;rc&#x3D;"light_bulb_off.png" width="60"&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;bit_N&lt;/td&gt;
+                &lt;td id="bit_7" class="console"&gt;0&lt;/td&gt;
+                &lt;td id="bit_6" class="console"&gt;0&lt;/td&gt;
+                &lt;td id="bit_5" class="console"&gt;0&lt;/td&gt;
+                &lt;td id="bit_4" class="console"&gt;0&lt;/td&gt;
+                &lt;td id="bit_3" class="console"&gt;0&lt;/td&gt;
+                &lt;td id="bit_2" class="console"&gt;0&lt;/td&gt;
+                &lt;td id="bit_1" class="console"&gt;0&lt;/td&gt;
+                &lt;td id="bit_0" class="console"&gt;0&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;switch_N&lt;/td&gt;
+                &lt;td&gt;&lt;input type="button" id="switch_7" value="SWITCH" onclick="switch_7()"&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;input type="button" id="switch_6" value="SWITCH" onclick="switch_6()"&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;input type="button" id="switch_5" value="SWITCH" onclick="switch_5()"&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;input type="button" id="switch_4" value="SWITCH" onclick="switch_4()"&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;input type="button" id="switch_3" value="SWITCH" onclick="switch_3()"&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;input type="button" id="switch_2" value="SWITCH" onclick="switch_2()"&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;input type="button" id="switch_1" value="SWITCH" onclick="switch_1()"&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;input type="button" id="switch_0" value="SWITCH" onclick="switch_0()"&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;input type="button" id="binary_to_decimal_button" value="BINARY_TO_DECIMAL" onclick="binary_to_decimal()"&gt;
+        &nbsp;
+        &lt;input type="button" id="reset_button" value="RESET" onclick="initialize_application()"&gt;
+    &lt;/div&gt;
+    &lt;div id="output"&gt;&lt;p&gt;???&lt;/p&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
 <hr>
 
 
