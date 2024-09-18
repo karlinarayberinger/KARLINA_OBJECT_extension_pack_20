@@ -19,9 +19,82 @@
 <p><strong>Hyper-Text-Markup-Language Code</strong></p>
 <hr>
 <p>The following Hyper-Text-Markup-Language (<a style="background: #ff9000;color: #000000" href="https://en.wikipedia.org/wiki/HTML" target="_blank" rel="noopener">HTML</a>) code defines the user interface component of the COUNT_DOWN_TIMER web page application. Copy the HTML code from the source code file which is linked below into a text editor and save that file as <strong>count_down_timer.html</strong>. Use a web browser such as <a style="background: #ff9000;color: #000000" href="https://en.wikipedia.org/wiki/Firefox" target="_blank" rel="noopener">Firefox</a> to open that HTML file (and ensure that the JavaScript and Cascading-Style-Sheet files are in the same file directory as the HTML file).</p>
-<p><em>Note that the contents of the HTML file are not displayed in a preformatted text box on this web page due to the fact that the WordPress server makes no distinction between HTML code which is encapsulated inside of a preformatted text box and WordPress web page source code.</em></p>
+<p><em><strike>Note that the contents of the HTML file are not displayed in a preformatted text box on this web page due to the fact that the WordPress server makes no distinction between HTML code which is encapsulated inside of a preformatted text box and WordPress web page source code.</strike> <span style="background:#00ffff">(The HTML code has been formatted to be properly displayed on this web page as of 17_SEPTEMBER. For details on how that was accomplished, visit the web page of karbytes&#8217; blogging website named <a style="background:#000000;color:#ff9000" href="https://karbytesforlifeblog.wordpress.com/karbytes_17_september_2024/" target="_blank" rel="noopener">karbytes_17_september_2024</a>).</span></em></p>
 <p>Hyper-Text-Markup-Language_file: <a style="background: #000000;color: #00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/count_down_timer.html" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/count_down_timer.html</a></p>
 <p>Portable-Network-Graphics_image_link: <a style="background: #000000;color: #ff9000" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/count_down_timer_html_code_screenshot.png" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/count_down_timer_html_code_screenshot.png</a></p>
+<hr>
+<pre>
+&lt;!--
+/**
+ * file: count_down_timer.html
+ * type: Hyper-Text-Markup-Language
+ * author: karbytes
+ * date: 10_JULY_2023
+ * license: PUBLIC_DOMAIN
+ */
+ --&gt;
+ &lt;!DOCTYPE html&gt;
+ &lt;html&gt;
+ &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;COUNT_DOWN_TIMER&lt;/title&gt;
+    &lt;link rel="stylesheet" href="karbytes_aesthetic.css"&gt;
+    &lt;script s&#8203;rc&#x3D;"count_down_timer.js"&gt;&lt;/script&gt;
+    &lt;script s&#8203;rc&#x3D;"time_stamp.js"&gt;&lt;/script&gt;
+    &lt;style&gt;
+        /** 
+         * Set DIV borders to have a thickness of 2 pixel thick and to be solid colored CYAN. 
+         * Set DIV content to have 10 pixels of padding on each one of the four sides. 
+         * Set DIV elements to have 10 pixels of padding on the bottom side.
+         */
+        div {
+            border-color: #00ffff;
+            border-width: 2px;
+            border-style: solid;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body onload="initialize_application()"&gt;
+    &lt;!-- Display instructions for how to use the application. --&gt;
+    &lt;div&gt;
+        &lt;h1&gt;COUNT_DOWN_TIMER&lt;/h1&gt;
+        &lt;p&gt;&lt;em&gt;“Time is what makes the observation of change possible.”&lt;/em&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;em&gt;“Time is what prevents all phenomena from being perceived as occurring simultaneously.”&lt;/em&gt;&lt;/p&gt;
+        &lt;p&gt;Instantiate a time interval which is N seconds in length.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;!-- Display an expandable SELECT menu of timer interval lengths. --&gt;
+    &lt;div&gt;
+        &lt;p&gt;STEP_0: Select a natural number of seconds, N, from the menu.&lt;/p&gt;
+        &lt;p&gt;N :=
+            &lt;select id="nonnegative_integer_interval_selector"&gt;
+                &lt;option value="30" selected&gt;30 seconds&lt;/option&gt;
+                &lt;option value="60"&gt;60 seconds (i.e. 1 minute)&lt;/option&gt;
+                &lt;option value="120"&gt;120 seconds (i.e. 2 minutes)&lt;/option&gt;
+                &lt;option value="240"&gt;240 seconds (i.e. 4 minutes)&lt;/option&gt;
+                &lt;option value="480"&gt;480 seconds (i.e. 8 minutes)&lt;/option&gt;
+                &lt;option value="960"&gt;960 seconds (i.e. 16 minutes)&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/p&gt;
+        &lt;p&gt;(Click the menu to view hidden options).&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;!-- Display a button which starts the timer session of N seconds. --&gt;
+    &lt;div&gt;
+        &lt;p&gt;STEP_1: Click the button to start counting down from N to 0 seconds.&lt;/p&gt;
+        &lt;p&gt;&lt;input id="timer_start_button" type="button" value="start()" onclick="start()"&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;!-- Display the integer number of seconds remaining for the "in progress" timer session. --&gt;
+    &lt;div class="console" id="seconds_elapsed_display"&gt;
+        &lt;p&gt;???&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;!-- Display time-stamped messages denoting specific events while using the web page application. --&gt;
+    &lt;div class="console" id="application_status_messages_display"&gt;
+        &lt;p&gt;???&lt;/p&gt;
+    &lt;/div&gt;
+ &lt;/body&gt;
+ &lt;/html&gt;
+</pre>
 <hr>
 
 
@@ -364,4 +437,4 @@ function generate_time_stamp() {
 
 <hr>
 <p>This web page was last updated on 17_SEPTEMBER_2024. The content displayed on this web page is licensed as <a style="background:#000000;color:#ff9000" href="https://karlinaobject.wordpress.com/public_domain/" target="_blank" rel="noopener">PUBLIC_DOMAIN</a> intellectual property.</p>
-<hr>	
+<hr>
