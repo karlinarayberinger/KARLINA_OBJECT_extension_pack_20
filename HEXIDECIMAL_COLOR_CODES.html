@@ -23,9 +23,65 @@
 <p><strong>Hyper-Text-Markup-Language Code</strong></p>
 <hr>
 <p>The following Hyper-Text-Markup-Language (<a style="background: #ff9000;color: #000000" href="https://en.wikipedia.org/wiki/HTML" target="_blank" rel="noopener">HTML</a>) code defines the user interface component of the HEXIDECIMAL_COLOR_CODES web page application. Copy the HTML code from the source code file which is linked below into a text editor and save that file as <strong>hexidecimal_color_codes.html</strong>. Use a web browser such as <a style="background: #ff9000;color: #000000" href="https://en.wikipedia.org/wiki/Firefox" target="_blank" rel="noopener">Firefox</a> to open that HTML file (and ensure that the JavaScript and Cascading-Style-Sheet files are in the same file directory as the HTML file).</p>
-<p><em>Note that the contents of the HTML file are not displayed in a preformatted text box on this web page due to the fact that the WordPress server makes no distinction between HTML code which is encapsulated inside of a preformatted text box and WordPress web page source code.</em></p>
+<p><em><strike>Note that the contents of the HTML file are not displayed in a preformatted text box on this web page due to the fact that the WordPress server makes no distinction between HTML code which is encapsulated inside of a preformatted text box and WordPress web page source code.</strike> <span style="background:#00ffff">(The HTML code has been formatted to be properly displayed on this web page as of 17_SEPTEMBER. For details on how that was accomplished, visit the web page of karbytes&#8217; blogging website named <a style="background:#000000;color:#ff9000" href="https://karbytesforlifeblog.wordpress.com/karbytes_17_september_2024/" target="_blank" rel="noopener">karbytes_17_september_2024</a>).</span></em></p>
 <p>Hyper-Text-Markup-Language_file: <a style="background: #000000;color: #00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/hexidecimal_color_codes.html" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_packk/main/hexidecimal_color_codes.html</a></p>
 <p>image_link: <a style="background: #000000;color: #ff9000" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/hexidecimal_color_codes_html_code_screenshot.png" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/hexidecimal_color_codes_html_code_screenshot.png</a></p>
+<hr>
+<pre>
+&lt;!--
+/**
+ * file: hexidecimal_color_codes.html
+ * type: Hyper-Text-Markup-Language
+ * date: 10_JULY_2023
+ * author: karbytes
+ * license: PUBLIC_DOMAIN
+ */
+--&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;HEXIDECIMAL_COLOR_CODES&lt;/title&gt;
+    &lt;link rel="stylesheet" href="karbytes_aesthetic.css"&gt;
+    &lt;script s&#8203;rc&#x3D;"hexidecimal_color_codes.js"&gt;&lt;/script&gt;
+    &lt;script s&#8203;rc&#x3D;"time_stamp.js"&gt;&lt;/script&gt;
+    &lt;style&gt;
+        .green_input_element {
+            background: #000000;
+            color: #00ff00;
+            border-color: #00ff00;
+        }
+        .green_input_element:hover {
+            background: #00ff00;
+            color: #000000;
+        }
+        .tile_text {
+            background: #000000;
+            color: #00ffff;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body onload="initialize_application()"&gt;
+    &lt;h1&gt;HEXIDECIMAL_COLOR_CODES&lt;/h1&gt;
+    &lt;p&gt;1) Select a color skew from the expandable menu.&lt;/p&gt;
+    &lt;p class="console"&gt;COLOR_SKEW := 
+        &lt;select class="green_input_element" id="color_skew_menu"&gt;
+            &lt;option value="none" selected&gt;NONE&lt;/option&gt;
+            &lt;option value="red"&gt;RED&lt;/option&gt;
+            &lt;option value="green"&gt;GREEN&lt;/option&gt;
+            &lt;option value="blue"&gt;BLUE&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+        2) Click the GENERATE button to generate a grid comprised of 3 rows and 3 columns 
+        of randomly colored tiles according to the selected color skew.
+    &lt;/p&gt;
+    &lt;p&gt;&lt;input class="green_input_element" type="button" value="GENERATE" onclick="generate_color_grid()"&gt;&lt;/p&gt;
+    &lt;div id="output"&gt;&lt;p&gt;???&lt;/p&gt;&lt;/div&gt;
+    &lt;div id="time_stamped_events" class="console"&gt;&lt;p&gt;???&lt;/p&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
 <hr>
 
 
@@ -543,4 +599,4 @@ function generate_time_stamp() {
 
 <hr>
 <p>This web page was last updated on 17_SEPTEMBER_2024. The content displayed on this web page is licensed as <a style="background:#000000;color:#ff9000" href="https://karlinaobject.wordpress.com/public_domain/" target="_blank" rel="noopener">PUBLIC_DOMAIN</a> intellectual property.</p>
-<hr>	
+<hr>
