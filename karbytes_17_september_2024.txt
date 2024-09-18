@@ -66,4 +66,18 @@ ChatGPT:
 
 You’re very welcome! I’m really glad I could save you time and help streamline your work. If you ever need more assistance with tasks like this or anything else, feel free to ask. I’m here to make things easier for you! 😊
 
-[unicode_character(😊).identifier = U+1F60A] 
+[unicode_character(😊).identifier = U+1F60A]
+
+* * *
+
+On 17_SEPTEMBER_2024 at approximately 6:30PM Pacific Standard Time, karbytes noticed that karbytes had been overlooking an “error” which happened after karbytes copy-pasted text from ChatGPT-4o’s modified versions of code_text.txt into the WordPress web page source code editor (and that “error” was the WordPress editor converting the script tag linking to a program JavaScript file from the respective program HTML file with a hyperlink whose display and link text was “http​​​://[program_javascript_file].js”). karbytes and ChatGPT-4o were able to come up with a working solution to that “error” such that karbytes can now display the entire contents of an HTML file on a WordPress.com web page.
+
+The significant takeaway karbytes gleaned from the aforementioned conversation with ChatGPT-4o is learning that there exist zero-width space Unicode characters (e.g. &​#8203;) which can be inserted into web page source code in order to “break control” of processes which would otherwise render some text sequences as hyperlinks.
+
+The following hyperlinks lead to screenshot images of the aforementioned conversation with ChatGPT-4o which involves preventing the WordPress web page source code editor from converting script tags to hyperlinks.
+
+[https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_20/main/chatgpt4o_and_karbytes_conversation_screenshot_17september2024_p0.png]
+
+[https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_20/main/chatgpt4o_and_karbytes_conversation_screenshot_17september2024_p1.png]
+
+[https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_20/main/chatgpt4o_and_karbytes_conversation_screenshot_17september2024_p2.png] 
