@@ -1,7 +1,7 @@
  /**
  * file: karbytes_19_september_2024.txt
  * type: plain-text
- * date: 17_SEPTEMBER_2024
+ * date: 18_SEPTEMBER_2024
  * author: karbytes
  * license: PUBLIC_DOMAIN
  */
@@ -23,3 +23,7 @@ This is a good thing (in my opinion) because the global population already seems
 I personally appreciate that people can express themselves in ways which defy strict notions of what gender because what those people are doing is taking gender (and sexuality) outside the context of population survival and, instead, allowing it to be “just for fun” (which seems to align with what my personal ideals of a utopian society are: all people getting to do things because they want to instead of because they are forced to against their will (and some things I think humans were historically forced to do against their will was be drafted into combat roles or sexual/reproductive slavery roles)).
 
 Speaking of utopia, I was reading about an experiment conducted in the 1950s called “Utopia 25” which involved allowing a population of mice living in captivity to grow so large that the mice eventually stopped reproducing and started becoming cannibalistic. Homosexuality emerged in those mice seemingly as a mechanism for preventing the population from growing even larger than what was an optimal population size to enable the mice to harmoniously coexist. 
+
+* * *
+
+18_SEPTEMBER_2024: I posit that what mainly distinguishes a man from a women (culturally speaking) is that a man's sense of "purpose" centers on his intellectual, creative, athletic, or business-related ACHIEVEMENTS while a woman's sense of "purpose" centers on her interpersonal (especially familial) RELATIONSHIPS. I liken this to the analogy of a man being more like the independent variable (e.g. x) of a function (y = f(x) = (2 * x) - 3) and a woman being more like the dependent variable of that function (i.e. y). y changes in response to x but not vice versa. y needs x in order for y to have a sense of definition or meaning but x does not need y in order for x to have a sense of definition or meaning. What I mean to suggest is that a man has more of a sense of self-sufficiency and internal locus of self-control while a woman has more of a sense of being incomplete without other people more frequently telling her how to think and behave and such that her locus of self-control is external rather than internal. That makes man the initiator of social, economic, and intellectual activity while woman is merely a responder to such initiations; rendering her more of a sycophant and imitator than an autonomous agent which does not rely so much on external approval to act on its own behalf. 
