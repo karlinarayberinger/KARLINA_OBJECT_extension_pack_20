@@ -1,304 +1,317 @@
 <hr>
-<p><strong>TRIANGLE_GRAPHING JavaScript Code</strong></p>
+<p><strong>TRIANGLE</strong></p>
 <hr>
-<p>The following JavaScript (<a style="background: #ff9000;color: #000000" href="https://en.wikipedia.org/wiki/JavaScript" target="_blank" rel="noopener">JS</a>) code defines the functions which control the behavior of the TRIANGLE_GRAPHING web page application. Copy the JS code from the preformatted text box below or from the source code file which is linked below into a text editor and save that file as <strong>triangle_graphing.js</strong>.</p>
-<p>The text in the preformatted text box below appears on this web page (while rendered correctly by the <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/HTML" target="_blank" rel="noopener">web browser</a>) to be identical to the content of the <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/JavaScript" target="_blank" rel="noopener">JavaScript</a> source code file whose <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/URL" target="_blank" rel="noopener">Uniform Resource Locator</a> is displayed in the green <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Hyperlink" target="_blank" rel="noopener">hyperlink</a> below.</p>
-<p><em>(Note that angle brackets which resemble <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/HTML" target="_blank" rel="noopener">HTML</a> tags (i.e. an &#8220;is less than&#8221; symbol (i.e. &#8216;&lt;&#8216;) followed by an &#8220;is greater than&#8221; symbol (i.e. &#8216;&gt;&#8217;) displayed in the aforementioned text box have been replaced (at the source code level of this web page) with Unicode symbols <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Less-than_sign" target="_blank" rel="noopener">U+003C</a> (which is rendered by the web browser as &#8216;&lt;&#8216;) and <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Greater-than_sign" target="_blank" rel="noopener">U+003E</a> (which is rendered by the web browser as &#8216;&gt;&#8217;). That is because the <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/WordPress.com" target="_blank" rel="noopener">WordPress</a> web page editor interprets a plain-text versions of an &#8220;is less than&#8221; symbol followed by an &#8220;is greater than&#8221; symbol as being an opening HTML tag (which means that the WordPress web page editor deletes the content between those (plain-text) inequality symbols)).</em></p>
-<p>JavaScript_file: <a style="background: #000000;color: #00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_0/main/triangle_graphing.js" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_0/main/triangle_graphing.js</a></p>
+
+
+<figure class="wp-block-image size-full"><img data-attachment-id="21581" data-permalink="https://karlinaobject.wordpress.com/triangle/triangle_image-2/" data-orig-file="https://karlinaobject.wordpress.com/wp-content/uploads/2023/07/triangle_image.png" data-orig-size="960,720" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="triangle_image" data-image-description="" data-image-caption="" data-medium-file="https://karlinaobject.wordpress.com/wp-content/uploads/2023/07/triangle_image.png?w=300" data-large-file="https://karlinaobject.wordpress.com/wp-content/uploads/2023/07/triangle_image.png?w=960" tabindex="0" role="button" width="960" height="720" src="https://karlinaobject.wordpress.com/wp-content/uploads/2023/07/triangle_image.png" alt="" class="wp-image-21581" srcset="https://karlinaobject.wordpress.com/wp-content/uploads/2023/07/triangle_image.png 960w, https://karlinaobject.wordpress.com/wp-content/uploads/2023/07/triangle_image.png?w=150&amp;h=113 150w, https://karlinaobject.wordpress.com/wp-content/uploads/2023/07/triangle_image.png?w=300&amp;h=225 300w, https://karlinaobject.wordpress.com/wp-content/uploads/2023/07/triangle_image.png?w=768&amp;h=576 768w" sizes="(max-width: 960px) 100vw, 960px" /></figure>
+
+
 <hr>
-<pre>
-/**
- * file: triangle_graphing.js
- * type: JavaScript
+<p>image_link: <a style="background:#000000;color:#ff9000" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/triangle_image.png" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/triangle_image.png</a></p>
+<hr>
+
+
+<figure class="wp-block-image size-full"><img data-attachment-id="21565" data-permalink="https://karlinaobject.wordpress.com/point/points_on_cartesian_grid-2/" data-orig-file="https://karlinaobject.wordpress.com/wp-content/uploads/2023/07/points_on_cartesian_grid.png" data-orig-size="960,720" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="points_on_cartesian_grid" data-image-description="" data-image-caption="" data-medium-file="https://karlinaobject.wordpress.com/wp-content/uploads/2023/07/points_on_cartesian_grid.png?w=300" data-large-file="https://karlinaobject.wordpress.com/wp-content/uploads/2023/07/points_on_cartesian_grid.png?w=960" tabindex="0" role="button" width="960" height="720" src="https://karlinaobject.wordpress.com/wp-content/uploads/2023/07/points_on_cartesian_grid.png" alt="" class="wp-image-21565" srcset="https://karlinaobject.wordpress.com/wp-content/uploads/2023/07/points_on_cartesian_grid.png 960w, https://karlinaobject.wordpress.com/wp-content/uploads/2023/07/points_on_cartesian_grid.png?w=150&amp;h=113 150w, https://karlinaobject.wordpress.com/wp-content/uploads/2023/07/points_on_cartesian_grid.png?w=300&amp;h=225 300w, https://karlinaobject.wordpress.com/wp-content/uploads/2023/07/points_on_cartesian_grid.png?w=768&amp;h=576 768w" sizes="(max-width: 960px) 100vw, 960px" /></figure>
+
+
+<hr />
+<p>image_link: <a style="background: #000000;color: #ff9000" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/points_on_cartesian_grid.png" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/points_on_cartesian_grid.png</a></p>
+<hr />
+<p><span style="background: #ffff00">The <a style="background: #ff9000;color: #000000" href="https://en.wikipedia.org/wiki/C%2B%2B" target="_blank" rel="noopener">C++</a> program featured in this tutorial web page demonstrates the concept of Object Oriented Programming (<a style="background: #ff9000;color: #000000" href="https://en.wikipedia.org/wiki/Object-oriented_programming" target="_blank" rel="noopener">OOP</a>). The program implements a user defined data type for instantiating <strong>TRIANGLE</strong> type objects. Each TRIANGLE type object represents three instances of the <a style="background: #000000;color: #00ff00" href="https://karlinaobject.wordpress.com/point/" target="_blank" rel="noopener">POINT</a> class named <strong>A</strong>, <strong>B</strong>, and <strong>C</strong> which each represent a unique whole number coordinate pair. A TRIANGLE object can execute various functions including the ability to compute the <a style="background: #ff9000;color: #000000" href="https://en.wikipedia.org/wiki/Area" target="_blank" rel="noopener">area</a> of the two-dimensional region whose boundaries are the line segments which connect the points which the three POINT type variables of the TRIANGLE object represent and the ability to compute the interior <a style="background: #ff9000;color: #000000" href="https://en.wikipedia.org/wiki/Angle" target="_blank" rel="noopener">angle</a> measurement of any one of the three interior angles of the triangle which the TRIANGLE object represents.</span></p>
+<p><em>To view hidden text inside each of the preformatted text boxes below, scroll horizontally.</em></p>
+<pre>class : object :: data_type : variable.</pre>
+<hr />
+<p><strong>SOFTWARE_APPLICATION_COMPONENTS</strong></p>
+<hr />
+<p>C++_header_file: <a style="background: #000000;color: #00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/point.h" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/point.h</a></p>
+<p>C++_source_file: <a style="background: #000000;color: #00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/point.cpp" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/point.cpp</a></p>
+<p>C++_header_file: <a style="background: #000000;color: #00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/triangle.h" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/triangle.h</a></p>
+<p>C++_source_file: <a style="background: #000000;color: #00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/triangle.cpp" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/triangle.cpp</a></p>
+<p>C++_source_file: <a style="background: #000000;color: #00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/triangle_class_tester.cpp" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/triangle_class_tester.cpp</a></p>
+<p>plain-text_file: <a style="background: #000000;color: #ff9000" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/triangle_class_tester_output.txt" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/triangle_class_tester_output.txt</a></p>
+<hr />
+<p><strong>PROGRAM_COMPILATION_AND_EXECUTION</strong></p>
+<hr />
+<p>STEP_0: Copy and paste the C++ code from the files named <a style="background: #000000;color: #00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/point.h" target="_blank" rel="noopener">point.h</a>, <a style="background: #000000;color: #00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/point.cpp" target="_blank" rel="noopener">point.cpp</a>, <a style="background: #000000;color: #00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/triangle.h" target="_blank" rel="noopener">triangle.h</a>, <a style="background: #000000;color: #00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/triangle.cpp" target="_blank" rel="noopener">triangle.cpp</a>, and <a style="background: #000000;color: #00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/triangle_class_tester.cpp" target="_blank" rel="noopener">triangle_class_tester.cpp</a> into their own new text editor documents and save those documents using their corresponding file names:</p>
+<pre>point.h</pre>
+<pre>point.cpp</pre>
+<pre>triangle.h</pre>
+<pre>triangle.cpp</pre>
+<pre>triangle_class_tester.cpp</pre>
+<p>STEP_1: Open a <a style="background: #ff9000;color: #000000" href="https://en.wikipedia.org/wiki/Unix" target="_blank" rel="noopener">Unix</a> command line terminal application and set the current directory to wherever the C++ is located on the local machine (e.g. Desktop).</p>
+<pre>cd Desktop</pre>
+<p>STEP_2: Compile the C++ file into machine-executable instructions (i.e. object file) and then into an executable piece of software named <strong>app</strong> using the following command:</p>
+<pre>g++ triangle_class_tester.cpp triangle.cpp point.cpp -o app</pre>
+<p>STEP_3: If the program compilation command does not work, then use the following commands (in top-down order) to install the C/C++ compiler (which is part of the <a style="background: #ff9000;color: #000000" href="https://en.wikipedia.org/wiki/GNU_Compiler_Collection" target="_blank" rel="noopener">GNU Compiler Collection (GCC)</a>):</p>
+<pre>sudo apt install build-essential</pre>
+<pre>sudo apt-get install g++</pre>
+<p>STEP_4: After running the <strong>g++</strong> command, run the executable file using the following command:</p>
+<pre>./app</pre>
+<p>STEP_5: Observe program results on the command line terminal and in the <a style="background: #000000;color: #ff9000" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/triangle_class_tester_output.txt" target="_blank" rel="noopener">output file</a>.</p>
+<hr />
+<p><strong>POINT_CLASS_HEADER</strong></p>
+<hr />
+<p>The following header file contains the preprocessing directives and function prototypes of the POINT class.</p>
+<p>(Note that the text inside of each of the the preformatted text boxes below appears on this web page (while rendered correctly by the <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/HTML" target="_blank" rel="noopener">web browser</a>) to be identical to the content of that preformatted text box text&#8217;s respective <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/C%2B%2B" target="_blank" rel="noopener">C++</a> source code file whose <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/URL" target="_blank" rel="noopener">Uniform Resource Locator</a> is displayed in the green <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Hyperlink" target="_blank" rel="noopener">hyperlink</a> immediately above that preformatted text box. A <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Computer" target="_blank" rel="noopener">computer</a> interprets that C++ source code as a series of programmatic instructions (i.e. <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Software" target="_blank" rel="noopener">software</a>) which govern how the <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Computer_hardware" target="_blank" rel="noopener">hardware</a> of that computer behaves).</p>
+<p><em>(Note also that angle brackets which resemble <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/HTML" target="_blank" rel="noopener">HTML</a> tags (i.e. an &#8220;is less than&#8221; symbol (i.e. &#8216;&lt;&#8216;) followed by an &#8220;is greater than&#8221; symbol (i.e. &#8216;&gt;&#8217;) displayed in the aforementioned text boxes have been replaced (at the source code level of this web page) with Unicode symbols <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Less-than_sign" target="_blank" rel="noopener">U+003C</a> (which is rendered by the web browser as &#8216;&lt;&#8216;) and <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Greater-than_sign" target="_blank" rel="noopener">U+003E</a> (which is rendered by the web browser as &#8216;&gt;&#8217;). That is because the <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/WordPress.com" target="_blank" rel="noopener">WordPress</a> web page editor interprets a plain-text versions of an &#8220;is less than&#8221; symbol followed by an &#8220;is greater than&#8221; symbol as being an opening HTML tag (which means that the WordPress web page editor deletes the content between those (plain-text) inequality symbols)).</em></p>
+<p>C++_header_file: <a style="background: #000000;color: #00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/point.h" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/point.h</a></p>
+<hr />
+<pre>/**
+ * file: point.h
+ * type: C++ (header file)
  * author: karbytes
- * date: 21_JULY_2023
+ * date: 07_JULY_2023
  * license: PUBLIC_DOMAIN
  */
 
+/* preprocessing directives */
+#ifndef POINT_H // If point.h has not already been linked to a source file (.cpp), 
+#define POINT_H // then link this header file to the source file(s) which include this header file.
+
+/* preprocessing directives */
+#include &lt;iostream&gt; // library for defining objects which handle command line input and command line output
+#include &lt;fstream&gt; // library for defining objects which handle file input and file output
+#include &lt;cmath&gt; // library which defines various math functions such as square root (sqrt()) and sine (sin())
+#include &lt;string&gt; // library which defines a sequence of text characters (i.e. char type values) as a string type variable
+#define MINIMUM_X -999 // constant which represents minimum X value
+#define MAXIMUM_X 999 // constant which represents maximum X value
+#define MINIMUM_Y -999 // constant which represents minimum Y value
+#define MAXIMUM_Y 999 // constant which represents maximum Y value
+#define PI 3.14159 // constant which represents the approximate value of a circle&#039;s circumference divided by that circle&#039;s diameter
+
 /**
- * Return a String type value which describes the number of milliseconds which have elapsed since the Unix Epoch.
+ * Define a class which is used to instantiate POINT type objects.
  * 
- * Note that the Unix Epoch is 01_JANUARY_1970 at 0 hours, 0 minutes, 0 seconds, and 0 seconds 
- * (i.e. 00:00:00) (i.e. midnight) (Coordinated Universal Time (UTC)).
+ * (An object is a variable whose data type is user defined rather than native to the C++ programming language).
  * 
- * @return {String} text which denotes the number of milliseconds which have elapsed since the Unix Epoch.
+ * A POINT object represents a whole number coordinate pair in the form (X,Y).
+ * 
+ * X represents a specific whole number position along the x-axis (i.e. horizontal dimension) of a two-dimensional Cartesian grid.
+ * Y represents a specific whole number position along the y-axis (i.e. vertical dimension) of the same two-dimensional Cartesian grid.
+ * 
+ * X stores one integer value at a time which is no smaller than MINIMUM_X and which is no larger than MAXIMUM_X.
+ * Y stores one integer value at a time which is no smaller than MINIMUM_Y and which is no larger than MAXIMUM_Y.
  */
-function generate_time_stamp() {
-    const milliseconds_elapsed_since_unix_epoch = Date.now();
-    return milliseconds_elapsed_since_unix_epoch + " milliseconds since midnight on 01_JANUARY_1970.";
+class POINT
+{
+private:
+    int X, Y; // data attributes
+public:
+    POINT(); // default constructor
+    POINT(int X, int Y); // normal constructor
+    POINT(const POINT &amp; point); // copy constructor
+    int get_X(); // getter method
+    int get_Y(); // getter method
+    bool set_X(int X); // setter method
+    bool set_Y(int Y); // setter method
+    double get_distance_from(POINT &amp; point); // getter method
+    double get_slope_of_line_to(POINT &amp; point); // getter method
+    void print(std::ostream &amp; output = std::cout); // descriptor method
+    friend std::ostream &amp; operator &lt;&lt; (std::ostream &amp; output, POINT &amp; point); // descriptor method
+    ~POINT(); // destructor
+};
+
+/* preprocessing directives */
+#endif // Terminate the conditional preprocessing directives code block in this header file.
+</pre>
+<hr />
+<p><strong>POINT_CLASS_SOURCE_CODE</strong></p>
+<hr />
+<p>The following source code defines the functions of the POINT class.</p>
+<p>C++_source_file: <a style="background: #000000;color: #00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/point.cpp" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/point.cpp</a></p>
+<hr />
+<pre>/**
+ * file: point.cpp
+ * type: C++ (source file)
+ * date: 07_JULY_2023
+ * author: karbytes
+ * license: PUBLIC_DOMAIN 
+ */
+
+/* preprocessing directives */
+#include "point.h" // Include the C++ header file which contains preprocessing directives, variable declarations, and function prototypes for the POINT class.
+
+/**
+ * The default constructor method of the POINT class 
+ * instantiates POINT type objects 
+ * whose X value is initially set to 0 and 
+ * whose Y value is initially set to 0.
+ * 
+ * The default constructor method of the POINT class is invoked 
+ * when a POINT type variable is declared as follows:
+ * 
+ * // variable declaration example one
+ * POINT point_0; 
+ * 
+ * // variable declaration example two
+ * POINT point_1 = POINT();
+ */
+POINT::POINT()
+{
+    std::cout &lt;&lt; "\n\nCreating the POINT type object whose memory address is " &lt;&lt; this &lt;&lt; "...";
+    X = 0;
+    Y = 0;
 }
 
 /**
- * Return a String type value which is used to instantiate a paragraph type web page element such that
- * the String type value which is passed into this function as its only input is that paragraph element's 
- * inner HTML content.
+ * The normal constructor method of the POINT class 
+ * instantiates POINT type objects 
+ * whose X value is set to the leftmost function input value (if that input value is no smaller than MINIMUM_X and no larger than MAXIMUM_X) and 
+ * whose Y value is set to the rightmost function input value (if that input value is no smaller than MINIMUM_Y and no larger than MAXIMUM_Y).
  * 
- * Note that the String type constant variable values are broken up into single-character String type values 
- * to avoid causing the WordPress web page editor to interpret HTML tags in the web page body with 
- * source code which is hosted on that web page inside of PRE (preformatted) web page elements.
+ * If a function input value is out of its specified range, then set the corresponding int type property of this to 0.
  * 
- * @param {String} inner_HTML is assumed to be plain text or HTML content.
- * 
- * @return {String} a sequence of text characters which is used to instantiate a paragraph (P) web page element.
- */
-function generate_paragraph_html_element(inner_html) {
-    const opening_paragraph_tag = ('&lt;' + 'p' + '&gt;'), closing_paragraph_tag = ('&lt;' + '/' + 'p' + '&gt;');
-    try {
-        if (typeof inner_html.length !== "number") throw 'The expression (typeof inner_html.length !== "number") was evaluated to be true.';
-        return opening_paragraph_tag + inner_html + closing_paragraph_tag;
-    }
-    catch(exception) {
-        console.log("An exception to normal functioning occurred during the runtime of generate_paragraph_html_element(inner_html): " + exception);
-    }
-}
-
-/**
- * Return a String type value which is used to instantiate a select type web page element such that
- * the String type value which is passed into this function as its only input is that select menu element's
- * id property value.
- * 
- * When clicked on, the select menu interface element will expand to display a list of all integers which are
- * no smaller than -100 and no larger than 100 in ascending order (with the smallest integer option at the top
- * of the list).
- * 
- * @param {String} select_id is assumed to be either 
- *                 "a_x_menu" or else
- *                 "a_y_menu" or else
- *                 "b_x_menu" or else
- *                 "b_y_menu" or else
- *                 "c_x_menu" or else
- *                 "c_y_menu". 
- * 
- * @return {String} a sequence of text characters which is used to instantiate an expandable list menu (SELECT) web page element.
- */
-function generate_coordinate_menu_select_html_element(select_id) {
-    let select_menu = '', option = '', i = 0;
-    try {
-        if (typeof select_id.length !== "number") throw 'The expression (typeof select_id.length !== "number") was evaluated to be true.';
-        if ((select_id !== "a_x_menu") &amp;&amp; (select_id !== "a_y_menu") &amp;&amp; 
-            (select_id !== "b_x_menu") &amp;&amp; (select_id !== "b_y_menu") &amp;&amp;
-            (select_id !== "c_x_menu") &amp;&amp; (select_id !== "c_y_menu"))
-        throw 'select_id must either be "a_x_menu" or else "a_y_menu" or ' + 
-               'else "b_x_menu" or else "b_y_menu" or ' + 
-               'else "c_x_menu" or else "c_y_menu".';
-        select_menu = ('&lt;' + 'select id="' + select_id + '" style="text-align:center"' + '&gt;');
-        for (i = -100; i &lt;= 100; i += 1) {
-            if (i === 0) option = ('&lt;' + 'option value="0" selected' + '&gt;');
-            else option = ('&lt;' + 'option value="' + i + '"' + '&gt;');
-            option += (i + ('&lt;' + '/' + 'option' + '&gt;'));
-            select_menu += option;
-        }
-        select_menu += ('&lt;' + '/' + 'select' + '&gt;');
-        return select_menu;
-
-    }
-    catch(exception) {
-        console.log("An exception to normal functioning occurred during the runtime of generate_coordinate_menu_select_html_element(select_id): " + exception);
-    } 
-}
-
-/**
- * Return the String type value of the selected menu option of a SELECT menu element.
- * 
- * Assume that select_menu_identifier is a String type value and the id of an existing select HTML element.
- * 
- * @param {String} select_menu_identififier is assumed to be the id of an existing SELECT menu web page element.
- * 
- * @return {String} value of an OPTION of the SELECT whose id is select_menu_identifier.
- */
-function get_selected_menu_option_value(select_menu_identifier) {
-    try {
-        let menu_object = {}, options_array = [], selected_option_index = 0, selected_option_object = {}, selected_option_value;
-        if (arguments.length !== 1) throw "Error: exactly one function input is required.";
-        if (typeof arguments[0] !== "string") throw "Error: select_menu_identifier is required to be a String type data value.";
-        menu_object = document.getElementById(select_menu_identifier);
-        options_array = menu_object.options;
-        selected_option_index = menu_object.selectedIndex;
-        selected_option_object = options_array[selected_option_index];
-        selected_option_value = selected_option_object.value
-        return selected_option_value;
-    }
-    catch(exception) {
-        console.log("An exception to normal functioning occurred during the runtime of get_selected_menu_option(select_menu_identifier): " + exception);
-    }
-}
-
-/**
- * Draw a line segment whose thickness is one pixel and whose color is black from the middle point of the left edge 
- * of the HTML canvas whose id is "cartesian_plane" to the middle of the right edge of that canvas.
- * 
- * Assume that the length of each one of the four sides of that canvas is 750 pixels.
- */
-function draw_horizontal_line_through_middle_of_canvas() {
-    const CANVAS_SIDE_LENGTH = 750;
-    let canvas = undefined, context = undefined, canvas_midpoint = 0;
-    try {
-        canvas = document.getElementById("cartesian_plane");
-        if (canvas.width !== canvas.height) throw "The expression (canvas.width !== canvas.height) was evaluated to be true.";
-        if (canvas.width !== CANVAS_SIDE_LENGTH) throw "The expression (canvas.width !== CANVAS_SIDE_LENGTH) was evaluated to be true.";
-        canvas_midpoint = (canvas.width / 2);
-        canvas_midpoint = parseInt(canvas_midpoint);
-        context = canvas.getContext("2d");
-        context.strokeStyle = "#000000"; 
-        context.lineWidth = 1;
-        context.beginPath();
-        context.moveTo(0, canvas_midpoint); // the middle point of the left edge of the square canvas
-        context.lineTo((canvas_midpoint * 2), canvas_midpoint); // the middle point of the right edge of the square canvas
-        context.stroke();
-    }
-    catch(exception) {
-        console.log("An exception to expected functioning occurred in draw_horizontal_line_through_middle_of_canvas(): " + exception);
-    }
-}
-
-/**
- * Draw a line segment whose thickness is one pixel and whose color is black from the middle point of the top edge 
- * of the HTML canvas whose id is "cartesian_plane" to the middle of the bottom edge of that canvas.
- * 
- * Assume that the length of each one of the four sides of that canvas is 750 pixels.
- */
-function draw_vertical_line_through_middle_of_canvas() {
-    const CANVAS_SIDE_LENGTH = 750;
-    let canvas = undefined, context = undefined, canvas_midpoint = 0;
-    try {
-        canvas = document.getElementById("cartesian_plane");
-        if (canvas.width !== canvas.height) throw "The expression (canvas.width !== canvas.height) was evaluated to be true.";
-        if (canvas.width !== CANVAS_SIDE_LENGTH) throw "The expression (canvas.width !== CANVAS_SIDE_LENGTH) was evaluated to be true.";
-        canvas_midpoint = (canvas.width / 2);
-        canvas_midpoint = parseInt(canvas_midpoint);
-        context = canvas.getContext("2d");
-        context.strokeStyle = "#000000"; 
-        context.lineWidth = 1;
-        context.beginPath();
-        context.moveTo(canvas_midpoint, 0); // the middle point of the top edge of the square canvas
-        context.lineTo(canvas_midpoint, (canvas_midpoint * 2)); // the middle point of the bottom edge of the square canvas
-        context.stroke();
-    }
-    catch(exception) {
-        console.log("An exception to expected functioning occurred in draw_vertical_line_through_middle_of_canvas(): " + exception);
-    }
-}
-
-/**
- * Respond to the event of the RESET button being clicked or the web page being loaded by a web browser.
- */
-function initialize_application() {
-    let cartesian_plane_canvas = "";
-    let time_stamped_message = "", initial_output_message = "";
-    let canvas_container_div = undefined, output_div = undefined, events_log_div = undefined, generate_button_container_paragraph = undefined;
-    let a_x_menu_container_paragraph = undefined, a_y_menu_container_paragraph = undefined;
-    let b_x_menu_container_paragraph = undefined, b_y_menu_container_paragraph = undefined;
-    let c_x_menu_container_paragraph = undefined, c_y_menu_container_paragraph = undefined;
-    let generate_button_container = "";
-    try {
-        // Populate the "event_log" div with a time stamped message indicating that this function was called.
-        time_stamped_message = ("The function named initialize_application() was called at time: " + generate_time_stamp());
-        console.log(time_stamped_message);
-        time_stamped_message = generate_paragraph_html_element(time_stamped_message);
-        events_log_div = document.getElementById("events_log");
-        events_log_div.innerHTML = time_stamped_message;
-        // Populate the "output" div with placeholder text.
-        output_div = document.getElementById("output");
-        output_div.innerHTML = generate_paragraph_html_element("This sentence will disappear as a result of the GENERATE button being clicked.");
-        // Populate the "canvas_container" div with a canvas web page element.
-        cartesian_plane_canvas = (('&lt;' + 'canvas id="cartesian_plane" width="750" height="750" style="background:#ffffff"&gt;') + ('&lt;' + '/' + '&gt;'));
-        canvas_container_div = document.getElementById("canvas_container");
-        canvas_container_div.innerHTML = generate_paragraph_html_element(cartesian_plane_canvas);
-        // Draw the horizontal axis of a Cartesian plane through the center of the square canvas.
-        draw_horizontal_line_through_middle_of_canvas();
-        // Draw the vertical axis of a Cartesian plane through the center of the square canvas.
-        draw_vertical_line_through_middle_of_canvas();
-        // Populate the "a_x_menu_container" paragraph element with a select menu for choosing an integer value for the X property of POINT object A.
-        a_x_menu_container_paragraph = document.getElementById("a_x_menu_container");
-        a_x_menu_container_paragraph.innerHTML = ('A.X := ' + generate_coordinate_menu_select_html_element("a_x_menu") + '. // horizontal position of two-dimensional POINT labeled A.'); 
-        // Populate the "a_y_menu_container" paragraph element with a select menu for choosing an integer value for the Y property of POINT object A.
-        a_y_menu_container_paragraph = document.getElementById("a_y_menu_container");
-        a_y_menu_container_paragraph.innerHTML = ('A.Y := ' + generate_coordinate_menu_select_html_element("a_y_menu") + '. // vertical position of two-dimensional POINT labeled A.');   
-        // Populate the "b_x_menu_container" paragraph element with a select menu for choosing an integer value for the X property of POINT object B.
-        b_x_menu_container_paragraph = document.getElementById("b_x_menu_container");
-        b_x_menu_container_paragraph.innerHTML = ('B.X := ' + generate_coordinate_menu_select_html_element("b_x_menu") + '. // horizontal position of two-dimensional POINT labeled B.'); 
-        // Populate the "B_y_menu_container" paragraph element with a select menu for choosing an integer value for the Y property of POINT object B.
-        b_y_menu_container_paragraph = document.getElementById("b_y_menu_container");
-        b_y_menu_container_paragraph.innerHTML = ('B.Y := ' + generate_coordinate_menu_select_html_element("b_y_menu") + '. // vertical position of two-dimensional POINT labeled B.');  
-        // Populate the "c_x_menu_container" paragraph element with a select menu for choosing an integer value for the X property of POINT object C.
-        c_x_menu_container_paragraph = document.getElementById("c_x_menu_container");
-        c_x_menu_container_paragraph.innerHTML = ('C.X := ' + generate_coordinate_menu_select_html_element("c_x_menu") + '. // horizontal position of two-dimensional POINT labeled C.'); 
-        // Populate the "C_y_menu_container" paragraph element with a select menu for choosing an integer value for the Y property of POINT object B.
-        c_y_menu_container_paragraph = document.getElementById("c_y_menu_container");
-        c_y_menu_container_paragraph.innerHTML = ('C.Y := ' + generate_coordinate_menu_select_html_element("c_y_menu") + '. // vertical position of two-dimensional POINT labeled C.'); 
-        // Populate the "generate_button_container" paragraph element with a button input web page element which calls the function named generate_triangle_using_input_coordinates().
-        generate_button_container = document.getElementById("generate_button_container");
-        generate_button_container.innerHTML = ('&lt;' + 'input type="button" value="GENERATE" style="text-align:center" onclick="generate_triangle_using_input_coordinates()"' + '/' + '&gt;'); 
-    }
-    catch(exception) {
-        console.log("An exception to normal functioning occurred during the runtime of initialize_application(): " + exception);
-    }
-}
-
-/**
- * Compute the approximate square root of input such that the output has an arbitrary number of significant digits.
- * The product, approximate_square_root(input) * approximate_square_root(input), is approximately equal to input. 
- * 
- * @param {Number} input is assumed to be a nonnegative integer.
- * 
- * @return {Number} the approximate square root of input.
- */
-function approximate_square_root(input) {
-    let n = 0, a = 0, b = 0, c = 0;
-    try {
-        if (arguments.length !== 1) throw "exactly one function argument is required.";
-        if (typeof arguments[0] !== "number") throw "the function argument must be a Number type value.";
-        if (input &lt; 0) throw "the function argument must be no smaller than zero.";
-        n = input;
-        a = n;
-        b = 1;
-        c = 0.000000001; // precision control
-        while ((a - b) &gt; c) { 
-            a = (a + b) / 2;
-            b = n / a;
-        }
-        return a;
-    }
-    catch(exception) {
-        console.log("An exception to expected functioning occurred in approximate_square_root(input): " + exception);
-        return 0;
-    }
-}
-
-/**
- * Use the Distance Formula to calculate the nonnegative real number distance between planar points A and B.
- * 
- * distance_formula(A, B) = square_root( ((A.x - B.x) ^ 2) + ((A.y - B.y) ^ 2) )
- * 
- * @param {Object} A is assumed to be an Object type data value with the following properties: 
- *        {Number} X is assumed to be an integer no smaller than -100 and no larger than 100.
- *        {Number} Y is assumed to be an integer no smaller than -100 and no larger than 100.
+ * (The keyword this refers to the POINT object which is returned by this function).
  *
- * @param {Object} B is assumed to be an Object type data value with the following properties: 
- *        {Number} X is assumed to be an integer no smaller than -100 and no larger than 100.
- *        {Number} Y is assumed to be an integer no smaller than -100 and no larger than 100.
+ * The normal constructor method of the POINT class is invoked when a POINT type variable is declared as follows:
  * 
- * @return {Number} the length of the shortest path between planar points A and B.
+ * // variable definition example one
+ * POINT point_0 = POINT(-55,84);
+ * 
+ * // variable definition example two
+ * POINT point_1 = POINT(3,-4);
+ * 
+ * // variable definition example three
+ * POINT point_2 = POINT(-1000, 999); // point_2 = POINT(0,999).
+ * 
+ * // variable definition example four
+ * POINT point_3 = POINT(1000,-999); // point_3 = POINT(0,-999).
+ * 
+ * // variable definition example five
+ * POINT point_4 = POINT(999,-1000); // point_4 = POINT(999,0).
+ * 
+ * // variable definition example six
+ * POINT point_5 = POINT(-999,1000); // point_5 = POINT(-999,0).
  */
-function compute_distance_between_two_planar_points(A, B) {
-    let horizontal_difference = 0, vertical_difference = 0;
-    try {
-        if (arguments.length !== 2) throw "exactly two function arguments are required.";
-        if (!is_point(A)) throw "A must be an object whose data properties are as follows: { X : integer in range [-100,100], Y : integer in range [-100,100] }.";
-        if (!is_point(B)) throw "B must be an object whose data properties are as follows: { X : integer in range [-100,100], Y : integer in range [-100,100] }.";
-        horizontal_difference = A.X - B.X
-        vertical_difference = A.Y - B.Y;
-        return approximate_square_root((horizontal_difference * horizontal_difference) + (vertical_difference * vertical_difference));
-    }
-    catch(exception) {
-        console.log("An exception to expected functioning occurred in compute_distance_between_two_planar_points(A, B): " + exception);
-        return 0;
-    }
+POINT::POINT(int X, int Y)
+{
+    std::cout &lt;&lt; "\n\nCreating the POINT type object whose memory address is " &lt;&lt; this &lt;&lt; "...";
+    this -&gt; X = ((X &lt; MINIMUM_X) || (X &gt; MAXIMUM_X)) ? 0 : X; // Set the X property of the POINT instance being created to 0 if the function input X value is out of range.
+    this -&gt; Y = ((Y &lt; MINIMUM_Y) || (Y &gt; MAXIMUM_Y)) ? 0 : Y; // Set the Y property of the POINT instance being created to 0 if the function input Y value is out of range.
 }
 
 /**
- * Compute the rate at which the y-value changes in relation to the x-value in the function whose graph
- * is the line which completely overlaps the line segment whose endpoints are A and B.
+ * The copy constructor method of the POINT class 
+ * instantiates POINT type objects 
+ * whose X value is set to the X value of the input POINT object and 
+ * whose Y value is set to the Y value of the input POINT object.
+ *
+ * The copy constructor method of the POINT class is invoked when a POINT type variable is declared as follows:
+ * 
+ * // variable definition example one
+ * POINT point_0 = POINT(33,55);
+ * POINT point_1 = POINT(point_0); // point_1 = POINT(33,55).
+ * 
+ * // variable definition example two
+ * POINT point_2 = POINT(point_1); // point_2 = POINT(33,55).
+ */
+POINT::POINT(const POINT &amp; point) 
+{
+    std::cout &lt;&lt; "\n\nCreating the POINT type object whose memory address is " &lt;&lt; this &lt;&lt; "...";
+    X = point.X;
+    Y = point.Y;
+}
+
+/**
+ * The getter method of the POINT class returns the value of the caller POINT object's X property.
+ * 
+ * X is an int type variable which stores exactly one integer value at a time which is no smaller than MINIMUM_X and which is no larger than MAXIMUM_X.
+ * 
+ * X represents a specific whole number position along the x-axis (i.e. horizontal dimension) of a two-dimensional Cartesian grid.
+ */
+int POINT::get_X()
+{
+    return X;
+}
+
+/**
+ * The getter method of the POINT class returns the value of the caller POINT object's Y property.
+ * 
+ * Y is an int type variable which stores exactly one integer value at a time which is no smaller than MINIMUM_Y and which is no larger than MAXIMUM_Y.
+ * 
+ * Y represents a specific whole number position along the y-axis (i.e. vertical dimension) of a two-dimensional Cartesian grid.
+ */
+int POINT::get_Y()
+{
+    return Y;
+}
+
+/**
+ * The setter method of the POINT class sets the POINT object's X property to the function input value 
+ * if that value is no smaller than MINIMUM_X and which is no larger than MAXIMUM_X.
+ * 
+ * If the input value is in range, then return true. 
+ * Otherwise, do not change the caller POINT object's X value and return false.
+ * 
+ * (The keyword this refers to the POINT object which calls this function).
+ * 
+ * (X represents a specific whole number position along the x-axis (i.e. horizontal dimension) of a two-dimensional Cartesian grid).
+ */
+bool POINT::set_X(int X)
+{
+    if ((X &gt;= MINIMUM_X) &amp;&amp; (X &lt;= MAXIMUM_X)) 
+    {
+        this -&gt; X = X;
+        return true;
+    }
+    return false;
+}
+
+/**
+ * The setter method of the POINT class sets the POINT object's Y property to the function input value 
+ * if that value is no smaller than MINIMUM_Y and which is no larger than MAXIMUM_Y.
+ * 
+ * If the input value is in range, then return true. 
+ * Otherwise, do not change the caller POINT object's Y value and return false.
+ * 
+ * (The keyword this refers to the POINT object which calls this function).
+ * 
+ * (Y represents a specific whole number position along the y-axis (i.e. vertical dimension) of a two-dimensional Cartesian grid).
+ */
+bool POINT::set_Y(int Y)
+{
+    if ((Y &gt;= MINIMUM_Y) &amp;&amp; (Y &lt;= MAXIMUM_Y)) 
+    {
+        this -&gt; Y = Y;
+        return true;
+    }
+    return false;
+}
+
+/**
+ * The getter method of the POINT class returns the length of the shortest path 
+ * between the two-dimensional point represented by the the caller POINT object (i.e. this) 
+ * and the two-dimensional point represented by the input POINT object (i.e. point).
+ * 
+ * Use the Pythagorean Theorem to compute the length of a right triangle's hypotenuse 
+ * such that the two end points of that hypotenuse are represented by this and point.
+ * 
+ * (A hypotenuse is the only side of a right triangle which does not form a right angle 
+ * with any other side of that triangle).
+ * 
+ * (A hypotenuse is the longest side of a triangle (and a triangle is a three-sided polygon 
+ * in which three unique line segments connect three unique points)).
+ * 
+ * // c is the length of a right triangle's hypotenuse.
+ * // a is the length of that right triangle's horizontal leg.
+ * // b is the length of that triangle's vertical leg.
+ * (c * c) = (a * a) + (b * b). 
+ * 
+ * // sqrt() is a native C++ function defined in the cmath library.
+ * c = square_root( (a * a) + (b * b)). 
+ */
+double POINT::get_distance_from(POINT &amp; point)
+{
+    int horizontal_difference = 0.0, vertical_difference = 0.0;
+    horizontal_difference = X - point.X; // a
+    vertical_difference = Y - point.Y; // b
+    return sqrt((horizontal_difference * horizontal_difference) + (vertical_difference * vertical_difference)); // c
+}
+
+/**
+ * The getter method of the POINT class returns the slope of the line which intersects 
+ * the two-dimensional point represented by the caller POINT instance (i.e. this)
+ * and the two-dimensional point represented by the input POINT instance (i.e. point).
  * 
  * // y := f(x), 
  * // b := f(0), 
@@ -309,441 +322,1097 @@ function compute_distance_between_two_planar_points(A, B) {
  * m := (y - b) / x. 
  * 
  * // m represents the difference of the two y-values divided by the difference of the two x-values.
- * m := (A.Y - B.Y) / (A.X - B.X).
- * 
- * @param {Object} A is assumed to be an Object type data value with the following properties: 
- *        {Number} X is assumed to be an integer no smaller than -100 and no larger than 100.
- *        {Number} Y is assumed to be an integer no smaller than -100 and no larger than 100.
- *
- * @param {Object} B is assumed to be an Object type data value with the following properties: 
- *        {Number} X is assumed to be an integer no smaller than -100 and no larger than 100.
- *        {Number} Y is assumed to be an integer no smaller than -100 and no larger than 100.
- * 
- * @return {Number} the slope of the shortest path between planar points A and B.
+ * m := (point.Y - this.Y) / (point.X - this.X).
  */
-function get_slope_of_line_segment(A, B) {
-    let vertical_difference = 0, horizontal_difference = 0;
-    try {
-        if (arguments.length !== 2) throw "exactly two function arguments are required.";
-        if (!is_point(A)) throw "A must be an object whose data properties are as follows: { X : integer in range [-100,100], Y : integer in range [-100,100] }.";
-        if (!is_point(B)) throw "B must be an object whose data properties are as follows: { X : integer in range [-100,100], Y : integer in range [-100,100] }.";
-        horizontal_difference = A.X - B.X;
-        vertical_difference = A.Y - B.Y;
-        console.log("horizontal_difference := " + horizontal_difference + '.');
-        console.log("vertical_difference := " + vertical_difference + '.');
-        return (vertical_difference / horizontal_difference);
-    }
-    catch(exception) {
-        console.log("An exception to expected functioning occurred in get_slope_of_line_segment(A, B): " + exception);
-        return 0;
-    }
+double POINT::get_slope_of_line_to(POINT &amp; point)
+{
+    double vertical_difference = 0.0, horizontal_difference = 0.0, result = 0.0;
+    vertical_difference = point.Y - Y;
+    horizontal_difference = point.X - X;
+    result = vertical_difference / horizontal_difference;
+    if (result == -0) result = 0; // Signed zeros sometimes occur inside of C++ program runtime instances.
+    return result;
 }
 
 /**
- * Determine whether or not a given input value is a valid planar point object (as defined in the generate_triangle_using_input_coordinates() function).
+ * The print method of the POINT class prints a description of the caller POINT object to the output stream.
  * 
- * @param {Object} input is assumed to be an Object type data value with the following properties: 
- *        {Number} X is assumed to be an integer no smaller than -100 and no larger than 100.
- *        {Number} Y is assumed to be an integer no smaller than -100 and no larger than 100.
+ * Note that the default value of the function input parameter is the standard command line output stream (std::cout).
  * 
- * @return {Boolean} true if input satisfies the conditions defined above; false otherwise.
+ * The default parameter is defined in the POINT class header file (i.e. point.h) and not in the POINT class source file (i.e. point.cpp).
  */
-function is_point(input) {
-    // let properties = undefined, count = 0;
-    try {
-        if (arguments.length !== 1) throw "exactly one function argument (labeled input) is required.";
-        if (typeof input !== "object") throw "input must be an Object type value.";
-        if (typeof input.X !== "number") throw "the X property of input must be a Number type value.";
-        if (typeof input.Y !== "number") throw "the Y property of input must be a Number type value.";
-        if (Math.floor(input.X) !== input.X) throw "the X property of the input object must be a whole number value.";
-        if (Math.floor(input.Y) !== input.Y) throw "the Y property of the input object must be a whole number value.";
-        if ((input.X &lt; -100) || (input.X &gt; 100)) throw "the X of the input object must be no smaller than -100 and no larger than 100.";
-        if ((input.Y &lt; -100) || (input.Y &gt; 100)) throw "the X of the input object must be no smaller than -100 and no larger than 100.";
-        /*
-        // This is commented out due to the fact that karbytes wanted to allow indefinitely many function properties to be added to POINT "type" objects.
-        for (let properties in input) count += 1;
-        if (count !== 2) throw "input must be an object consisting of exactly two properties.";
-        */
-        return true;
-    }
-    catch(exception) {
-        console.log("An exception to expected functioning occurred in is_point(input): " + exception);
-        return false;
-    }
+void POINT::print(std::ostream &amp; output)
+{
+    output &lt;&lt; "\n\n--------------------------------------------------------------------------------------------------";
+    output &lt;&lt; "\nthis = " &lt;&lt; this &lt;&lt; ". // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.";
+    output &lt;&lt; "\n&amp;X = " &lt;&lt; &amp;X &lt;&lt; ". // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.";
+    output &lt;&lt; "\n&amp;Y = " &lt;&lt; &amp;Y &lt;&lt; ". // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.";    
+    output &lt;&lt; "\nsizeof(int) = " &lt;&lt; sizeof(int) &lt;&lt; ". // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).";
+    output &lt;&lt; "\nsizeof(POINT) = " &lt;&lt; sizeof(POINT) &lt;&lt; ". // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).";
+    output &lt;&lt; "\nX = " &lt;&lt; X &lt;&lt; ". // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.";
+    output &lt;&lt; "\nY = " &lt;&lt; Y &lt;&lt; ". // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.";
+    output &lt;&lt; "\n--------------------------------------------------------------------------------------------------";
 }
 
 /**
- * Generate an Object type data value which represents a position on a two-dimensional Cartesian grid.
+ * The friend function is an alternative to the print method.
+ * The friend function overloads the ostream operator (&lt;&lt;).
  * 
- * If an exception is thrown while the try-catch block is being executed, return a POINT whose coordinate values are both zero.
+ * (Overloading an operator is assigning a different function to a native operator other than the function which that operator is used to represent by default).
  * 
- * @param {Number} X is assumed to be an integer no smaller than -100 and no larger than 100.
+ * Note that the default value of the leftmost function input parameter is the standard command line output stream (std::cout).
+ * The default parameter is defined in the POINT class header file (i.e. point.h).
  * 
- * @param {Number} Y is assumed to be an integer no smaller than -100 and no larger than 100.
+ * The friend function is not a member of the POINT class, 
+ * but the friend function has access to the private and protected members 
+ * of the POINT class and not just to the public members of the POINT class.
  * 
- * @return {Object} an object consisting of exactly two key-value pairs named X and Y and
- *                  exactly three functions named distance, slope, and description.
+ * The friend keyword only prefaces the function prototype of this function 
+ * (and the prototype of this function is declared in the POINT class header file (i.e. point.h)). 
+ * 
+ * The friend keyword does not preface the definition of this function
+ * (and the definition of this function is specified in the POINT class source file (i.e. point.cpp)).
+ * 
+ * // overloaded print function example one
+ * POINT point_0;
+ * std::cout &lt;&lt; point_0; // identical to point_0.print();
+ * 
+ * // overloaded print function example two
+ * std::ofstream file;
+ * POINT point_1;
+ * file &lt;&lt; point_1; // identical to point_1.print(file);
  */
-function POINT(X,Y) {
-    let distance = function(P) { return compute_distance_between_two_planar_points(this, P) };
-    let slope = function(P) { return get_slope_of_line_segment(this, P) };
-    let description = function() { 
-        return ('POINT(' + this.X + ',' + this.Y + ')');
-    };
-    try {
-        if (arguments.length !== 2) throw "exactly two function arguments are required.";
-        if (is_point({X:X,Y:Y})) return {X:X, Y:Y, DISTANCE:distance, SLOPE:slope, DESCRIPTION:description};
-        else throw "The expression (is_point({X:X,Y:Y})) was evaluated to be false.";
-    }
-    catch(exception) {
-        console.log("An exception to expected functioning occurred in POINT(X,Y): " + exception);
-        return {X:0, Y:0, DISTANCE:distance, SLOPE:slope, DESCRIPTION:description};
-    }
+std::ostream &amp; operator &lt;&lt; (std::ostream &amp; output, POINT &amp; point)
+{
+    point.print(output);
+    return output;
 }
 
 /**
- * Generate an Object type data value which represents the triangular region of space whose corners
- * are points represented by input POINT instances A, B, and C.
+ * The destructor method of the POINT class de-allocates memory which was used to 
+ * instantiate the POINT object which is calling this function.
  * 
- * If an exception is thrown while the try-catch block is being executed, return a POINT whose coordinate values are both zero.
- * 
- * A, B, and C are assumed to represent unique points in two-dimensional space. 
- * 
- * The area of the two-dimensional space whose boundaries are the shortest paths between points A, B, and C 
- * is assumed to be a positive real number quantity. (Therefore, A, B, and C are required to not be located on the same line).
- * 
- * @param {Object} A is assumed to be a value returned by the function POINT(X,Y).
- * 
- * @param {Object} B is assumed to be a value returned by the function POINT(X,Y).
- * 
- * @param {Object} C is assumed to be a value returned by the function POINT(X,Y).
- * 
- * @return {Object} an object consisting of exactly three data attributes named A, B, and C 
- *                  and exactly nine function attributes named perimeter, area, angle_a, angle_b, angle,
- *                  length_ab, length_bc, length_ca, and description.
+ * The destructor method of the POINT class is automatically called when 
+ * the program scope in which the caller POINT object was instantiated terminates.
  */
-function TRIANGLE(A,B,C) {
-    let _A = {}, _B = {}, _C = {};
-    let perimeter = function() { return (this.LENGTH_AB() + this.LENGTH_BC() + this.LENGTH_CA()); };
-    let area = function() { 
-        let s = 0.0, a = 0.0, b = 0.0, c = 0.0;
-        s = this.PERIMETER() / 2; // s is technically referred to as the semiperimter of the triangle which the caller TRIANGLE object of this function represents.
-        a = this.LENGTH_BC(); // a represents the length of the line segment whose endpoints are this.B and this.C.
-        b = this.LENGTH_CA(); // b represents the length of the line segment whose endpoints are this.C and this.A.
-        c = this.LENGTH_AB(); // c represents the length of the line segment whose endpoints are this.A and this.B.
-        return Math.sqrt(s * (s - a) * (s - b) * (s - c)); // Use Heron's Formula to compute the area of the triangle whose points are A, B, and C (and which are points of the caller TRIANGLE object of this function represents).
-    };
-    let angle_a = function() { 
-        let a = 0.0, b = 0.0, c = 0.0, angle_opposite_of_a = 0.0, angle_opposite_of_b = 0.0, angle_opposite_of_c = 0.0;
-        a = this.LENGTH_BC(); // a represents the length of the line segment whose endpoints are this.B and this.C.
-        b = this.LENGTH_CA(); // b represents the length of the line segment whose endpoints are this.C and this.A.
-        c = this.LENGTH_AB(); // c represents the length of the line segment whose endpoints are this.A and this.B.
-        angle_opposite_of_a = Math.acos(((b * b) + (c * c) - (a * a)) / (2 * b * c)) * (180 / Math.PI); // acos implies inverse of cosine (and Math.acos() returns a nonnegative number of radians)
-        angle_opposite_of_b = Math.acos(((a * a) + (c * c) - (b * b)) / (2 * a * c)) * (180 / Math.PI); // acos implies inverse of cosine (and Math.acos() returns a nonnegative number of radians)
-        angle_opposite_of_c = Math.acos(((a * a) + (b * b) - (c * c)) / (2 * a * b)) * (180 / Math.PI); // acos implies inverse of cosine (and Math.acos() returns a nonnegative number of radians)
-        return angle_opposite_of_a; // in degrees (instead of in radians)
-    };
-    let angle_b = function() { 
-        let a = 0.0, b = 0.0, c = 0.0, angle_opposite_of_a = 0.0, angle_opposite_of_b = 0.0, angle_opposite_of_c = 0.0;
-        a = this.LENGTH_BC(); // a represents the length of the line segment whose endpoints are this.B and this.C.
-        b = this.LENGTH_CA() // b represents the length of the line segment whose endpoints are this.C and this.A.
-        c = this.LENGTH_AB(); // c represents the length of the line segment whose endpoints are this.A and this.B.
-        angle_opposite_of_a = Math.acos(((b * b) + (c * c) - (a * a)) / (2 * b * c)) * (180 / Math.PI); // acos implies inverse of cosine (and Math.acos() returns a nonnegative number of radians)
-        angle_opposite_of_b = Math.acos(((a * a) + (c * c) - (b * b)) / (2 * a * c)) * (180 / Math.PI); // acos implies inverse of cosine (and Math.acos() returns a nonnegative number of radians)
-        angle_opposite_of_c = Math.acos(((a * a) + (b * b) - (c * c)) / (2 * a * b)) * (180 / Math.PI); // acos implies inverse of cosine (and Math.acos() returns a nonnegative number of radians)
-        return angle_opposite_of_b; // in degrees (instead of in radians)
-    };
-    let angle_c = function() { 
-        let a = 0.0, b = 0.0, c = 0.0, angle_opposite_of_a = 0.0, angle_opposite_of_b = 0.0, angle_opposite_of_c = 0.0;
-        a = this.LENGTH_BC(); // a represents the length of the line segment whose endpoints are this.B and this.C.
-        b = this.LENGTH_CA() // b represents the length of the line segment whose endpoints are this.C and this.A.
-        c = this.LENGTH_AB(); // c represents the length of the line segment whose endpoints are this.A and this.B.
-        angle_opposite_of_a = Math.acos(((b * b) + (c * c) - (a * a)) / (2 * b * c)) * (180 / Math.PI); // acos implies inverse of cosine (and Math.acos() returns a nonnegative number of radians)
-        angle_opposite_of_b = Math.acos(((a * a) + (c * c) - (b * b)) / (2 * a * c)) * (180 / Math.PI); // acos implies inverse of cosine (and Math.acos() returns a nonnegative number of radians)
-        angle_opposite_of_c = Math.acos(((a * a) + (b * b) - (c * c)) / (2 * a * b)) * (180 / Math.PI); // acos implies inverse of cosine (and Math.acos() returns a nonnegative number of radians)
-        return angle_opposite_of_c; // in degrees (instead of in radians)
-    };
-    let length_ab = function(A,B) { return this.A.DISTANCE(this.B); };
-    let length_bc = function(B,C) { return this.B.DISTANCE(this.C); };
-    let length_ca = function(C,A) { return this.C.DISTANCE(this.A); };
-    let description = function() { 
-        return ('TRIANGLE(A := ' + this.A.DESCRIPTION() + ', B:= ' + this.B.DESCRIPTION() + ', C := ' + this.C.DESCRIPTION() + ')');
-    };
-    try {
-        if (arguments.length !== 3) throw "exactly three function arguments are required.";
-        _A = POINT(A.X,A.Y);
-        _B = POINT(B.X,B.Y);
-        _C = POINT(C.X,C.Y);
-        if ((_A.X === _B.X) &amp;&amp; (_A.Y === _B.Y)) throw "A and B appear to represent the same planar coordinates.";
-        if ((_A.X === _C.X) &amp;&amp; (_A.Y === _C.Y)) throw "A and C appear to represent the same planar coordinates.";
-        if ((_C.X === _B.X) &amp;&amp; (_C.Y === _B.Y)) throw "C and B appear to represent the same planar coordinates.";
-        return {A:_A, B:_B, C:_C, PERIMETER:perimeter, AREA:area, ANGLE_A:angle_a, ANGLE_B:angle_b, ANGLE_C:angle_c, LENGTH_AB:length_ab, LENGTH_BC:length_bc, LENGTH_CA:length_ca, DESCRIPTION:description};
-    }
-    catch(exception) {
-        console.log("An exception to expected functioning occurred in TRIANGLE(A,B,C): " + exception);
-        return {A:POINT(0,0), B:POINT(1,1), C:POINT(0,1), PERIMETER:perimeter, AREA:area, ANGLE_A:angle_a, ANGLE_B:angle_b, ANGLE_C:angle_c, LENGTH_AB:length_ab, LENGTH_BC:length_bc, LENGTH_CA:length_ca, DESCRIPTION:description};
-    }
-}
-
-/**
- * Translate a POINT object's coordinate pair to its corresponding HTML canvas coordinates (which are each a nonnegative integer number of pixels)
- * such that the POINT object can be graphically depicted as a two-dimensional Cartesian grid "spaceless" location precisely located on that grid
- * (displayed inside of an HTML5 canvas element on the corresponding web page graphical user interface).
- * 
- * Assume that the relevant canvas element is square shaped and has a side length of exactly 750 pixels.
- * 
- * @param {Object} input_POINT is assumed to be an object whose abstracted properties are identical to objects returned by the function named POINT(X,Y).
- * 
- * @param {String} canvas_id is assumed to be a sequence of text characters which represents the identifier (id) of the relevant HTML canvas element.
- * 
- * @return {Object} an array whose elements are exactly two nonnegative integers.
- */
-function convert_POINT_coordinate_to_HTML_canvas_coordinate(input_POINT, canvas_id) {
-    let the_canvas, canvas_width = 0, canvas_height = 0, output_canvas_coordinate_pair = [];
-    let minimum_input_x_value = -100, maximum_input_x_value = 100;
-    let minimum_input_y_value = -100, maximum_input_y_value = 100;
-    let minimum_output_x_value = -100, maximum_output_x_value = 100;
-    let minimum_output_y_value = -100, maximum_output_y_value = 100;  
-    let output_x_value = 0, output_y_value = 0;  
-    let output_origin_x_value = 0, output_origin_y_value = 0;
-    const CANVAS_SIDE_LENGTH = 750;
-    try {
-        if (arguments.length !== 2) throw "exactly two (2) function inputs value are required.";
-        if (typeof arguments[0].X !== "number") throw "input_POINT.X is required to be a Number type value.";
-        if (typeof arguments[0].Y !== "number") throw "input_POINT.Y is required to be a Number type value.";
-        if (typeof arguments[1] !== "string") throw "canvas_id is required to be a String type value.";
-        if (Math.floor(input_POINT.X) !== input_POINT.X) throw "input_POINT.X is required to be a whole number (i.e. integer) value.";
-        if (Math.floor(input_POINT.Y) !== input_POINT.Y) throw "input_POINT.Y is required to be a whole number (i.e. integer) value.";
-        if ((input_POINT.X &lt; minimum_input_x_value) || (input_POINT.X &gt; maximum_input_x_value)) throw "input_POINT.X must be an integer value inside the set [-100,100].";
-        if ((input_POINT.Y &lt; minimum_input_y_value) || (input_POINT.Y &gt; maximum_input_y_value)) throw "input_POINT.Y must be an integer value inside the set [-100,100].";
-        if (canvas_id.length &lt; 1) throw "canvas_id is required to be a sequence of one (1) or more text characters.";
-        the_canvas = document.getElementById(canvas_id);
-        canvas_width = the_canvas.width;
-        canvas_height = the_canvas.height;
-        if (canvas_width !== canvas_height) throw "The canvas_width and canvas_height values are required to be identical values.";
-        if (canvas_width !== CANVAS_SIDE_LENGTH) throw "The canvas side lengths are each required to be exactly 750 pixels.";
-        output_origin_x_value = parseInt((the_canvas.width / 2));
-        output_origin_y_value = parseInt((the_canvas.height / 2)); 
-        // Determine whether or not the input_POINT is located on a Cartesian plane axis.
-        if (input_POINT.X === 0) output_x_value = output_origin_x_value;
-        if (input_POINT.Y === 0) output_y_value = output_origin_y_value;
-        // Determine whether or not the input_POINT is located on the right side of the y-axis of a Cartesian plane.
-        if (input_POINT.X &gt; 0) output_x_value = (output_origin_x_value + (input_POINT.X * (canvas_width / (Math.abs(minimum_input_x_value) + Math.abs(maximum_input_x_value)))));
-        // Determine whether or not the input_POINT is located on the top side of the x-axis of a Cartesian plane.
-        if (input_POINT.Y &gt; 0) output_y_value = (output_origin_y_value - (input_POINT.Y * (canvas_height / (Math.abs(minimum_input_y_value) + Math.abs(maximum_input_y_value)))));
-        // Determine whether or not the input_POINT is located on the right side of the y-axis of a Cartesian plane.
-        if (input_POINT.X &lt; 0) output_x_value = output_origin_x_value - (Math.abs(input_POINT.X) * (canvas_width / (Math.abs(minimum_input_x_value) + Math.abs(maximum_input_x_value))));
-        // Determine whether or not the input_POINT is located on the top side of the x-axis of a Cartesian plane.
-        if (input_POINT.Y &lt; 0) output_y_value = output_origin_y_value + (Math.abs(input_POINT.Y) * (canvas_width / (Math.abs(minimum_input_y_value) + Math.abs(maximum_input_y_value))));
-        output_canvas_coordinate_pair.push(output_x_value);
-        output_canvas_coordinate_pair.push(output_y_value);
-        return output_canvas_coordinate_pair;
-    }
-    catch(exception) {
-        console.log("An exception to normal functioning occurred during the runtime of convert_POINT_coordinate_to_HTML_canvas_coordinate(input_POINT, canvas_id): " + exception);
-        return 0;
-    }
-}
-
-/** 
- * Plot a red pixel-sized dot on the canvas whose identifier (id) is "cartesian_plane" on the web page named triangle_graphing.html
- * such that the horizontal position of the red pixel visually depicts the x-value coordinate value represented by input_POINT
- * and such that the vertical position of the red pixel visually depicts the y-value cordinate value represented by input_POINT
- * 
- * @param {Object} input_POINT is assumed to be an object whose abstracted properties are identical to objects returned by the function named POINT(X,Y).
- */
-function plot_red_POINT_pixel_on_canvas(input_POINT) {
-    let canvas, context;
-    let output_canvas_coordinate_pair = [];
-    try {
-        canvas = document.getElementById("cartesian_plane");
-        context = canvas.getContext("2d");
-        output_canvas_coordinate_pair = convert_POINT_coordinate_to_HTML_canvas_coordinate(input_POINT, "cartesian_plane");
-        context.beginPath();
-        context.rect(output_canvas_coordinate_pair[0], output_canvas_coordinate_pair[1], 1, 1); // 1 pixel has a width of 1 and a height of 1
-        context.strokeStyle = "#ff0000"; // HTML color code for red
-        context.stroke();
-    }
-    catch(exception) {
-        console.log("An exception to normal functioning occurred during the runtime of plot_red_POINT_pixel_on_canvas(input_POINT): " + exception);
-        return 0;
-    }
-}
-
-/** 
- * Draw a red line segment which is one pixel thick on the canvas whose identifier (id) is "cartesian_plane" on the web page named triangle_graphing.html.
- * 
- * @param {Object} input_POINT_0 is assumed to be an object whose abstracted properties are identical to objects returned by the function named POINT(X,Y).
- * 
- * @param {Object} input_POINT_1 is assumed to be an object whose abstracted properties are identical to objects returned by the function named POINT(X,Y).
- */
-/* function commented out on 21_JULY_2021
-function draw_red_line_segment_on_canvas(input_POINT_0, input_POINT_1) {
-    let canvas, context;
-    let placeholder_array = [], ip0x = 0, ip0y = 0, ip1x = 0, ip1y = 0;
-    try {
-        placeholder_array = convert_POINT_coordinate_to_HTML_canvas_coordinate(input_POINT_0, "cartesian_plane");
-        ip0x = placeholder_array[0];
-        ip0y = placeholder_array[1];
-        placeholder_array = convert_POINT_coordinate_to_HTML_canvas_coordinate(input_POINT_1, "cartesian_plane");
-        ip1x = placeholder_array[0];
-        ip1y = placeholder_array[1];
-        canvas = document.getElementById("cartesian_plane");
-        context = canvas.getContext("2d");
-        context.strokeStyle = "#ff0000"; 
-        context.lineWidth = 1;
-        context.beginPath();
-        context.moveTo(ip0x, ip0y); 
-        context.lineTo(ip1x, ip1y); 
-        context.stroke();
-    }
-    catch(exception) {
-        console.log("An exception to expected functioning occurred in draw_red_line_segment_on_canvas(input_POINT_0, input_POINT_1): " + exception);
-    }
-}
-*/
-
-/**
- * Draw a "light green" filled triangle which visually represents input_TRIANGLE on the canvas whose identifier (id) is "cartesian_plane"
- * on the web page named triangle_graphing.html.
- * 
- * @param {Object} input_TRIANGLE is assumed to be an object whose abstracted properties are identical to objects returned by the function named TRIANGLE(A,B,C).
- */
-function draw_green_filled_triangle(input_TRIANGLE) {
-    let canvas, context;
-    let placeholder_array = [], ax = 0, ay = 0, bx = 0, by = 0, cx = 0, cy = 0;
-    try {
-        placeholder_array = convert_POINT_coordinate_to_HTML_canvas_coordinate(input_TRIANGLE.A, "cartesian_plane");
-        ax = placeholder_array[0];
-        ay = placeholder_array[1];
-        placeholder_array = convert_POINT_coordinate_to_HTML_canvas_coordinate(input_TRIANGLE.B, "cartesian_plane");
-        bx = placeholder_array[0];
-        by = placeholder_array[1];
-        placeholder_array = convert_POINT_coordinate_to_HTML_canvas_coordinate(input_TRIANGLE.C, "cartesian_plane");
-        cx = placeholder_array[0];
-        cy = placeholder_array[1];
-        canvas = document.getElementById("cartesian_plane");
-        context = canvas.getContext("2d");
-        context.fillStyle = "#c2fab4"; // HTML color code for a particular shade of "light green"
-        context.beginPath();
-        context.moveTo(ax, ay); // point 0  
-        context.lineTo(bx, by); // point 1
-        context.lineTo(cx, cy); // point 2
-        context.closePath(); // go back to point 0
-        context.strokeStyle = "#ff0000"; // red
-        context.lineWidth = 1; 
-        context.fill();
-        context.stroke();
-    }
-    catch(exception) {
-        console.log("An exception to expected functioning occurred in draw_red_line_segment_on_canvas(input_POINT_0, input_POINT_1): " + exception);
-    }
-}
-
-/**
- * Respond to the event of the GENERATE button being clicked.
- */
-function generate_triangle_using_input_coordinates() {
-    let cartesian_plane_canvas = "";
-    let A = {}, B = {}, C = {}, T = {};
-    let time_stamped_message = "", selected_menu_option_value = 0, x_coordinate_value = 0, y_coordinate_value = 0;
-    let output_div = undefined, events_log_div = undefined, generate_button_container_paragraph = undefined;
-    let select_menu_container_paragraph = undefined;
-    let reset_button = undefined;
-    try {
-        // Append the bottom of the content inside of the "event_log" div with a time stamped message indicating that this function was called.
-        time_stamped_message = ("The function named generate_triangle_using_input_coordinates() was called at time: " + generate_time_stamp());
-        console.log(time_stamped_message);
-        time_stamped_message = generate_paragraph_html_element(time_stamped_message);
-        events_log_div = document.getElementById("events_log");
-        events_log_div.innerHTML += time_stamped_message;
-        // Replace the GENERATE button with a RESET button.
-        generate_button_container_paragraph = document.getElementById("generate_button_container");
-        generate_button_container_paragraph.innerHTML = ('&lt;' + 'input type="button" value="RESET" onclick="initialize_application()"' + '/' + '&gt;');
-        // Transform the first input select menu (for A.X) into plain text displaying its selected option.
-        select_menu_container_paragraph = document.getElementById("a_x_menu_container");
-        selected_menu_option_value = parseInt(get_selected_menu_option_value("a_x_menu"));
-        select_menu_container_paragraph.innerHTML = ('A.X := ' + selected_menu_option_value + '. // horizontal position of two-dimensional POINT labeled A.');
-        // Store the selected menu option in a variable to be used later as its corresponding POINT property (as the property labeled X of the object labeled A).
-        x_coordinate_value = selected_menu_option_value; 
-        // Transform the second input select menu (for A.Y) into plain text displaying its selected option.
-        select_menu_container_paragraph = document.getElementById("a_y_menu_container");
-        selected_menu_option_value = parseInt(get_selected_menu_option_value("a_y_menu"));
-        select_menu_container_paragraph.innerHTML = ('A.Y := ' + selected_menu_option_value + '. // vertical position of two-dimensional POINT labeled A.'); 
-        // Store the selected menu option in a variable to be used later as its corresponding POINT property (as the property labeled Y of the object labeled A).
-        y_coordinate_value = selected_menu_option_value; 
-        // Store an Object type value for representing the two-dimensional point labeled A.
-        A = POINT(x_coordinate_value,y_coordinate_value);
-        // Transform the third input select menu (for B.X) into plain text displaying its selected option.
-        select_menu_container_paragraph = document.getElementById("b_x_menu_container");
-        selected_menu_option_value = parseInt(get_selected_menu_option_value("b_x_menu"));
-        select_menu_container_paragraph.innerHTML = ('B.X := ' + selected_menu_option_value + '. // horizontal position of two-dimensional POINT labeled B.');
-        // Store the selected menu option in a variable to be used later as its corresponding POINT property (as the property labeled X of the object labeled B).
-        x_coordinate_value = selected_menu_option_value; 
-        // Transform the fourth input select menu (for B.Y) into plain text displaying its selected option.
-        select_menu_container_paragraph = document.getElementById("b_y_menu_container");
-        selected_menu_option_value = parseInt(get_selected_menu_option_value("b_y_menu"));
-        select_menu_container_paragraph.innerHTML = ('B.Y := ' + selected_menu_option_value + '. // vertical position of two-dimensional POINT labeled B.'); 
-        // Store the selected menu option in a variable to be used later as its corresponding POINT property (as the property labeled Y of the object labeled B).
-        y_coordinate_value = selected_menu_option_value; 
-        // Store an Object type value for representing the two-dimensional point labeled A.
-        B = POINT(x_coordinate_value,y_coordinate_value);
-        // Transform the fifth input select menu (for C.X) into plain text displaying its selected option.
-        select_menu_container_paragraph = document.getElementById("c_x_menu_container");
-        selected_menu_option_value = parseInt(get_selected_menu_option_value("c_x_menu"));
-        select_menu_container_paragraph.innerHTML = ('C.X := ' + selected_menu_option_value + '. // horizontal position of two-dimensional POINT labeled C.');
-        // Store the selected menu option in a variable to be used later as its corresponding POINT property (as the property labeled X of the object labeled C).
-        x_coordinate_value = selected_menu_option_value; 
-        // Transform the sixth input select menu (for C.Y) into plain text displaying its selected option.
-        select_menu_container_paragraph = document.getElementById("c_y_menu_container");
-        selected_menu_option_value = parseInt(get_selected_menu_option_value("c_y_menu"));
-        select_menu_container_paragraph.innerHTML = ('C.Y := ' + selected_menu_option_value + '. // vertical position of two-dimensional POINT labeled C.'); 
-        // Store the selected menu option in a variable to be used later as its corresponding POINT property (as the property labeled Y of the object labeled C).
-        y_coordinate_value = selected_menu_option_value; 
-        // Store an Object type value for representing the two-dimensional point labeled A.
-        C = POINT(x_coordinate_value,y_coordinate_value);
-        // Generate a TRIANGLE object using the POINT objects A, B, and C as the inputs to that "constructor" function.
-        T = TRIANGLE(A,B,C);
-        // Print the attributes of the TRIANGLE object as text inside of the div element whose id is "output". (Append those paragraphs to the bottom of the content in the output div).
-        output_div = document.getElementById("output");
-        output_div.innerHTML = generate_paragraph_html_element("T.DESCRIPTION() := " + T.DESCRIPTION() + ".");
-        output_div.innerHTML += generate_paragraph_html_element("T.LENGTH_AB() := " + T.LENGTH_AB() + ". // in Cartesian grid unit lengths");
-        output_div.innerHTML += generate_paragraph_html_element("T.LENGTH_BC() := " + T.LENGTH_BC() + ". // in Cartesian grid unit lengths");
-        output_div.innerHTML += generate_paragraph_html_element("T.LENGTH_CA() := " + T.LENGTH_CA() + ". // in Cartesian grid unit lengths");
-        output_div.innerHTML += generate_paragraph_html_element("T.PERIMETER() := " + T.PERIMETER() + ". // in Cartesian grid unit lengths");
-        output_div.innerHTML += generate_paragraph_html_element("T.ANGLE_A() := " + T.ANGLE_A() + ". // in degrees (non-obtuse between CA and AB)");
-        output_div.innerHTML += generate_paragraph_html_element("T.ANGLE_B() := " + T.ANGLE_B() + ". // in degrees (non-obtuse between AB and BC)");
-        output_div.innerHTML += generate_paragraph_html_element("T.ANGLE_C() := " + T.ANGLE_C() + ". // in degrees (non-obtuse between BC and CA)");
-        output_div.innerHTML += generate_paragraph_html_element("((T.ANGLE_A() + T.ANGLE_B()) + T.ANGLE_C()) = " + ((T.ANGLE_A() + T.ANGLE_B()) + T.ANGLE_C())  + ". // in degrees");
-        output_div.innerHTML += generate_paragraph_html_element("T.AREA() := " + T.AREA() + ". // in Cartesian grid unit square areas"); 
-        /*
-        console.log("testing POINT_coordinate_to_HTML_canvas_coordinate(input_POINT, canvas_id)...");
-        console.log('POINT_coordinate_to_HTML_canvas_coordinate(POINT(-20,-20), "cartesian_plane") := ' + POINT_coordinate_to_HTML_canvas_coordinate(POINT(-20,-20), "cartesian_plane") + '.');
-        console.log("testing plot_red_POINT_pixel_on_canvas(POINT(-20,-20))...");
-        plot_red_POINT_pixel_on_canvas(POINT(-20,-20));
-        */
-        // Plot the three points of the TRIANGLE object as red pixel-sized dots on the canvas element whose id is "cartesian_plane".
-        plot_red_POINT_pixel_on_canvas(T.A);
-        plot_red_POINT_pixel_on_canvas(T.B);
-        plot_red_POINT_pixel_on_canvas(T.C);
-        //...
-        console.log("testing draw_red_line_segment_on_canvas(input_POINT_0, input_POINT_1)...");
-        console.log("testing draw_red_line_segment_on_canvas(POINT(0,0), POINT(100,100))...");
-        /* code block commented out on 21_JULY_2023
-        // draw_red_line_segment_on_canvas(POINT(0,0), POINT(100,100)); 
-        // Draw red line segments which are each one pixel thick and whose endpoints are each of the points in the TRIANGLE object.
-        draw_red_line_segment_on_canvas(T.A, T.B);
-        draw_red_line_segment_on_canvas(T.B, T.C);
-        draw_red_line_segment_on_canvas(T.C, T.A);
-        */
-        // Draw a green triangular area inside of the red line segments which were previously drawn.
-        draw_green_filled_triangle(T);
-    }
-    catch(exception) {
-        console.log("An exception to normal functioning occurred during the runtime of generate_triangle_using_input_coordinates(): " + exception);
-    }
+POINT::~POINT()
+{
+    std::cout &lt;&lt; "\n\nDeleting the POINT type object whose memory address is " &lt;&lt; this &lt;&lt; "...";
 }
 </pre>
-<hr>
-<p>This web page was last updated on 17_JUNE_2024. The content displayed on this web page is licensed as <a style="background:#000000;color:#ff9000" href="https://karlinaobject.wordpress.com/public_domain/" target="_blank" rel="noopener">PUBLIC_DOMAIN</a> intellectual property.</p>
-<hr>
+<hr />
+<p><strong>TRIANGLE_CLASS_HEADER</strong></p>
+<hr />
+<p>The following header file contains the preprocessing directives and function prototypes of the TRIANGLE class.</p>
+<p>C++_header_file: <a style="background: #000000;color: #00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/triangle.h" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/triangle.h</a></p>
+<hr />
+<pre>/**
+ * file: triangle.h
+ * type: C++ (header file)
+ * author: karbytes
+ * date: 07_JULY_2023
+ * license: PUBLIC_DOMAIN
+ */
+
+// If TRIANGLE.h has not already been linked to a source file (.cpp), then link this header file to the source file(s) which include this header file.
+#ifndef TRIANGLE_H // If triangle.h has not already been linked to a source file (.cpp), 
+#define TRIANGLE_H // then link this header file to the source file(s) which include this header file.
+
+// Include the C++ header file which contains preprocessing directives, variable declarations, and function prototypes for the POINT class.
+#include "point.h" 
+
+/**
+ * Define a class which is used to instantiate TRIANGLE type objects.
+ * 
+ * (An object is a variable whose data type is user defined rather than native to the C++ programming language).
+ * 
+ * A TRIANGLE object represents an instance in which three unique POINT instances exist 
+ * (and such that each one of those three POINT instances represents a unique coordinate pair within the tuple of three objects 
+ *  which each represent exactle one two-dimensional point, POINT(X,Y), on a Cartesian grid).
+ * 
+ * A POINT object represents a whole number coordinate pair in the form (X,Y).
+ * 
+ * X represents a specific whole number position along the x-axis (i.e. horizontal dimension) of a two-dimensional Cartesian grid.
+ * Y represents a specific whole number position along the y-axis (i.e. vertical dimension) of the same two-dimensional Cartesian grid.
+ * 
+ * X stores one integer value at a time which is no smaller than MINIMUM_X and which is no larger than MAXIMUM_X.
+ * Y stores one integer value at a time which is no smaller than MINIMUM_Y and which is no larger than MAXIMUM_Y.
+ */
+class TRIANGLE
+{
+private:
+    POINT A, B, C; // data attributes
+    bool points_represent_unique_coordinate_pairs(POINT point_0, POINT point_1, POINT point_2); // helper method
+    bool points_form_nondegenerate_triangle(POINT point_0, POINT point_1, POINT point_2); // helper method
+public:
+    TRIANGLE(); // default constructor
+    TRIANGLE(POINT A, POINT B, POINT C); // normal constructor
+    TRIANGLE(int A_X, int A_Y, int B_X, int B_Y, int C_X, int C_Y); // normal constructor
+    TRIANGLE(const TRIANGLE &amp; triangle); // copy constructor
+    POINT get_A(); // getter method
+    POINT get_B(); // getter method
+    POINT get_C(); // getter method
+    double get_side_length_AB(); // getter method
+    double get_side_length_BC(); // getter method
+    double get_side_length_CA(); // getter method
+    double get_interior_angle_ABC(); // getter method
+    double get_interior_angle_BCA(); // getter method
+    double get_interior_angle_CAB(); // getter method
+    double get_perimeter(); // getter method
+    double get_area(); // getter method
+    void print(std::ostream &amp; output = std::cout); // descriptor method
+    friend std::ostream &amp; operator &lt;&lt; (std::ostream &amp; output, TRIANGLE &amp; triangle); // descriptor method
+    ~TRIANGLE(); // destructor
+};
+
+/* preprocessing directives */
+#endif // Terminate the conditional preprocessing directives code block in this header file.
+</pre>
+<hr />
+<p><strong>TRIANGLE_CLASS_SOURCE_CODE</strong></p>
+<hr />
+<p>The following source code defines the functions of the TRIANGLE class.</p>
+<p>C++_source_file: <a style="background: #000000;color: #00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/triangle.cpp" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/triangle.cpp</a></p>
+<hr />
+<pre>/**
+ * file: triangle.cpp
+ * type: C++ (source file)
+ * author: karbytes
+ * date: 07_JULY_2023
+ * license: PUBLIC_DOMAIN
+ */
+
+// Include the C++ header file which contains preprocessing directives, variable declarations, and function prototypes for the TRIANGLE class.
+#include "triangle.h" 
+
+/**
+ * Determine whether or not point_0, point_1, and point_2 each represent unique coordinate pairs.
+ * 
+ * (Assume that point_0, point_1, and point_2 each represent valid POINT instances).
+ * 
+ * If each of the three POINT objects represent unique coordinate pairs, return true.
+ * 
+ * Otherwise, return false.
+ */
+bool TRIANGLE::points_represent_unique_coordinate_pairs(POINT point_0, POINT point_1, POINT point_2)
+{
+    if ((point_0.get_X() == point_1.get_X()) &amp;&amp; (point_0.get_Y() == point_1.get_Y())) 
+    {
+        std::cout &lt;&lt; &quot;\n\npoint_0 and point_1 appear to represent the same coordinate pair.&quot;;
+        std::cout &lt;&lt; &quot;\npoint_0 := POINT(&quot; &lt;&lt; point_0.get_X() &lt;&lt; &quot;, &quot; &lt;&lt; point_0.get_Y() &lt;&lt; &quot;).&quot;;
+        std::cout &lt;&lt; &quot;\npoint_1 := POINT(&quot; &lt;&lt; point_1.get_X() &lt;&lt; &quot;, &quot; &lt;&lt; point_1.get_Y() &lt;&lt; &quot;).&quot;;
+        return false;
+    }
+    if ((point_0.get_X() == point_2.get_X()) &amp;&amp; (point_0.get_Y() == point_2.get_Y())) 
+    {
+        std::cout &lt;&lt; &quot;\n\npoint_0 and point_2 appear to represent the same coordinate pair.&quot;;
+        std::cout &lt;&lt; &quot;\npoint_0 := POINT(&quot; &lt;&lt; point_0.get_X() &lt;&lt; &quot;, &quot; &lt;&lt; point_0.get_Y() &lt;&lt; &quot;).&quot;;
+        std::cout &lt;&lt; &quot;\npoint_2 := POINT(&quot; &lt;&lt; point_2.get_X() &lt;&lt; &quot;, &quot; &lt;&lt; point_2.get_Y() &lt;&lt; &quot;).&quot;;
+        return false;
+    }
+    if ((point_1.get_X() == point_2.get_X()) &amp;&amp; (point_1.get_Y() == point_2.get_Y())) 
+    {
+        std::cout &lt;&lt; &quot;\n\npoint_1 and point_2 appear to represent the same coordinate pair.&quot;;
+        std::cout &lt;&lt; &quot;\npoint_1 := POINT(&quot; &lt;&lt; point_1.get_X() &lt;&lt; &quot;, &quot; &lt;&lt; point_1.get_Y() &lt;&lt; &quot;).&quot;;
+        std::cout &lt;&lt; &quot;\npoint_2 := POINT(&quot; &lt;&lt; point_2.get_X() &lt;&lt; &quot;, &quot; &lt;&lt; point_2.get_Y() &lt;&lt; &quot;).&quot;;
+        return false;
+    }
+    if ((point_2.get_X() == point_0.get_X()) &amp;&amp; (point_2.get_Y() == point_0.get_Y())) 
+    {
+        std::cout &lt;&lt; &quot;\n\npoint_2 and point_0 appear to represent the same coordinate pair.&quot;;
+        std::cout &lt;&lt; &quot;\npoint_2 := POINT(&quot; &lt;&lt; point_2.get_X() &lt;&lt; &quot;, &quot; &lt;&lt; point_2.get_Y() &lt;&lt; &quot;).&quot;;
+        std::cout &lt;&lt; &quot;\npoint_0 := POINT(&quot; &lt;&lt; point_0.get_X() &lt;&lt; &quot;, &quot; &lt;&lt; point_0.get_Y() &lt;&lt; &quot;).&quot;;
+        return false;
+    }
+    return true;
+}
+
+/**
+ * Determine whether or not point_0, point_1, and point_2 form a non-degenerate triangle.
+ * 
+ * (Assume that point_0, point_1, and point_2 each represent valid POINT instances).
+ * 
+ * A non-degenerate triangle is a triangle whose area is some positive real number quantity.
+ * 
+ * A degenerate triangle is a triangle whose area is zero (due to the fact that one line intersects each of the three points).
+ * 
+ * If point_0, point_1, and point_2 form a non-degenerate triangle, return true.
+ * 
+ * Otherwise, return false.
+ */
+bool TRIANGLE::points_form_nondegenerate_triangle(POINT point_0, POINT point_1, POINT point_2)
+{
+    if (!points_represent_unique_coordinate_pairs(point_0, point_1, point_2))
+    {
+        std::cout &lt;&lt; &quot;\n\npoint_0, point_1, and point_2 do not each represent unique coordinate pairs.&quot;;
+        std::cout &lt;&lt; &quot;\nHence, points_form_degenerate_triangle(point_0, point_1, point_2) is returning false.&quot;;
+        return false;
+    }
+    A = point_0;
+    B = point_1;
+    C = point_2;
+    if (get_area() &lt;= 0) 
+    {
+        std::cout &lt;&lt; &quot;\n\nWhen setting the POINT values of the caller TRIANGLE object using the given inputs, get_area() returned a non-positive number result.&quot;;
+        std::cout &lt;&lt; &quot;\nHence, points_form_nondegenerate_triangle(POINT point_0, POINT point_1, POINT point_2) is returning false.&quot;;
+        return false;
+    }
+    return true;
+}
+
+/**
+ * The default constructor method of the TRIANGLE class returns a TRIANGLE object 
+ * whose POINT property named A represents the coordinate pair (0, 0),
+ * whose POINT property named B represents the coordinate pair (0, 1), and
+ * whose POINT property named C represents the coordinate pair (1, 0).
+ */
+TRIANGLE::TRIANGLE()
+{
+    std::cout &lt;&lt; &quot;\n\nCreating the TRIANGLE type object whose memory address is &quot; &lt;&lt; this &lt;&lt; &quot;...&quot;;
+    A = POINT(0, 0);
+    B = POINT(0, 1);
+    C = POINT(1, 0);
+}
+
+/**
+ * The normal constructor method of the TRIANGLE class (which takes six int type values as function inputs) returns a TRIANGLE object 
+ * whose POINT property named A represents the coordinate pair (A_X, A_Y),
+ * whose POINT property named B represents the coordinate pair (B_X, B_Y), and
+ * whose POINT property named C represents the coordinate pair (C_X, C_Y)
+ * if POINT(A_X, A_Y), POINT(B_X, B_Y), and POINT(C_X, C_Y) represent a non-degenerate triangle.
+ * 
+ * If POINT(A_X, A_Y, POINT(B_X, B_Y), and POINT(C_X, C_Y) do not represent a non-degenerate triangle,
+ * this function will return a TRIANGLE object
+ * whose POINT property named A represents the coordinate pair (0, 0),
+ * whose POINT property named B represents the coordinate pair (0, 1), and
+ * whose POINT property named C represents the coordinate pair (1, 0).
+ */
+TRIANGLE::TRIANGLE(int A_X, int A_Y, int B_X, int B_Y, int C_X, int C_Y)
+{
+    std::cout &lt;&lt; &quot;\n\nCreating the TRIANGLE type object whose memory address is &quot; &lt;&lt; this &lt;&lt; &quot;...&quot;;
+    POINT input_A = POINT(A_X, A_Y);
+    POINT input_B = POINT(B_X, B_Y);
+    POINT input_C = POINT(C_X, C_Y);
+    if (points_form_nondegenerate_triangle(input_A, input_B, input_C))
+    {
+        A = input_A;
+        B = input_B;
+        C = input_C;
+    }
+    else
+    {
+        A = POINT(0, 0);
+        B = POINT(0, 1);
+        C = POINT(1, 0);
+    }
+}
+
+/**
+ * The normal constructor method of the TRIANGLE class (which takes three POINT objects as function inputs) returns a TRIANGLE object 
+ * whose POINT property named A represents the same coordinate pair as the parameter named A,
+ * whose POINT property named B represents the same coordinate pair as the parameter named B, and
+ * whose POINT property named C represents the same coordinate pair as the parameter named C
+ * if parameter A, parameter B, and parameter C represent a non-degenerate triangle.
+ * 
+ * If parameter A, parameter B, and parameter C do not represent a non-degenerate triangle,
+ * this function will return a TRIANGLE object
+ * whose POINT property named A represents the coordinate pair (0, 0),
+ * whose POINT property named B represents the coordinate pair (0, 1), and
+ * whose POINT property named C represents the coordinate pair (1, 0).
+ * 
+ * (The keyword this refers to the TRIANGLE object which is returned by the TRIANGLE(POINT A, POINT B, POINT C) method of the TRIANGLE class).
+ */
+TRIANGLE::TRIANGLE(POINT A, POINT B, POINT C)
+{
+    std::cout &lt;&lt; &quot;\n\nCreating the TRIANGLE type object whose memory address is &quot; &lt;&lt; this &lt; A = A;
+        this -&gt; B = B;
+        this -&gt; C = C;
+    }
+    else
+    {
+        this -&gt; A = POINT(0, 0);
+        this -&gt; B = POINT(0, 1);
+        this -&gt; C = POINT(1, 0);
+    }
+}
+
+/**
+ * The copy constructor method of the TRIANGLE class returns a TRIANGLE object 
+ * whose POINT property named A represents the same coordinate pair as the POINT property named A which belongs to the input TRIANGLE object,
+ * whose POINT property named B represents the same coordinate pair as the POINT property named B which belongs to the input TRIANGLE object, and
+ * whose POINT property named C represents the same coordinate pair as the POINT property named C which belongs to the input TRIANGLE object. 
+ * 
+ * (The keyword this refers to the TRIANGLE object which is returned by the copy constructor method of the TRIANGLE class).
+ */
+TRIANGLE::TRIANGLE(const TRIANGLE &amp; triangle)
+{
+    std::cout &lt;&lt; &quot;\n\nCreating the TRIANGLE type object whose memory address is &quot; &lt;&lt; this &lt; A = triangle.A;
+    this -&gt; B = triangle.B;
+    this -&gt; C = triangle.C;
+}
+
+/** 
+ * The getter method of the TRIANGLE class named get_A() returns the POINT type value of the caller TRIANGLE object's A property.
+ */
+POINT TRIANGLE::get_A()
+{
+    return A;
+}
+
+/** 
+ * The getter method of the TRIANGLE class named get_B() returns the POINT type value of the caller TRIANGLE object's B property.
+ */
+POINT TRIANGLE::get_B()
+{
+    return B;
+}
+
+/** 
+ * The getter method of the TRIANGLE class named get_C() returns the POINT type value of the caller TRIANGLE object's C property.
+ */
+POINT TRIANGLE::get_C()
+{
+    return C;
+}
+
+/** 
+ * The getter method of the TRIANGLE class named get_side_length_AB() returns the approximate length of the shortest path between points A and B.
+ */
+double TRIANGLE::get_side_length_AB()
+{
+    return A.get_distance_from(B);
+}
+
+/** 
+ * The getter method of the TRIANGLE class named get_side_length_BC() returns the approximate length of the shortest path between points B and C.
+ */
+double TRIANGLE::get_side_length_BC()
+{
+    return B.get_distance_from(C);
+}
+
+/** 
+ * The getter method of the TRIANGLE class named get_side_length_CA() returns the approximate length of the shortest path between points C and A.
+ */
+double TRIANGLE::get_side_length_CA()
+{
+    return C.get_distance_from(A);
+}
+
+/**
+ * The getter method of the TRIANGLE class named get_interior_angle_ABC() returns the approximate angle measurement in degrees of the angle
+ * formed by connecting points A, B, anc C in the order specified by this sentence.
+ * 
+ * The function below uses the Law of Cosines to compute the measurement of an interior angle of a triangle 
+ * using that triangle's three side lengths as function inputs to output some nonnegative real number of degrees.
+ */
+double TRIANGLE::get_interior_angle_ABC()
+{
+    double a = 0.0, b = 0.0, c = 0.0, angle_opposite_of_a = 0.0, angle_opposite_of_b = 0.0, angle_opposite_of_c = 0.0;
+    a = get_side_length_BC(); // a represents the length of the line segment whose endpoints are B and C.
+    b = get_side_length_CA(); // b represents the length of the line segment whose endpoints are C and A.
+    c = get_side_length_AB(); // c represents the length of the line segment whose endpoints are A and B.
+    angle_opposite_of_a = acos(((b * b) + (c * c) - (a * a)) / (2 * b * c)) * (180 / PI);
+    angle_opposite_of_b = acos(((a * a) + (c * c) - (b * b)) / (2 * a * c)) * (180 / PI);
+    angle_opposite_of_c = acos(((a * a) + (b * b) - (c * c)) / (2 * a * b)) * (180 / PI);
+    return angle_opposite_of_b;
+}
+
+/**
+ * The getter method of the TRIANGLE class named get_interior_angle_BCA() returns the approximate angle measurement in degrees of the angle
+ * formed by connecting points B, C, and A in the order specified by this sentence.
+ * 
+ * The function below uses the Law of Cosines to compute the measurement of an interior angle of a triangle 
+ * using that triangle's three side lengths as function inputs to output some nonnegative real number of degrees.
+ */
+double TRIANGLE::get_interior_angle_BCA()
+{
+    double a = 0.0, b = 0.0, c = 0.0, angle_opposite_of_a = 0.0, angle_opposite_of_b = 0.0, angle_opposite_of_c = 0.0;
+    a = get_side_length_BC(); // a represents the length of the line segment whose endpoints are B and C.
+    b = get_side_length_CA(); // b represents the length of the line segment whose endpoints are C and A.
+    c = get_side_length_AB(); // c represents the length of the line segment whose endpoints are A and B.
+    angle_opposite_of_a = acos(((b * b) + (c * c) - (a * a)) / (2 * b * c)) * (180 / PI);
+    angle_opposite_of_b = acos(((a * a) + (c * c) - (b * b)) / (2 * a * c)) * (180 / PI);
+    angle_opposite_of_c = acos(((a * a) + (b * b) - (c * c)) / (2 * a * b)) * (180 / PI);
+    return angle_opposite_of_c;
+}
+
+/**
+ * The getter method of the TRIANGLE class named get_interior_angle_CAB() returns the approximate angle measurement in degrees of the angle
+ * formed by connecting points C, A, and B in the order specified by this sentence.
+ * 
+ * The function below uses Law of Cosines to compute the measurement of an interior angle of a triangle 
+ * using that triangle's three side lengths as function inputs to output some nonnegative real number of degrees.
+ */   
+double TRIANGLE::get_interior_angle_CAB()
+{
+    double a = 0.0, b = 0.0, c = 0.0, angle_opposite_of_a = 0.0, angle_opposite_of_b = 0.0, angle_opposite_of_c = 0.0;
+    a = get_side_length_BC(); // a represents the length of the line segment whose endpoints are B and C (and which are points of the caller TRIANGLE object of this function represents).
+    b = get_side_length_CA(); // b represents the length of the line segment whose endpoints are C and A (and which are points of the caller TRIANGLE object of this function represents).
+    c = get_side_length_AB(); // c represents the length of the line segment whose endpoints are A and B (and which are points of the caller TRIANGLE object of this function represents).
+    angle_opposite_of_a = acos(((b * b) + (c * c) - (a * a)) / (2 * b * c)) * (180 / PI);
+    angle_opposite_of_b = acos(((a * a) + (c * c) - (b * b)) / (2 * a * c)) * (180 / PI);
+    angle_opposite_of_c = acos(((a * a) + (b * b) - (c * c)) / (2 * a * b)) * (180 / PI);
+    return angle_opposite_of_a;
+}
+
+/** 
+ * The getter method of the TRIANGLE class named get_perimeter() returns the approximate sum of the three side lengths 
+ * of the triangle which the caller TRIANGLE object represents.
+ */
+double TRIANGLE::get_perimeter()
+{
+    return get_side_length_AB() + get_side_length_BC() + get_side_length_CA();
+}
+
+/** 
+ * The getter method of the TRIANGLE class named get_area() returns the approximate area of the two-dimensional space whose bounds are 
+ * the shortest paths between points A, B, and C of the triangle which the caller TRIANGLE object represents.
+ * 
+ * This function uses Heron's Formula to compute the area of a triangle using that triangle's side lengths as formula inputs.
+ */
+double TRIANGLE::get_area()
+{
+    double s = 0.0, a = 0.0, b = 0.0, c = 0.0;
+    s = get_perimeter() / 2; // s is technically referred to as the semiperimter of the triangle which the caller TRIANGLE object of this function represents.
+    a = get_side_length_BC(); // a represents the length of the line segment whose endpoints are B and C (and which are points of the caller TRIANGLE object of this function represents).
+    b = get_side_length_CA(); // b represents the length of the line segment whose endpoints are C and A (and which are points of the caller TRIANGLE object of this function represents).
+    c = get_side_length_AB(); // c represents the length of the line segment whose endpoints are A and B (and which are points of the caller TRIANGLE object of this function represents).
+    return sqrt(s * (s - a) * (s - b) * (s - c)); // Use Heron's Formula to compute the area of the triangle whose points are A, B, and C (and which are points of the caller TRIANGLE object of this function represents).
+}
+
+/**
+ * The print method of the TRIANGLE class prints a description of the caller TRIANGLE object to the output stream.
+ * 
+ * Note that the default value of the function input parameter is the standard command line output stream (std::cout).
+ * 
+ * The default parameter is defined in the TRIANGLE class header file (i.e. triangle.h) and not in the TRIANGLE class source file (i.e. triangle.cpp).
+ */
+void TRIANGLE::print(std::ostream &amp; output)
+{
+    output &lt;&lt; &quot;\n\n--------------------------------------------------------------------------------------------------&quot;;
+    output &lt;&lt; &quot;\nthis = &quot; &lt;&lt; this &lt;&lt; &quot;. // The keyword named this is a pointer which stores the memory address of the first memory cell of a TRIANGLE sized chunk of contiguous memory cells which are allocated to the caller TRIANGLE object.&quot;;
+    output &lt;&lt; &quot;\n&amp;A = &quot; &lt;&lt; &amp;A &lt;&lt; &quot;. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named A.&quot;;
+    output &lt;&lt; &quot;\n&amp;B = &quot; &lt;&lt; &amp;B &lt;&lt; &quot;. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named B.&quot;;
+    output &lt;&lt; &quot;\n&amp;C = &quot; &lt;&lt; &amp;C &lt;&lt; &quot;. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named C.&quot;;
+    output &lt;&lt; &quot;\nsizeof(int) = &quot; &lt;&lt; sizeof(int) &lt;&lt; &quot;. // The sizeof() operation returns the nonnegative integer number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).&quot;;
+    output &lt;&lt; &quot;\nsizeof(POINT) = &quot; &lt;&lt; sizeof(POINT) &lt;&lt; &quot;. // The sizeof() operation returns the nonnegative integer number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).&quot;;
+    output &lt;&lt; &quot;\nsizeof(TRIANGLE) = &quot; &lt;&lt; sizeof(TRIANGLE) &lt;&lt; &quot;. // The sizeof() operation returns the nonnegative integer number of bytes of memory which a TRIANGLE type object occupies. (Each memory cell has a data capacity of 1 byte).&quot;;
+    output &lt;&lt; &quot;\nA = POINT(&quot; &lt;&lt; A.get_X() &lt;&lt; &quot;,&quot; &lt;&lt; A.get_Y() &lt;&lt; &quot;). // A represents a point (which is neither B nor C) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).&quot;;
+    output &lt;&lt; &quot;\nB = POINT(&quot; &lt;&lt; B.get_X() &lt;&lt; &quot;,&quot; &lt;&lt; B.get_Y() &lt;&lt; &quot;). // B represents a point (which is neither A nor C) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).&quot;;
+    output &lt;&lt; &quot;\nC = POINT(&quot; &lt;&lt; C.get_X() &lt;&lt; &quot;,&quot; &lt;&lt; C.get_Y() &lt;&lt; &quot;). // C represents a point (which is neither A nor B) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).&quot;;
+    output &lt;&lt; &quot;\na = get_side_length_BC() = &quot; &lt;&lt; get_side_length_BC() &lt;&lt; &quot;. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points B and C.&quot;;
+    output &lt;&lt; &quot;\nb = get_side_length_CA() = &quot; &lt;&lt; get_side_length_CA() &lt;&lt; &quot;. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points C and A.&quot;;
+    output &lt;&lt; &quot;\nc = get_side_length_AB() = &quot; &lt;&lt; get_side_length_AB() &lt;&lt; &quot;. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points A and B.&quot;;
+    output &lt;&lt; &quot;\nA.get_slope_of_line_to(B) = &quot; &lt;&lt; A.get_slope_of_line_to(B) &lt;&lt; &quot;. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points A and B.&quot;;
+    output &lt;&lt; &quot;\nB.get_slope_of_line_to(C) = &quot; &lt;&lt; B.get_slope_of_line_to(C) &lt;&lt; &quot;. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points B and C.&quot;;
+    output &lt;&lt; &quot;\nC.get_slope_of_line_to(A) = &quot; &lt;&lt; C.get_slope_of_line_to(A) &lt;&lt; &quot;. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points C and A.&quot;;
+    output &lt;&lt; &quot;\nget_interior_angle_CAB() =  &quot; &lt;&lt; get_interior_angle_CAB() &lt;&lt; &quot;. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are C and A with the line segment whose endpoints are A and B such that those two line segments intersect at A (and the angle measurement is in degrees and not in radians).&quot;;
+    output &lt;&lt; &quot;\nget_interior_angle_ABC() =  &quot; &lt;&lt; get_interior_angle_ABC() &lt;&lt; &quot;. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are A and B with the line segment whose endpoints are B and C such that those two line segments intersect at B (and the angle measurement is in degrees and not in radians).&quot;;
+    output &lt;&lt; &quot;\nget_interior_angle_BCA() =  &quot; &lt;&lt; get_interior_angle_BCA() &lt;&lt; &quot;. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are B and C with the line segment whose endpoints are C and A such that those two line segments intersect at C (and the angle measurement is in degrees and not in radians).&quot;;
+    output &lt;&lt; &quot;\nget_interior_angle_CAB() + get_interior_angle_ABC() + get_interior_angle_BCA() = &quot; &lt;&lt; get_interior_angle_CAB() + get_interior_angle_ABC() + get_interior_angle_BCA() &lt;&lt; &quot;. // sum of all three approximate interior angle measurements of the triangle represented by the caller TRIANGLE object (in degrees and not in radians)&quot;;
+    output &lt;&lt; &quot;\nget_perimeter() = a + b + c = &quot; &lt;&lt; get_perimeter() &lt;&lt; &quot;. // The method returns the sum of the three approximated side lengths of the triangle which the caller TRIANGLE object represents.&quot;;
+    output &lt;&lt; &quot;\nget_area() = &quot; &lt;&lt; get_area() &lt;&lt; &quot;. // The method returns the approximate nonnegative real number of Cartesian grid unit squares which are enclosed inside of the two-dimensional region formed by the three line segments which connect points A, B, and C.&quot;;
+    output &lt;&lt; &quot;\n--------------------------------------------------------------------------------------------------&quot;;
+}
+
+/**
+ * The friend function is an alternative to the print method.
+ * The friend function overloads the ostream operator (&lt;&lt;).
+ * 
+ * (Overloading an operator is assigning a different function to a native operator other than the function which that operator is used to represent by default).
+ * 
+ * Note that the default value of the leftmost function input parameter is the standard command line output stream (std::cout).
+ * The default parameter is defined in the TRIANGLE class header file (i.e. triangle.h).
+ * 
+ * The friend function is not a member of the TRIANGLE class, 
+ * but the friend function has access to the private and protected members 
+ * of the TRIANGLE class and not just to the public members of the TRIANGLE class.
+ * 
+ * The friend keyword only prefaces the function prototype of this function 
+ * (and the prototype of this function is declared in the TRIANGLE class header file (i.e. triangle.h)). 
+ * 
+ * The friend keyword does not preface the definition of this function
+ * (and the definition of this function is specified in the TRIANGLE class source file (i.e. triangle.cpp)).
+ * 
+ * // overloaded print function example one
+ * TRIANGLE triangle_0;
+ * std::cout &lt;&lt; triangle_0; // identical to triangle_0.print();
+ * 
+ * // overloaded print function example two
+ * std::ofstream file;
+ * TRIANGLE triangle_1;
+ * file &lt;&lt; triangle_1; // identical to triangle_1.print(file);
+ */
+std::ostream &amp; operator &lt;&lt; (std::ostream &amp; output, TRIANGLE &amp; triangle)
+{
+    triangle.print(output);
+    return output;
+}
+
+/**
+ * The destructor method of the TRIANGLE class de-allocates memory which was used to 
+ * instantiate the TRIANGLE object which is calling this function.
+ * 
+ * The destructor method of the TRIANGLE class is automatically called when 
+ * the program scope in which the caller TRIANGLE object was instantiated terminates.
+ */
+TRIANGLE::~TRIANGLE()
+{
+    std::cout &lt;&lt; &quot;\n\nDeleting the TRIANGLE type object whose memory address is &quot; &lt;&lt; this &lt;&lt; &quot;...&quot;;
+}</pre>
+<hr />
+<p><strong>PROGRAM_SOURCE_CODE</strong></p>
+<hr />
+<p>The following source code defines the client which implements the TRIANGLE class. The client executes a series of unit tests which demonstrate how the TRIANGLE class methods work.</p>
+<p>C++_source_file: <a style="background: #000000;color: #00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/triangle_class_tester.cpp" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/triangle_class_tester.cpp</a></p>
+<hr />
+<pre>/**
+ * file: triangle_class_tester.cpp
+ * type: C++ (source file)
+ * date: 07_JULY_2023
+ * author: karbytes
+ * license: PUBLIC_DOMAIN 
+ */
+
+#include "triangle.h" // Include the C++ header file which contains preprocessing directives, variable declarations, and function prototypes for the TRIANGLE class.
+
+/* function prototypes */
+void unit_test_0(std::ostream &amp; output);
+void unit_test_1(std::ostream &amp; output);
+void unit_test_2(std::ostream &amp; output);
+void unit_test_3(std::ostream &amp; output);
+void unit_test_4(std::ostream &amp; output);
+
+// Unit Test # 0: TRIANGLE class default constructor, TRIANGLE class print method, and TRIANGLE class destructor.
+void unit_test_0(std::ostream &amp; output) 
+{
+    output &lt;&lt; &quot;\n\n--------------------------------------------------------------------------------------------------&quot;;
+    output &lt;&lt; &quot;\nUnit Test # 0: TRIANGLE class default constructor, TRIANGLE class print method, and TRIANGLE class destructor.&quot;;
+    output &lt;&lt; &quot;\n--------------------------------------------------------------------------------------------------&quot;;
+    output &lt;&lt; &quot;\nTRIANGLE point;&quot;;
+    output &lt;&lt; &quot;\ntriangle.print(output);&quot;;
+    TRIANGLE triangle;
+    triangle.print(output);
+}
+
+// Unit Test # 1: TRIANGLE class default constructor, TRIANGLE class overloaded ostream operator method, TRIANGLE getter methods, and TRIANGLE class destructor.
+void unit_test_1(std::ostream &amp; output) 
+{
+    output &lt;&lt; &quot;\n\n--------------------------------------------------------------------------------------------------&quot;;
+    output &lt;&lt; &quot;\nUnit Test # 1: TRIANGLE class default constructor, TRIANGLE class overloaded ostream operator method, TRIANGLE getter methods, and TRIANGLE class destructor.&quot;;
+    output &lt;&lt; &quot;\n--------------------------------------------------------------------------------------------------&quot;;
+    output &lt;&lt; &quot;\nTRIANGLE triangle;&quot;;
+    output &lt;&lt; &quot;\nPOINT copy_of_point_A = triangle.get_A();&quot;;
+    output &lt;&lt; &quot;\nPOINT copy_of_point_B = triangle.get_B();&quot;;
+    output &lt;&lt; &quot;\nPOINT copy_of_point_C = triangle.get_C();&quot;;
+    output &lt;&lt; &quot;\noutput &lt;&lt; triangle;&quot;;
+    TRIANGLE triangle;
+    POINT copy_of_point_A = triangle.get_A();
+    POINT copy_of_point_B = triangle.get_B();
+    POINT copy_of_point_C = triangle.get_C();
+    output &lt;&lt; triangle;
+    output &lt;&lt; &quot;\n\ncopy_of_point_A.print(output);&quot;;
+    copy_of_point_A.print(output);
+    output &lt;&lt; &quot;\n\noutput &lt;&lt; copy_of_point_A;&quot;;
+    output &lt;&lt; copy_of_point_A;
+    output &lt;&lt; &quot;\n\ncopy_of_point_B.print(output);&quot;;
+    copy_of_point_B.print(output);
+    output &lt;&lt; &quot;\n\noutput &lt;&lt; copy_of_point_B;&quot;;
+    output &lt;&lt; copy_of_point_B;
+    output &lt;&lt; &quot;\n\ncopy_of_point_C.print(output);&quot;;
+    copy_of_point_C.print(output);
+    output &lt;&lt; &quot;\n\noutput &lt;&lt; copy_of_point_C;&quot;;
+    output &lt;&lt; copy_of_point_C;
+    output &lt;&lt; &quot;\n\ntriangle.get_side_length_AB() = &quot; &lt;&lt; triangle.get_side_length_AB() &lt;&lt; &quot;.&quot;;
+    output &lt;&lt; &quot;\ntriangle.get_side_length_BC() = &quot; &lt;&lt; triangle.get_side_length_BC() &lt;&lt; &quot;.&quot;;
+    output &lt;&lt; &quot;\ntriangle.get_side_length_CA() = &quot; &lt;&lt; triangle.get_side_length_CA() &lt;&lt; &quot;.&quot;;
+    output &lt;&lt; &quot;\ntriangle.get_interior_angle_ABC() = &quot; &lt;&lt; triangle.get_interior_angle_ABC() &lt;&lt; &quot;.&quot;;
+    output &lt;&lt; &quot;\ntriangle.get_interior_angle_BCA() := &quot; &lt;&lt; triangle.get_interior_angle_BCA() &lt;&lt; &quot;.&quot;;
+    output &lt;&lt; &quot;\ntriangle.get_interior_angle_CAB() = &quot; &lt;&lt; triangle.get_interior_angle_CAB() &lt;&lt; &quot;.&quot;;
+    output &lt;&lt; &quot;\ntriangle.get_perimeter() = &quot; &lt;&lt; triangle.get_perimeter() &lt;&lt; &quot;.&quot;;
+    output &lt;&lt; &quot;\ntriangle.get_area() = &quot; &lt;&lt; triangle.get_area() &lt;&lt; &quot;.&quot;;
+}
+
+
+// Unit Test # 2: TRIANGLE class normal constructors, TRIANGLE class copy constructor, TRIANGLE class print method, and TRIANGLE class destructor.
+void unit_test_2(std::ostream &amp; output) 
+{
+    output &lt;&lt; &quot;\n\n--------------------------------------------------------------------------------------------------&quot;;
+    output &lt;&lt; &quot;\nUnit Test # 2: TRIANGLE class normal constructors, TRIANGLE class copy constructor, TRIANGLE class print method, and TRIANGLE class destructor.&quot;;
+    output &lt;&lt; &quot;\n--------------------------------------------------------------------------------------------------&quot;;
+    output &lt;&lt; &quot;\nTRIANGLE triangle_0 = TRIANGLE(-1, -1, 0, 5, 2, -5); // normal constructor which takes exactly 6 int type values as function inputs&quot;;
+    output &lt;&lt; &quot;\nTRIANGLE triangle_1 = TRIANGLE( POINT(-3,-3), POINT(-4,-8), POINT(0,1) ); // normal constructor which takes 3 POINT type values as function inputs&quot;;
+    output &lt;&lt; &quot;\nTRIANGLE triangle_2 = TRIANGLE(triangle_0); // copy constructor which takes 1 TRIANGLE type value as function input&quot;;
+    output &lt;&lt; &quot;\ntriangle_0.print(output);&quot;;
+    output &lt;&lt; &quot;\ntriangle_1.print(output);&quot;;
+    output &lt;&lt; &quot;\ntriangle_2.print(output);&quot;;
+    TRIANGLE triangle_0 = TRIANGLE(-1, -1, 0, 5, 2, -5); // normal constructor which takes exactly 6 int type values as function inputs
+    TRIANGLE triangle_1 = TRIANGLE( POINT(-3,-3), POINT(-4,-8), POINT(0,1) ); // normal constructor which takes 3 POINT type values as function inputs
+    TRIANGLE triangle_2 = TRIANGLE(triangle_0); // copy constructor which takes 1 TRIANGLE type value as function input
+    triangle_0.print(output);
+    triangle_1.print(output);
+    triangle_2.print(output);
+}
+
+// Unit Test # 3: degenerate triangle examples.
+void unit_test_3(std::ostream &amp; output) 
+{
+    output &lt;&lt; &quot;\n\n--------------------------------------------------------------------------------------------------&quot;;
+    output &lt;&lt; &quot;\nUnit Test # 3: degenerate triangle examples.&quot;;
+    output &lt;&lt; &quot;\n--------------------------------------------------------------------------------------------------&quot;;
+    output &lt;&lt; &quot;\nTRIANGLE triangle_0 = TRIANGLE( POINT(-1,-1), POINT(0,0), POINT(1,1) ); // Because these inputs would generate a degenerate triangle, default coordinate values are used for A, B, and C instead of the input values.&quot;;
+    output &lt;&lt; &quot;\nTRIANGLE triangle_1 = TRIANGLE( POINT(-1,-1), POINT(0,0), POINT(-1,-1) ); // Because these inputs represent only 2 unique points instead of 3 unique points, default coordinate values are used for A, B, and C instead of the input values.&quot;;
+    output &lt;&lt; &quot;\ntriangle_0.print(output);&quot;;
+    output &lt;&lt; &quot;\ntriangle_1.print(output);&quot;;
+    TRIANGLE triangle_0 = TRIANGLE( POINT(-1,-1), POINT(0,0), POINT(1,1) ); // Because these inputs would generate a degenerate triangle, default coordinate values are used for A, B, and C instead of the input values.
+    TRIANGLE triangle_1 = TRIANGLE(-1, -1, 0, 0, -1, -1); // Because these inputs represent only 2 unique points instead of 3 unique points, default coordinate values are used for A, B, and C instead of the input values.
+    triangle_0.print(output);
+    triangle_1.print(output);
+}
+
+// Unit Test # 4: Demonstrate how the methods of the POINT class cannot be called by a TRIANGLE object due to the fact that the methods of the POINT class each have uniquely corresponding function prototypes which are prefaced with the private access specifier in the POINT class header file (i.e. POINT.h).
+void unit_test_4(std::ostream &amp; output) 
+{
+    output &lt;&lt; &quot;\n\n--------------------------------------------------------------------------------------------------&quot;;
+    output &lt;&lt; &quot;\n// Unit Test # 4: Demonstrate how the methods of the POINT class cannot be called by a TRIANGLE object due to the fact that the methods of the POINT class each have uniquely corresponding function prototypes which are prefaced with the private access specifier in the POINT class header file (i.e. POINT.h).&quot;;
+    output &lt;&lt; &quot;\n--------------------------------------------------------------------------------------------------&quot;;
+    output &lt;&lt; &quot;\nTRIANGLE triangle;&quot;;
+    output &lt;&lt; &quot;\ntriangle.print(output);&quot;;
+    TRIANGLE triangle;
+    triangle.print(output);
+    output &lt;&lt; &quot;\nPOINT copy_A = triangle.get_A();&quot;;
+    output &lt;&lt; &quot;\ncopy_A.print(output);&quot;;
+    POINT copy_A = triangle.get_A();
+    copy_A.print(output);
+    copy_A.set_X(33); // The setter method of the POINT class is public. Therefore, that method can be invoked from the program scope in which the POINT type variable copy_A is instantiated.
+    output &lt;&lt; &quot;\ncopy_A.set_X(33); // The setter method of the POINT class is public. Therefore, that method can be invoked from the program scope in which the POINT type variable copy_A is instantiated.&quot;;
+    output &lt;&lt; &quot;\ncopy_A.print(output); // The print method of the POINT class is public. Therefore, that method can be invoked from the program scope in which the POINT type variable copy_A is insstantiated.&quot;;
+    /*
+    output &lt;&lt; &quot;\ntriangle.A.get_X() = &quot; &lt;&lt; triangle.A.get_X() &lt;&lt; &quot;. // Note that this command can only be executed if the POINT type data member named A of a TRIANGLE instance is public.&quot;;
+    output &lt;&lt; &quot;\ntriangle.A.get_Y() = &quot; &lt;&lt; triangle.A.get_Y() &lt;&lt; &quot;. // Note that this command can only be executed if the POINT type data member named A of a TRIANGLE instance is public.&quot;;
+    output &lt;&lt; &quot;\ntriangle.A.set_X(25) = &quot; &lt;&lt; triangle.A.set_X(25) &lt;&lt; &quot;. // Note that this command can only be executed if the POINT type data member named A of a TRIANGLE instance is public.&quot;;
+    output &lt;&lt; &quot;\ntriangle.A.get_Y(666) = &quot; &lt;&lt; triangle.A.set_Y(666) &lt;&lt; &quot;. // Note that this command can only be executed if the POINT type data member named A of a TRIANGLE instance is public.&quot;;
+    triangle.print(output);
+    */
+    output &lt;&lt; &quot;\n// COMMENTED OUT: triangle.A.get_X(); // Note that this command can only be executed if the POINT type data member named A of a TRIANGLE instance is public.&quot;;
+    output &lt;&lt; &quot;\n// COMMENTED OUT: triangle.A.get_Y(); // Note that this command can only be executed if the POINT type data member named A of a TRIANGLE instance is public.&quot;;
+    output &lt;&lt; &quot;\n// COMMENTED OUT: triangle.A.set_X(25); // Note that this command can only be executed if the POINT type data member named A of a TRIANGLE instance is public.&quot;;
+    output &lt;&lt; &quot;\n// COMMENTED OUT: triangle.A.get_Y(666); // Note that this command can only be executed if the POINT type data member named A of a TRIANGLE instance is public.&quot;;
+}
+
+/* program entry point */
+int main()
+{
+    // Declare a file output stream object.
+    std::ofstream file;
+
+    // Set the number of digits of floating-point numbers which are printed to the command line terminal to 100 digits.
+    std::cout.precision(100);
+
+    // Set the number of digits of floating-point numbers which are printed to the file output stream to 100 digits.
+    file.precision(100);
+
+    /**
+     * If triangle_class_tester_output.txt does not already exist in the same directory as triangle_class_tester.cpp, 
+     * create a new file named triangle_class_tester_output.txt.
+     * 
+     * Open the plain-text file named triangle_class_tester_output.txt 
+     * and set that file to be overwritten with program data.
+     */
+    file.open(&quot;triangle_class_tester_output.txt&quot;);
+
+    // Print an opening message to the command line terminal.
+    std::cout &lt;&lt; &quot;\n\n--------------------------------&quot;;
+    std::cout &lt;&lt; &quot;\nStart Of Program&quot;;
+    std::cout &lt;&lt; &quot;\n--------------------------------&quot;;
+
+    // Print an opening message to the file output stream.
+    file &lt;&lt; &quot;--------------------------------&quot;;
+    file &lt;&lt; &quot;\nStart Of Program&quot;;
+    file &lt;&lt; &quot;\n--------------------------------&quot;;
+
+    // Implement a series of unit tests which demonstrate the functionality of TRIANGLE class variables.
+    unit_test_0(std::cout);
+    unit_test_0(file);
+    unit_test_1(std::cout);
+    unit_test_1(file);
+    unit_test_2(std::cout);
+    unit_test_2(file);
+    unit_test_3(std::cout);
+    unit_test_3(file);
+    unit_test_4(std::cout);
+    unit_test_4(file);
+
+    // Print a closing message to the command line terminal.
+    std::cout &lt;&lt; &quot;\n\n--------------------------------&quot;;
+    std::cout &lt;&lt; &quot;\nEnd Of Program&quot;;
+    std::cout &lt;&lt; &quot;\n--------------------------------\n\n&quot;;
+
+    // Print a closing message to the file output stream.
+    file &lt;&lt; &quot;\n\n--------------------------------&quot;;
+    file &lt;&lt; &quot;\nEnd Of Program&quot;;
+    file &lt;&lt; &quot;\n--------------------------------&quot;;
+
+    // Close the file output stream.
+    file.close();
+
+    // Exit the program.
+    return 0;
+}</pre>
+<hr />
+<p><strong>SAMPLE_PROGRAM_OUTPUT</strong></p>
+<hr />
+<p>The text in the preformatted text box below was generated by one use case of the C++ program featured in this <a style="background: #ff9000;color: #000000" href="https://en.wikipedia.org/wiki/Computer_programming" target="_blank" rel="noopener">computer programming</a> tutorial web page.</p>
+<p>plain-text_file: <a style="background: #000000;color: #ff9000" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/triangle_class_tester_output.txt" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/triangle_class_tester_output.txt</a></p>
+<hr />
+<pre>
+--------------------------------
+Start Of Program
+--------------------------------
+
+--------------------------------------------------------------------------------------------------
+Unit Test # 0: TRIANGLE class default constructor, TRIANGLE class print method, and TRIANGLE class destructor.
+--------------------------------------------------------------------------------------------------
+TRIANGLE point;
+triangle.print(output);
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffcc3aa1a50. // The keyword named this is a pointer which stores the memory address of the first memory cell of a TRIANGLE sized chunk of contiguous memory cells which are allocated to the caller TRIANGLE object.
+&amp;A = 0x7ffcc3aa1a50. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named A.
+&amp;B = 0x7ffcc3aa1a58. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named B.
+&amp;C = 0x7ffcc3aa1a60. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named C.
+sizeof(int) = 4. // The sizeof() operation returns the nonnegative integer number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the nonnegative integer number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(TRIANGLE) = 24. // The sizeof() operation returns the nonnegative integer number of bytes of memory which a TRIANGLE type object occupies. (Each memory cell has a data capacity of 1 byte).
+A = POINT(0,0). // A represents a point (which is neither B nor C) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+B = POINT(0,1). // B represents a point (which is neither A nor C) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+C = POINT(1,0). // C represents a point (which is neither A nor B) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+a = get_side_length_BC() = 1.4142135623730951454746218587388284504413604736328125. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points B and C.
+b = get_side_length_CA() = 1. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points C and A.
+c = get_side_length_AB() = 1. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points A and B.
+A.get_slope_of_line_to(B) = inf. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points A and B.
+B.get_slope_of_line_to(C) = -1. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points B and C.
+C.get_slope_of_line_to(A) = 0. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points C and A.
+get_interior_angle_CAB() =  90.0000760198120843824654002673923969268798828125. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are C and A with the line segment whose endpoints are A and B such that those two line segments intersect at A (and the angle measurement is in degrees and not in radians).
+get_interior_angle_ABC() =  45.0000380099060208749506273306906223297119140625. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are A and B with the line segment whose endpoints are B and C such that those two line segments intersect at B (and the angle measurement is in degrees and not in radians).
+get_interior_angle_BCA() =  45.0000380099060208749506273306906223297119140625. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are B and C with the line segment whose endpoints are C and A such that those two line segments intersect at C (and the angle measurement is in degrees and not in radians).
+get_interior_angle_CAB() + get_interior_angle_ABC() + get_interior_angle_BCA() = 180.0001520396241403432213701307773590087890625. // sum of all three approximate interior angle measurements of the triangle represented by the caller TRIANGLE object (in degrees and not in radians)
+get_perimeter() = a + b + c = 3.41421356237309492343001693370752036571502685546875. // The method returns the sum of the three approximated side lengths of the triangle which the caller TRIANGLE object represents.
+get_area() = 0.4999999999999997779553950749686919152736663818359375. // The method returns the approximate nonnegative real number of Cartesian grid unit squares which are enclosed inside of the two-dimensional region formed by the three line segments which connect points A, B, and C.
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+Unit Test # 1: TRIANGLE class default constructor, TRIANGLE class overloaded ostream operator method, TRIANGLE getter methods, and TRIANGLE class destructor.
+--------------------------------------------------------------------------------------------------
+TRIANGLE triangle;
+POINT copy_of_point_A = triangle.get_A();
+POINT copy_of_point_B = triangle.get_B();
+POINT copy_of_point_C = triangle.get_C();
+output &lt;&lt; triangle;
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffcc3aa1a50. // The keyword named this is a pointer which stores the memory address of the first memory cell of a TRIANGLE sized chunk of contiguous memory cells which are allocated to the caller TRIANGLE object.
+&amp;A = 0x7ffcc3aa1a50. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named A.
+&amp;B = 0x7ffcc3aa1a58. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named B.
+&amp;C = 0x7ffcc3aa1a60. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named C.
+sizeof(int) = 4. // The sizeof() operation returns the nonnegative integer number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the nonnegative integer number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(TRIANGLE) = 24. // The sizeof() operation returns the nonnegative integer number of bytes of memory which a TRIANGLE type object occupies. (Each memory cell has a data capacity of 1 byte).
+A = POINT(0,0). // A represents a point (which is neither B nor C) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+B = POINT(0,1). // B represents a point (which is neither A nor C) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+C = POINT(1,0). // C represents a point (which is neither A nor B) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+a = get_side_length_BC() = 1.4142135623730951454746218587388284504413604736328125. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points B and C.
+b = get_side_length_CA() = 1. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points C and A.
+c = get_side_length_AB() = 1. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points A and B.
+A.get_slope_of_line_to(B) = inf. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points A and B.
+B.get_slope_of_line_to(C) = -1. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points B and C.
+C.get_slope_of_line_to(A) = 0. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points C and A.
+get_interior_angle_CAB() =  90.0000760198120843824654002673923969268798828125. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are C and A with the line segment whose endpoints are A and B such that those two line segments intersect at A (and the angle measurement is in degrees and not in radians).
+get_interior_angle_ABC() =  45.0000380099060208749506273306906223297119140625. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are A and B with the line segment whose endpoints are B and C such that those two line segments intersect at B (and the angle measurement is in degrees and not in radians).
+get_interior_angle_BCA() =  45.0000380099060208749506273306906223297119140625. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are B and C with the line segment whose endpoints are C and A such that those two line segments intersect at C (and the angle measurement is in degrees and not in radians).
+get_interior_angle_CAB() + get_interior_angle_ABC() + get_interior_angle_BCA() = 180.0001520396241403432213701307773590087890625. // sum of all three approximate interior angle measurements of the triangle represented by the caller TRIANGLE object (in degrees and not in radians)
+get_perimeter() = a + b + c = 3.41421356237309492343001693370752036571502685546875. // The method returns the sum of the three approximated side lengths of the triangle which the caller TRIANGLE object represents.
+get_area() = 0.4999999999999997779553950749686919152736663818359375. // The method returns the approximate nonnegative real number of Cartesian grid unit squares which are enclosed inside of the two-dimensional region formed by the three line segments which connect points A, B, and C.
+--------------------------------------------------------------------------------------------------
+
+copy_of_point_A.print(output);
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffcc3aa1a38. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&amp;X = 0x7ffcc3aa1a38. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&amp;Y = 0x7ffcc3aa1a3c. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = 0. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = 0. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+
+output &lt;&lt; copy_of_point_A;
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffcc3aa1a38. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&amp;X = 0x7ffcc3aa1a38. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&amp;Y = 0x7ffcc3aa1a3c. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = 0. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = 0. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+
+copy_of_point_B.print(output);
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffcc3aa1a40. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&amp;X = 0x7ffcc3aa1a40. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&amp;Y = 0x7ffcc3aa1a44. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = 0. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = 1. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+
+output &lt;&lt; copy_of_point_B;
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffcc3aa1a40. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&amp;X = 0x7ffcc3aa1a40. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&amp;Y = 0x7ffcc3aa1a44. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = 0. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = 1. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+
+copy_of_point_C.print(output);
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffcc3aa1a48. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&amp;X = 0x7ffcc3aa1a48. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&amp;Y = 0x7ffcc3aa1a4c. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = 1. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = 0. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+
+output &lt;&lt; copy_of_point_C;
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffcc3aa1a48. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&amp;X = 0x7ffcc3aa1a48. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&amp;Y = 0x7ffcc3aa1a4c. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = 1. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = 0. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+
+triangle.get_side_length_AB() = 1.
+triangle.get_side_length_BC() = 1.4142135623730951454746218587388284504413604736328125.
+triangle.get_side_length_CA() = 1.
+triangle.get_interior_angle_ABC() = 45.0000380099060208749506273306906223297119140625.
+triangle.get_interior_angle_BCA() := 45.0000380099060208749506273306906223297119140625.
+triangle.get_interior_angle_CAB() = 90.0000760198120843824654002673923969268798828125.
+triangle.get_perimeter() = 3.41421356237309492343001693370752036571502685546875.
+triangle.get_area() = 0.4999999999999997779553950749686919152736663818359375.
+
+--------------------------------------------------------------------------------------------------
+Unit Test # 2: TRIANGLE class normal constructors, TRIANGLE class copy constructor, TRIANGLE class print method, and TRIANGLE class destructor.
+--------------------------------------------------------------------------------------------------
+TRIANGLE triangle_0 = TRIANGLE(-1, -1, 0, 5, 2, -5); // normal constructor which takes exactly 6 int type values as function inputs
+TRIANGLE triangle_1 = TRIANGLE( POINT(-3,-3), POINT(-4,-8), POINT(0,1) ); // normal constructor which takes 3 POINT type values as function inputs
+TRIANGLE triangle_2 = TRIANGLE(triangle_0); // copy constructor which takes 1 TRIANGLE type value as function input
+triangle_0.print(output);
+triangle_1.print(output);
+triangle_2.print(output);
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffcc3aa1a10. // The keyword named this is a pointer which stores the memory address of the first memory cell of a TRIANGLE sized chunk of contiguous memory cells which are allocated to the caller TRIANGLE object.
+&amp;A = 0x7ffcc3aa1a10. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named A.
+&amp;B = 0x7ffcc3aa1a18. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named B.
+&amp;C = 0x7ffcc3aa1a20. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named C.
+sizeof(int) = 4. // The sizeof() operation returns the nonnegative integer number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the nonnegative integer number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(TRIANGLE) = 24. // The sizeof() operation returns the nonnegative integer number of bytes of memory which a TRIANGLE type object occupies. (Each memory cell has a data capacity of 1 byte).
+A = POINT(-1,-1). // A represents a point (which is neither B nor C) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+B = POINT(0,5). // B represents a point (which is neither A nor C) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+C = POINT(2,-5). // C represents a point (which is neither A nor B) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+a = get_side_length_BC() = 10.198039027185568983213670435361564159393310546875. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points B and C.
+b = get_side_length_CA() = 5. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points C and A.
+c = get_side_length_AB() = 6.08276253029821933893117602565325796604156494140625. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points A and B.
+A.get_slope_of_line_to(B) = 6. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points A and B.
+B.get_slope_of_line_to(C) = -5. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points B and C.
+C.get_slope_of_line_to(A) = -1.3333333333333332593184650249895639717578887939453125. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points C and A.
+get_interior_angle_CAB() =  133.66789305056954617612063884735107421875. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are C and A with the line segment whose endpoints are A and B such that those two line segments intersect at A (and the angle measurement is in degrees and not in radians).
+get_interior_angle_ABC() =  20.772272227633603591812061495147645473480224609375. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are A and B with the line segment whose endpoints are B and C such that those two line segments intersect at B (and the angle measurement is in degrees and not in radians).
+get_interior_angle_BCA() =  25.559986761421026102425457793287932872772216796875. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are B and C with the line segment whose endpoints are C and A such that those two line segments intersect at C (and the angle measurement is in degrees and not in radians).
+get_interior_angle_CAB() + get_interior_angle_ABC() + get_interior_angle_BCA() = 180.000152039624168764930800534784793853759765625. // sum of all three approximate interior angle measurements of the triangle represented by the caller TRIANGLE object (in degrees and not in radians)
+get_perimeter() = a + b + c = 21.280801557483787433966426760889589786529541015625. // The method returns the sum of the three approximated side lengths of the triangle which the caller TRIANGLE object represents.
+get_area() = 10.9999999999999946709294817992486059665679931640625. // The method returns the approximate nonnegative real number of Cartesian grid unit squares which are enclosed inside of the two-dimensional region formed by the three line segments which connect points A, B, and C.
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffcc3aa1a30. // The keyword named this is a pointer which stores the memory address of the first memory cell of a TRIANGLE sized chunk of contiguous memory cells which are allocated to the caller TRIANGLE object.
+&amp;A = 0x7ffcc3aa1a30. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named A.
+&amp;B = 0x7ffcc3aa1a38. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named B.
+&amp;C = 0x7ffcc3aa1a40. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named C.
+sizeof(int) = 4. // The sizeof() operation returns the nonnegative integer number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the nonnegative integer number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(TRIANGLE) = 24. // The sizeof() operation returns the nonnegative integer number of bytes of memory which a TRIANGLE type object occupies. (Each memory cell has a data capacity of 1 byte).
+A = POINT(-3,-3). // A represents a point (which is neither B nor C) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+B = POINT(-4,-8). // B represents a point (which is neither A nor C) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+C = POINT(0,1). // C represents a point (which is neither A nor B) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+a = get_side_length_BC() = 9.848857801796103927927106269635260105133056640625. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points B and C.
+b = get_side_length_CA() = 5. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points C and A.
+c = get_side_length_AB() = 5.0990195135927844916068352176807820796966552734375. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points A and B.
+A.get_slope_of_line_to(B) = 5. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points A and B.
+B.get_slope_of_line_to(C) = 2.25. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points B and C.
+C.get_slope_of_line_to(A) = 1.3333333333333332593184650249895639717578887939453125. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points C and A.
+get_interior_angle_CAB() =  154.440165278203068055518087930977344512939453125. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are C and A with the line segment whose endpoints are A and B such that those two line segments intersect at A (and the angle measurement is in degrees and not in radians).
+get_interior_angle_ABC() =  12.6525671877242711360622706706635653972625732421875. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are A and B with the line segment whose endpoints are B and C such that those two line segments intersect at B (and the angle measurement is in degrees and not in radians).
+get_interior_angle_BCA() =  12.907419573696753190006347722373902797698974609375. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are B and C with the line segment whose endpoints are C and A such that those two line segments intersect at C (and the angle measurement is in degrees and not in radians).
+get_interior_angle_CAB() + get_interior_angle_ABC() + get_interior_angle_BCA() = 180.00015203962408349980250932276248931884765625. // sum of all three approximate interior angle measurements of the triangle represented by the caller TRIANGLE object (in degrees and not in radians)
+get_perimeter() = a + b + c = 19.94787731538888664317710208706557750701904296875. // The method returns the sum of the three approximated side lengths of the triangle which the caller TRIANGLE object represents.
+get_area() = 5.49999999999998312461002569762058556079864501953125. // The method returns the approximate nonnegative real number of Cartesian grid unit squares which are enclosed inside of the two-dimensional region formed by the three line segments which connect points A, B, and C.
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffcc3aa1a50. // The keyword named this is a pointer which stores the memory address of the first memory cell of a TRIANGLE sized chunk of contiguous memory cells which are allocated to the caller TRIANGLE object.
+&amp;A = 0x7ffcc3aa1a50. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named A.
+&amp;B = 0x7ffcc3aa1a58. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named B.
+&amp;C = 0x7ffcc3aa1a60. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named C.
+sizeof(int) = 4. // The sizeof() operation returns the nonnegative integer number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the nonnegative integer number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(TRIANGLE) = 24. // The sizeof() operation returns the nonnegative integer number of bytes of memory which a TRIANGLE type object occupies. (Each memory cell has a data capacity of 1 byte).
+A = POINT(-1,-1). // A represents a point (which is neither B nor C) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+B = POINT(0,5). // B represents a point (which is neither A nor C) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+C = POINT(2,-5). // C represents a point (which is neither A nor B) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+a = get_side_length_BC() = 10.198039027185568983213670435361564159393310546875. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points B and C.
+b = get_side_length_CA() = 5. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points C and A.
+c = get_side_length_AB() = 6.08276253029821933893117602565325796604156494140625. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points A and B.
+A.get_slope_of_line_to(B) = 6. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points A and B.
+B.get_slope_of_line_to(C) = -5. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points B and C.
+C.get_slope_of_line_to(A) = -1.3333333333333332593184650249895639717578887939453125. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points C and A.
+get_interior_angle_CAB() =  133.66789305056954617612063884735107421875. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are C and A with the line segment whose endpoints are A and B such that those two line segments intersect at A (and the angle measurement is in degrees and not in radians).
+get_interior_angle_ABC() =  20.772272227633603591812061495147645473480224609375. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are A and B with the line segment whose endpoints are B and C such that those two line segments intersect at B (and the angle measurement is in degrees and not in radians).
+get_interior_angle_BCA() =  25.559986761421026102425457793287932872772216796875. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are B and C with the line segment whose endpoints are C and A such that those two line segments intersect at C (and the angle measurement is in degrees and not in radians).
+get_interior_angle_CAB() + get_interior_angle_ABC() + get_interior_angle_BCA() = 180.000152039624168764930800534784793853759765625. // sum of all three approximate interior angle measurements of the triangle represented by the caller TRIANGLE object (in degrees and not in radians)
+get_perimeter() = a + b + c = 21.280801557483787433966426760889589786529541015625. // The method returns the sum of the three approximated side lengths of the triangle which the caller TRIANGLE object represents.
+get_area() = 10.9999999999999946709294817992486059665679931640625. // The method returns the approximate nonnegative real number of Cartesian grid unit squares which are enclosed inside of the two-dimensional region formed by the three line segments which connect points A, B, and C.
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+Unit Test # 3: degenerate triangle examples.
+--------------------------------------------------------------------------------------------------
+TRIANGLE triangle_0 = TRIANGLE( POINT(-1,-1), POINT(0,0), POINT(1,1) ); // Because these inputs would generate a degenerate triangle, default coordinate values are used for A, B, and C instead of the input values.
+TRIANGLE triangle_1 = TRIANGLE( POINT(-1,-1), POINT(0,0), POINT(-1,-1) ); // Because these inputs represent only 2 unique points instead of 3 unique points, default coordinate values are used for A, B, and C instead of the input values.
+triangle_0.print(output);
+triangle_1.print(output);
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffcc3aa1a30. // The keyword named this is a pointer which stores the memory address of the first memory cell of a TRIANGLE sized chunk of contiguous memory cells which are allocated to the caller TRIANGLE object.
+&amp;A = 0x7ffcc3aa1a30. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named A.
+&amp;B = 0x7ffcc3aa1a38. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named B.
+&amp;C = 0x7ffcc3aa1a40. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named C.
+sizeof(int) = 4. // The sizeof() operation returns the nonnegative integer number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the nonnegative integer number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(TRIANGLE) = 24. // The sizeof() operation returns the nonnegative integer number of bytes of memory which a TRIANGLE type object occupies. (Each memory cell has a data capacity of 1 byte).
+A = POINT(0,0). // A represents a point (which is neither B nor C) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+B = POINT(0,1). // B represents a point (which is neither A nor C) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+C = POINT(1,0). // C represents a point (which is neither A nor B) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+a = get_side_length_BC() = 1.4142135623730951454746218587388284504413604736328125. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points B and C.
+b = get_side_length_CA() = 1. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points C and A.
+c = get_side_length_AB() = 1. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points A and B.
+A.get_slope_of_line_to(B) = inf. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points A and B.
+B.get_slope_of_line_to(C) = -1. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points B and C.
+C.get_slope_of_line_to(A) = 0. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points C and A.
+get_interior_angle_CAB() =  90.0000760198120843824654002673923969268798828125. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are C and A with the line segment whose endpoints are A and B such that those two line segments intersect at A (and the angle measurement is in degrees and not in radians).
+get_interior_angle_ABC() =  45.0000380099060208749506273306906223297119140625. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are A and B with the line segment whose endpoints are B and C such that those two line segments intersect at B (and the angle measurement is in degrees and not in radians).
+get_interior_angle_BCA() =  45.0000380099060208749506273306906223297119140625. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are B and C with the line segment whose endpoints are C and A such that those two line segments intersect at C (and the angle measurement is in degrees and not in radians).
+get_interior_angle_CAB() + get_interior_angle_ABC() + get_interior_angle_BCA() = 180.0001520396241403432213701307773590087890625. // sum of all three approximate interior angle measurements of the triangle represented by the caller TRIANGLE object (in degrees and not in radians)
+get_perimeter() = a + b + c = 3.41421356237309492343001693370752036571502685546875. // The method returns the sum of the three approximated side lengths of the triangle which the caller TRIANGLE object represents.
+get_area() = 0.4999999999999997779553950749686919152736663818359375. // The method returns the approximate nonnegative real number of Cartesian grid unit squares which are enclosed inside of the two-dimensional region formed by the three line segments which connect points A, B, and C.
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffcc3aa1a50. // The keyword named this is a pointer which stores the memory address of the first memory cell of a TRIANGLE sized chunk of contiguous memory cells which are allocated to the caller TRIANGLE object.
+&amp;A = 0x7ffcc3aa1a50. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named A.
+&amp;B = 0x7ffcc3aa1a58. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named B.
+&amp;C = 0x7ffcc3aa1a60. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named C.
+sizeof(int) = 4. // The sizeof() operation returns the nonnegative integer number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the nonnegative integer number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(TRIANGLE) = 24. // The sizeof() operation returns the nonnegative integer number of bytes of memory which a TRIANGLE type object occupies. (Each memory cell has a data capacity of 1 byte).
+A = POINT(0,0). // A represents a point (which is neither B nor C) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+B = POINT(0,1). // B represents a point (which is neither A nor C) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+C = POINT(1,0). // C represents a point (which is neither A nor B) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+a = get_side_length_BC() = 1.4142135623730951454746218587388284504413604736328125. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points B and C.
+b = get_side_length_CA() = 1. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points C and A.
+c = get_side_length_AB() = 1. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points A and B.
+A.get_slope_of_line_to(B) = inf. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points A and B.
+B.get_slope_of_line_to(C) = -1. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points B and C.
+C.get_slope_of_line_to(A) = 0. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points C and A.
+get_interior_angle_CAB() =  90.0000760198120843824654002673923969268798828125. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are C and A with the line segment whose endpoints are A and B such that those two line segments intersect at A (and the angle measurement is in degrees and not in radians).
+get_interior_angle_ABC() =  45.0000380099060208749506273306906223297119140625. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are A and B with the line segment whose endpoints are B and C such that those two line segments intersect at B (and the angle measurement is in degrees and not in radians).
+get_interior_angle_BCA() =  45.0000380099060208749506273306906223297119140625. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are B and C with the line segment whose endpoints are C and A such that those two line segments intersect at C (and the angle measurement is in degrees and not in radians).
+get_interior_angle_CAB() + get_interior_angle_ABC() + get_interior_angle_BCA() = 180.0001520396241403432213701307773590087890625. // sum of all three approximate interior angle measurements of the triangle represented by the caller TRIANGLE object (in degrees and not in radians)
+get_perimeter() = a + b + c = 3.41421356237309492343001693370752036571502685546875. // The method returns the sum of the three approximated side lengths of the triangle which the caller TRIANGLE object represents.
+get_area() = 0.4999999999999997779553950749686919152736663818359375. // The method returns the approximate nonnegative real number of Cartesian grid unit squares which are enclosed inside of the two-dimensional region formed by the three line segments which connect points A, B, and C.
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+// Unit Test # 4: Demonstrate how the methods of the POINT class cannot be called by a TRIANGLE object due to the fact that the methods of the POINT class each have uniquely corresponding function prototypes which are prefaced with the private access specifier in the POINT class header file (i.e. POINT.h).
+--------------------------------------------------------------------------------------------------
+TRIANGLE triangle;
+triangle.print(output);
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffcc3aa1a50. // The keyword named this is a pointer which stores the memory address of the first memory cell of a TRIANGLE sized chunk of contiguous memory cells which are allocated to the caller TRIANGLE object.
+&amp;A = 0x7ffcc3aa1a50. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named A.
+&amp;B = 0x7ffcc3aa1a58. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named B.
+&amp;C = 0x7ffcc3aa1a60. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named C.
+sizeof(int) = 4. // The sizeof() operation returns the nonnegative integer number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the nonnegative integer number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(TRIANGLE) = 24. // The sizeof() operation returns the nonnegative integer number of bytes of memory which a TRIANGLE type object occupies. (Each memory cell has a data capacity of 1 byte).
+A = POINT(0,0). // A represents a point (which is neither B nor C) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+B = POINT(0,1). // B represents a point (which is neither A nor C) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+C = POINT(1,0). // C represents a point (which is neither A nor B) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+a = get_side_length_BC() = 1.4142135623730951454746218587388284504413604736328125. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points B and C.
+b = get_side_length_CA() = 1. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points C and A.
+c = get_side_length_AB() = 1. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points A and B.
+A.get_slope_of_line_to(B) = inf. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points A and B.
+B.get_slope_of_line_to(C) = -1. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points B and C.
+C.get_slope_of_line_to(A) = 0. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points C and A.
+get_interior_angle_CAB() =  90.0000760198120843824654002673923969268798828125. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are C and A with the line segment whose endpoints are A and B such that those two line segments intersect at A (and the angle measurement is in degrees and not in radians).
+get_interior_angle_ABC() =  45.0000380099060208749506273306906223297119140625. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are A and B with the line segment whose endpoints are B and C such that those two line segments intersect at B (and the angle measurement is in degrees and not in radians).
+get_interior_angle_BCA() =  45.0000380099060208749506273306906223297119140625. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are B and C with the line segment whose endpoints are C and A such that those two line segments intersect at C (and the angle measurement is in degrees and not in radians).
+get_interior_angle_CAB() + get_interior_angle_ABC() + get_interior_angle_BCA() = 180.0001520396241403432213701307773590087890625. // sum of all three approximate interior angle measurements of the triangle represented by the caller TRIANGLE object (in degrees and not in radians)
+get_perimeter() = a + b + c = 3.41421356237309492343001693370752036571502685546875. // The method returns the sum of the three approximated side lengths of the triangle which the caller TRIANGLE object represents.
+get_area() = 0.4999999999999997779553950749686919152736663818359375. // The method returns the approximate nonnegative real number of Cartesian grid unit squares which are enclosed inside of the two-dimensional region formed by the three line segments which connect points A, B, and C.
+--------------------------------------------------------------------------------------------------
+POINT copy_A = triangle.get_A();
+copy_A.print(output);
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffcc3aa1a48. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&amp;X = 0x7ffcc3aa1a48. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&amp;Y = 0x7ffcc3aa1a4c. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = 0. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = 0. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+copy_A.set_X(33); // The setter method of the POINT class is public. Therefore, that method can be invoked from the program scope in which the POINT type variable copy_A is instantiated.
+copy_A.print(output); // The print method of the POINT class is public. Therefore, that method can be invoked from the program scope in which the POINT type variable copy_A is insstantiated.
+// COMMENTED OUT: triangle.A.get_X(); // Note that this command can only be executed if the POINT type data member named A of a TRIANGLE instance is public.
+// COMMENTED OUT: triangle.A.get_Y(); // Note that this command can only be executed if the POINT type data member named A of a TRIANGLE instance is public.
+// COMMENTED OUT: triangle.A.set_X(25); // Note that this command can only be executed if the POINT type data member named A of a TRIANGLE instance is public.
+// COMMENTED OUT: triangle.A.get_Y(666); // Note that this command can only be executed if the POINT type data member named A of a TRIANGLE instance is public.
+
+--------------------------------
+End Of Program
+--------------------------------
+</pre>
+<hr />
+<p>This web page was last updated on 16_SEPTEMBER_2024. The content displayed on this web page is licensed as <a style="background: #000000;color: #ff9000" href="https://karlinaobject.wordpress.com/public_domain/" target="_blank" rel="noopener">PUBLIC_DOMAIN</a> intellectual property.</p>
+<hr />
