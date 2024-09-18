@@ -18,10 +18,68 @@
 <p><strong>Hyper-Text-Markup-Language Code</strong></p>
 <hr />
 <p>The following Hyper-Text-Markup-Language (<a style="background: #ff9000;color: #000000" href="https://en.wikipedia.org/wiki/HTML" target="_blank" rel="noopener">HTML</a>) code defines the user interface component of the BASE_CONVERTER web page application. Copy the HTML code from the source code file which is linked below into a text editor and save that file as <strong>base_converter.html</strong>. Use a web browser such as <a style="background: #ff9000;color: #000000" href="https://en.wikipedia.org/wiki/Firefox" target="_blank" rel="noopener">Firefox</a> to open that HTML file (and ensure that the JavaScript and Cascading-Style-Sheet files are in the same file directory as the HTML file).</p>
-<p><em>Note that the contents of the HTML file are not displayed in a preformatted text box on this web page due to the fact that the WordPress server makes no distinction between HTML code which is encapsulated inside of a preformatted text box and WordPress web page source code.</em></p>
+<p><em><strike>Note that the contents of the HTML file are not displayed in a preformatted text box on this web page due to the fact that the WordPress server makes no distinction between HTML code which is encapsulated inside of a preformatted text box and WordPress web page source code.</strike> <span style="background:#00ffff">(The HTML code has been formatted to be properly displayed on this web page as of 17_SEPTEMBER. For details on how that was accomplished, visit the web page of karbytes&#8217; blogging website named <a style="background:#000000;color:#ff9000" href="https://karbytesforlifeblog.wordpress.com/karbytes_17_september_2024/" target="_blank" rel="noopener">karbytes_17_september_2024</a>).</span></em></p>
 <p>Hyper-Text-Markup-Language_file: <a style="background: #000000;color: #00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/base_converter.html" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/base_converter.html</a></p>
 <p>image_link: <a style="background: #000000;color: #ff9000" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/base_converter_html_code_screenshot.png" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_summer_2023_starter_pack/main/base_converter_html_code_screenshot.png</a></p>
 <hr />
+<pre>
+&lt;!--
+/**
+ * file: base_converter.html
+ * type: Hyper-Text-Markup-Language
+ * date: 10_JULY_2023
+ * author: karbytes
+ * license: PUBLIC_DOMAIN
+ */
+--&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;BASE_CONVERTER&lt;/title&gt;
+    &lt;link rel="stylesheet" href="karbytes_aesthetic.css"&gt;
+    &lt;script s&#8203;rc&#x3D;"base_converter_arithmetic.js"&gt;&lt;/script&gt;
+    &lt;script s&#8203;rc&#x3D;"base_converter_interface.js"&gt;&lt;/script&gt;
+    &lt;script s&#8203;rc&#x3D;"time_stamp.js"&gt;&lt;/script&gt;
+    &lt;style&gt;
+        .module {
+            border-radius: 5px;
+            padding: 10px;
+        }
+        .input_step {
+            background: #8fed77;
+            color: #000000;
+        }
+        .output_step {
+            background: #b877ed;
+            color: #000000;
+        }
+        #introduction {
+            background: #ffff00;
+            color: #000000;
+        }
+        #time_stamped_messages {
+            border-color: #00ff00;
+            border-width: 1px;
+            border-style: solid;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body onload="initialize_application()"&gt;
+    &lt;h1&gt;BASE_CONVERTER&lt;/h1&gt;
+    &lt;p class="module" id="introduction"&gt;
+        Convert an INPUT_SEQUENCE (i.e. an unsigned integer consisting 
+        of no more than eight digits) whose base is INPUT_BASE to its 
+        equivalent representation as an unsigned integer whose base 
+        is OUTPUT_BASE.
+    &lt;/p&gt; 
+    &lt;div id="input_form"&gt;&lt;p&gt;#input_form&lt;/p&gt;&lt;/div&gt;
+    &lt;div id="output"&gt;&lt;p&gt;#output&lt;/p&gt;&lt;/div&gt;
+    &lt;div class="module console" id="time_stamped_messages"&gt;&lt;p&gt;#time_stamped_messages&lt;/p&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<hr>
 
 
 <figure class="wp-block-image size-full"><img data-attachment-id="21910" data-permalink="https://karlinaobject.wordpress.com/base_converter/base_converter_html_code_screenshot-2/" data-orig-file="https://karlinaobject.wordpress.com/wp-content/uploads/2023/07/base_converter_html_code_screenshot.png" data-orig-size="1301,1945" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="base_converter_html_code_screenshot" data-image-description="" data-image-caption="" data-medium-file="https://karlinaobject.wordpress.com/wp-content/uploads/2023/07/base_converter_html_code_screenshot.png?w=201" data-large-file="https://karlinaobject.wordpress.com/wp-content/uploads/2023/07/base_converter_html_code_screenshot.png?w=685" tabindex="0" role="button" width="1301" height="1945" src="https://karlinaobject.wordpress.com/wp-content/uploads/2023/07/base_converter_html_code_screenshot.png" alt="" class="wp-image-21910" srcset="https://karlinaobject.wordpress.com/wp-content/uploads/2023/07/base_converter_html_code_screenshot.png 1301w, https://karlinaobject.wordpress.com/wp-content/uploads/2023/07/base_converter_html_code_screenshot.png?w=100&amp;h=150 100w, https://karlinaobject.wordpress.com/wp-content/uploads/2023/07/base_converter_html_code_screenshot.png?w=201&amp;h=300 201w, https://karlinaobject.wordpress.com/wp-content/uploads/2023/07/base_converter_html_code_screenshot.png?w=768&amp;h=1148 768w, https://karlinaobject.wordpress.com/wp-content/uploads/2023/07/base_converter_html_code_screenshot.png?w=685&amp;h=1024 685w" sizes="(max-width: 1301px) 100vw, 1301px" /></figure>
