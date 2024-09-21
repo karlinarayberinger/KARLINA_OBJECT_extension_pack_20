@@ -17,12 +17,8 @@ void print_prime_factorization(int N, std::ostream& output);
 /** program entry point */
 int main() 
 {
-    /***********************************************************************************
-     * INITIALIZE VARIABLES
-     ***********************************************************************************/
-
-    // Declare one int type variable and set its initial value to 0.
-    int N = 0;
+    // Declare and initialize two int type variables.
+    int N = 0, input_additional_values = 1;
 
     // Declare a file output stream handler.
     std::ofstream file;
@@ -47,35 +43,36 @@ int main()
     file << "\nStart Of Program";
     file << "\n--------------------------------";
 
-    /***********************************************************************************
-     * SET N
-     ***********************************************************************************/
+    while (input_additional_values != 0) 
+    {
+        // Prompt the user to enter an input value for N.
+        std::cout << "\n\nEnter a nonnegative integer value to store in the variable named N which is no larger than " << MAXIMUM_N << " to factor into its constituent prime number multiplicative terms: ";
+        file << "\n\nEnter a nonnegative integer value to store in the variable named N which is no larger than " << MAXIMUM_N << " to factor into its constituent prime number multiplicative terms: ";
 
-    // Prompt the user to enter an input value for N.
-    std::cout << "\n\nEnter a nonnegative integer value to store in the variable named N which is no larger than " << MAXIMUM_N << " to factor into its constituent prime number multiplicative terms: ";
-    file << "\n\nEnter a nonnegative integer value to store in the variable named N which is no larger than " << MAXIMUM_N << " to factor into its constituent prime number multiplicative terms: ";
+        // Scan the command line terminal for the most recent keyboard input value. Store that value in N.
+        std::cin >> N;
 
-    // Scan the command line terminal for the most recent keyboard input value. Store that value in N.
-    std::cin >> N;
+        // Print "The value which was entered for N is {N}." to the command line terminal.
+        std::cout << "\nThe value which was entered for N is " << N << ".";
 
-    // Print "The value which was entered for N is {N}." to the command line terminal.
-    std::cout << "\nThe value which was entered for N is " << N << ".";
+        // Print "The value which was entered for N is {N}." to the file output stream.
+        file << "\n\nThe value which was entered for N is " << N << ".";
 
-    // Print "The value which was entered for N is {N}." to the file output stream.
-    file << "\n\nThe value which was entered for N is " << N << ".";
+        // If N is smaller than 0 or if N is larger than MAXIMUM_N, set N to 10.
+        N = ((N < 0) || (N > MAXIMUM_N)) ? 10 : N; 
 
-    // If N is smaller than 0 or if N is larger than MAXIMUM_N, set N to 10.
-    N = ((N < 0) || (N > MAXIMUM_N)) ? 10 : N; 
+        // Print the prime number factorization for N to the command line terminal.
+        print_prime_factorization(N, std::cout);
 
-    /***********************************************************************************
-     * FACTORIZE N
-     ***********************************************************************************/
+        // Print the prime number factorization for N to the file output stream.
+        print_prime_factorization(N, file);
 
-    // Print the prime number factorization for N to the command line terminal.
-    print_prime_factorization(N, std::cout);
+        // Ask the user whether or not to continue inputing values.
+        std::cout << "\n\nWould you like to continue inputting program values? (Enter 1 if YES. Enter 0 if NO): ";
 
-    // Print the prime number factorization for N to the file output stream.
-    print_prime_factorization(N, file);
+        // Scan the command line terminal for the most recent keyboard input value.
+        std::cin >> input_additional_values;
+    }
 
     // Print a closing message to the command line terminal.
     std::cout << "\n\n--------------------------------";
@@ -105,7 +102,7 @@ void print_prime_factorization(int N, std::ostream& output)
 {
     if (N <= 1) 
     {
-        output << N << " is not factorizable into multiple prime number multiplicative terms (other than itself and 1)." << std::endl;
+        output << "\n\n" << N << " is not factorizable into multiple prime number multiplicative terms.";
         return;
     }
 
