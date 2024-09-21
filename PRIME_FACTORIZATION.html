@@ -2,8 +2,8 @@
 <p><strong>PRIME_FACTORIZATION</strong></p>
 <hr>
 <p><span style="background:#ffff00">The <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/C%2B%2B" target="_blank" rel="noopener">C++</a> program featured in this tutorial web page factorizes some integer, N, into its constituent prime number multiplicative terms (if N is prime number factorizable). Results are printed to the command line terminal interface and to an output text file. Users can input multiple values for N by either choosing to enter another N value or else exiting the program after each value for N is entered.</span></p>
-<p>A <strong>prime number</strong> is a natural number which is no smaller than 2 and which is not the multiplicative product of prime numbers other than itself and 1.</p>
-<p>A <strong>composite number</strong> is a natural number which is larger than 1 and which is the multiplicative product of three or more prime numbers.</p>
+<p>A <strong>prime number</strong> is a natural number which is larger than or equal to 2 and which is the multiplicative product of only itself and 1.</p>
+<p>A <strong>composite number</strong> is a natural number which is larger than 1 and which is the multiplicative product of two or more prime numbers.</p>
 <p><em>To view hidden text inside each of the preformatted text boxes below, scroll horizontally.</em></p>
 <hr>
 <p><strong>SOFTWARE_APPLICATION_COMPONENTS</strong></p>
@@ -131,9 +131,9 @@ int main()
 /**
  * Use an iterative method to generate each of the prime number multiplicative terms of some nonnegative integer, N.
  * 
- * A prime number is a natural number which is no smaller than 2 and which is not the multiplicative product of prime numbers other than itself and 1.
+ * A prime number is a natural number which is larger than or equal to 2 and which is the multiplicative product of only itself and 1.
  * 
- * A composite number is a natural number which is larger than 1 and which is the multiplicative product of three or more prime numbers.
+ * A composite number is a natural number which is larger than 1 and which is the multiplicative product of two or more prime numbers.
  */
 void print_prime_factorization(int N, std::ostream&amp; output) 
 {
