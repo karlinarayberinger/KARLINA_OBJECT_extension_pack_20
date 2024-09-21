@@ -498,30 +498,30 @@ bool TRIANGLE::points_represent_unique_coordinate_pairs(POINT point_0, POINT poi
 {
     if ((point_0.get_X() == point_1.get_X()) &amp;&amp; (point_0.get_Y() == point_1.get_Y())) 
     {
-        std::cout &lt;&lt; &quot;\n\npoint_0 and point_1 appear to represent the same coordinate pair.&quot;;
-        std::cout &lt;&lt; &quot;\npoint_0 := POINT(&quot; &lt;&lt; point_0.get_X() &lt;&lt; &quot;, &quot; &lt;&lt; point_0.get_Y() &lt;&lt; &quot;).&quot;;
-        std::cout &lt;&lt; &quot;\npoint_1 := POINT(&quot; &lt;&lt; point_1.get_X() &lt;&lt; &quot;, &quot; &lt;&lt; point_1.get_Y() &lt;&lt; &quot;).&quot;;
+        std::cout &lt;&lt; "\n\npoint_0 and point_1 appear to represent the same coordinate pair.";
+        std::cout &lt;&lt; "\npoint_0 := POINT(" &lt;&lt; point_0.get_X() &lt;&lt; ", " &lt;&lt; point_0.get_Y() &lt;&lt; ").";
+        std::cout &lt;&lt; "\npoint_1 := POINT(" &lt;&lt; point_1.get_X() &lt;&lt; ", " &lt;&lt; point_1.get_Y() &lt;&lt; ").";
         return false;
     }
     if ((point_0.get_X() == point_2.get_X()) &amp;&amp; (point_0.get_Y() == point_2.get_Y())) 
     {
-        std::cout &lt;&lt; &quot;\n\npoint_0 and point_2 appear to represent the same coordinate pair.&quot;;
-        std::cout &lt;&lt; &quot;\npoint_0 := POINT(&quot; &lt;&lt; point_0.get_X() &lt;&lt; &quot;, &quot; &lt;&lt; point_0.get_Y() &lt;&lt; &quot;).&quot;;
-        std::cout &lt;&lt; &quot;\npoint_2 := POINT(&quot; &lt;&lt; point_2.get_X() &lt;&lt; &quot;, &quot; &lt;&lt; point_2.get_Y() &lt;&lt; &quot;).&quot;;
+        std::cout &lt;&lt; "\n\npoint_0 and point_2 appear to represent the same coordinate pair.";
+        std::cout &lt;&lt; "\npoint_0 := POINT(" &lt;&lt; point_0.get_X() &lt;&lt; ", " &lt;&lt; point_0.get_Y() &lt;&lt; ").";
+        std::cout &lt;&lt; "\npoint_2 := POINT(" &lt;&lt; point_2.get_X() &lt;&lt; ", " &lt;&lt; point_2.get_Y() &lt;&lt; ").";
         return false;
     }
     if ((point_1.get_X() == point_2.get_X()) &amp;&amp; (point_1.get_Y() == point_2.get_Y())) 
     {
-        std::cout &lt;&lt; &quot;\n\npoint_1 and point_2 appear to represent the same coordinate pair.&quot;;
-        std::cout &lt;&lt; &quot;\npoint_1 := POINT(&quot; &lt;&lt; point_1.get_X() &lt;&lt; &quot;, &quot; &lt;&lt; point_1.get_Y() &lt;&lt; &quot;).&quot;;
-        std::cout &lt;&lt; &quot;\npoint_2 := POINT(&quot; &lt;&lt; point_2.get_X() &lt;&lt; &quot;, &quot; &lt;&lt; point_2.get_Y() &lt;&lt; &quot;).&quot;;
+        std::cout &lt;&lt; "\n\npoint_1 and point_2 appear to represent the same coordinate pair.";
+        std::cout &lt;&lt; "\npoint_1 := POINT(" &lt;&lt; point_1.get_X() &lt;&lt; ", " &lt;&lt; point_1.get_Y() &lt;&lt; ").";
+        std::cout &lt;&lt; "\npoint_2 := POINT(" &lt;&lt; point_2.get_X() &lt;&lt; ", " &lt;&lt; point_2.get_Y() &lt;&lt; ").";
         return false;
     }
     if ((point_2.get_X() == point_0.get_X()) &amp;&amp; (point_2.get_Y() == point_0.get_Y())) 
     {
-        std::cout &lt;&lt; &quot;\n\npoint_2 and point_0 appear to represent the same coordinate pair.&quot;;
-        std::cout &lt;&lt; &quot;\npoint_2 := POINT(&quot; &lt;&lt; point_2.get_X() &lt;&lt; &quot;, &quot; &lt;&lt; point_2.get_Y() &lt;&lt; &quot;).&quot;;
-        std::cout &lt;&lt; &quot;\npoint_0 := POINT(&quot; &lt;&lt; point_0.get_X() &lt;&lt; &quot;, &quot; &lt;&lt; point_0.get_Y() &lt;&lt; &quot;).&quot;;
+        std::cout &lt;&lt; "\n\npoint_2 and point_0 appear to represent the same coordinate pair.";
+        std::cout &lt;&lt; "\npoint_2 := POINT(" &lt;&lt; point_2.get_X() &lt;&lt; ", " &lt;&lt; point_2.get_Y() &lt;&lt; ").";
+        std::cout &lt;&lt; "\npoint_0 := POINT(" &lt;&lt; point_0.get_X() &lt;&lt; ", " &lt;&lt; point_0.get_Y() &lt;&lt; ").";
         return false;
     }
     return true;
@@ -544,8 +544,8 @@ bool TRIANGLE::points_form_nondegenerate_triangle(POINT point_0, POINT point_1, 
 {
     if (!points_represent_unique_coordinate_pairs(point_0, point_1, point_2))
     {
-        std::cout &lt;&lt; &quot;\n\npoint_0, point_1, and point_2 do not each represent unique coordinate pairs.&quot;;
-        std::cout &lt;&lt; &quot;\nHence, points_form_degenerate_triangle(point_0, point_1, point_2) is returning false.&quot;;
+        std::cout &lt;&lt; "\n\npoint_0, point_1, and point_2 do not each represent unique coordinate pairs.";
+        std::cout &lt;&lt; "\nHence, points_form_degenerate_triangle(point_0, point_1, point_2) is returning false.";
         return false;
     }
     A = point_0;
@@ -553,8 +553,8 @@ bool TRIANGLE::points_form_nondegenerate_triangle(POINT point_0, POINT point_1, 
     C = point_2;
     if (get_area() &lt;= 0) 
     {
-        std::cout &lt;&lt; &quot;\n\nWhen setting the POINT values of the caller TRIANGLE object using the given inputs, get_area() returned a non-positive number result.&quot;;
-        std::cout &lt;&lt; &quot;\nHence, points_form_nondegenerate_triangle(POINT point_0, POINT point_1, POINT point_2) is returning false.&quot;;
+        std::cout &lt;&lt; "\n\nWhen setting the POINT values of the caller TRIANGLE object using the given inputs, get_area() returned a non-positive number result.";
+        std::cout &lt;&lt; "\nHence, points_form_nondegenerate_triangle(POINT point_0, POINT point_1, POINT point_2) is returning false.";
         return false;
     }
     return true;
@@ -568,7 +568,7 @@ bool TRIANGLE::points_form_nondegenerate_triangle(POINT point_0, POINT point_1, 
  */
 TRIANGLE::TRIANGLE()
 {
-    std::cout &lt;&lt; &quot;\n\nCreating the TRIANGLE type object whose memory address is &quot; &lt;&lt; this &lt;&lt; &quot;...&quot;;
+    std::cout &lt;&lt; "\n\nCreating the TRIANGLE type object whose memory address is " &lt;&lt; this &lt;&lt; "...";
     A = POINT(0, 0);
     B = POINT(0, 1);
     C = POINT(1, 0);
@@ -589,7 +589,7 @@ TRIANGLE::TRIANGLE()
  */
 TRIANGLE::TRIANGLE(int A_X, int A_Y, int B_X, int B_Y, int C_X, int C_Y)
 {
-    std::cout &lt;&lt; &quot;\n\nCreating the TRIANGLE type object whose memory address is &quot; &lt;&lt; this &lt;&lt; &quot;...&quot;;
+    std::cout &lt;&lt; "\n\nCreating the TRIANGLE type object whose memory address is " &lt;&lt; this &lt;&lt; "...";
     POINT input_A = POINT(A_X, A_Y);
     POINT input_B = POINT(B_X, B_Y);
     POINT input_C = POINT(C_X, C_Y);
@@ -624,7 +624,10 @@ TRIANGLE::TRIANGLE(int A_X, int A_Y, int B_X, int B_Y, int C_X, int C_Y)
  */
 TRIANGLE::TRIANGLE(POINT A, POINT B, POINT C)
 {
-    std::cout &lt;&lt; &quot;\n\nCreating the TRIANGLE type object whose memory address is &quot; &lt;&lt; this &lt; A = A;
+    std::cout &lt;&lt; "\n\nCreating the TRIANGLE type object whose memory address is " &lt;&lt; this &lt;&lt; ".";
+    if (points_form_nondegenerate_triangle(A, B, C))
+    {
+        this -&gt; A = A;
         this -&gt; B = B;
         this -&gt; C = C;
     }
@@ -646,7 +649,8 @@ TRIANGLE::TRIANGLE(POINT A, POINT B, POINT C)
  */
 TRIANGLE::TRIANGLE(const TRIANGLE &amp; triangle)
 {
-    std::cout &lt;&lt; &quot;\n\nCreating the TRIANGLE type object whose memory address is &quot; &lt;&lt; this &lt; A = triangle.A;
+    std::cout &lt;&lt; "\n\nCreating the TRIANGLE type object whose memory address is " &lt;&lt; this &lt;&lt; ".";
+    this -&gt; A = triangle.A;
     this -&gt; B = triangle.B;
     this -&gt; C = triangle.C;
 }
@@ -790,30 +794,30 @@ double TRIANGLE::get_area()
  */
 void TRIANGLE::print(std::ostream &amp; output)
 {
-    output &lt;&lt; &quot;\n\n--------------------------------------------------------------------------------------------------&quot;;
-    output &lt;&lt; &quot;\nthis = &quot; &lt;&lt; this &lt;&lt; &quot;. // The keyword named this is a pointer which stores the memory address of the first memory cell of a TRIANGLE sized chunk of contiguous memory cells which are allocated to the caller TRIANGLE object.&quot;;
-    output &lt;&lt; &quot;\n&amp;A = &quot; &lt;&lt; &amp;A &lt;&lt; &quot;. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named A.&quot;;
-    output &lt;&lt; &quot;\n&amp;B = &quot; &lt;&lt; &amp;B &lt;&lt; &quot;. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named B.&quot;;
-    output &lt;&lt; &quot;\n&amp;C = &quot; &lt;&lt; &amp;C &lt;&lt; &quot;. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named C.&quot;;
-    output &lt;&lt; &quot;\nsizeof(int) = &quot; &lt;&lt; sizeof(int) &lt;&lt; &quot;. // The sizeof() operation returns the nonnegative integer number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).&quot;;
-    output &lt;&lt; &quot;\nsizeof(POINT) = &quot; &lt;&lt; sizeof(POINT) &lt;&lt; &quot;. // The sizeof() operation returns the nonnegative integer number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).&quot;;
-    output &lt;&lt; &quot;\nsizeof(TRIANGLE) = &quot; &lt;&lt; sizeof(TRIANGLE) &lt;&lt; &quot;. // The sizeof() operation returns the nonnegative integer number of bytes of memory which a TRIANGLE type object occupies. (Each memory cell has a data capacity of 1 byte).&quot;;
-    output &lt;&lt; &quot;\nA = POINT(&quot; &lt;&lt; A.get_X() &lt;&lt; &quot;,&quot; &lt;&lt; A.get_Y() &lt;&lt; &quot;). // A represents a point (which is neither B nor C) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).&quot;;
-    output &lt;&lt; &quot;\nB = POINT(&quot; &lt;&lt; B.get_X() &lt;&lt; &quot;,&quot; &lt;&lt; B.get_Y() &lt;&lt; &quot;). // B represents a point (which is neither A nor C) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).&quot;;
-    output &lt;&lt; &quot;\nC = POINT(&quot; &lt;&lt; C.get_X() &lt;&lt; &quot;,&quot; &lt;&lt; C.get_Y() &lt;&lt; &quot;). // C represents a point (which is neither A nor B) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).&quot;;
-    output &lt;&lt; &quot;\na = get_side_length_BC() = &quot; &lt;&lt; get_side_length_BC() &lt;&lt; &quot;. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points B and C.&quot;;
-    output &lt;&lt; &quot;\nb = get_side_length_CA() = &quot; &lt;&lt; get_side_length_CA() &lt;&lt; &quot;. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points C and A.&quot;;
-    output &lt;&lt; &quot;\nc = get_side_length_AB() = &quot; &lt;&lt; get_side_length_AB() &lt;&lt; &quot;. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points A and B.&quot;;
-    output &lt;&lt; &quot;\nA.get_slope_of_line_to(B) = &quot; &lt;&lt; A.get_slope_of_line_to(B) &lt;&lt; &quot;. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points A and B.&quot;;
-    output &lt;&lt; &quot;\nB.get_slope_of_line_to(C) = &quot; &lt;&lt; B.get_slope_of_line_to(C) &lt;&lt; &quot;. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points B and C.&quot;;
-    output &lt;&lt; &quot;\nC.get_slope_of_line_to(A) = &quot; &lt;&lt; C.get_slope_of_line_to(A) &lt;&lt; &quot;. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points C and A.&quot;;
-    output &lt;&lt; &quot;\nget_interior_angle_CAB() =  &quot; &lt;&lt; get_interior_angle_CAB() &lt;&lt; &quot;. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are C and A with the line segment whose endpoints are A and B such that those two line segments intersect at A (and the angle measurement is in degrees and not in radians).&quot;;
-    output &lt;&lt; &quot;\nget_interior_angle_ABC() =  &quot; &lt;&lt; get_interior_angle_ABC() &lt;&lt; &quot;. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are A and B with the line segment whose endpoints are B and C such that those two line segments intersect at B (and the angle measurement is in degrees and not in radians).&quot;;
-    output &lt;&lt; &quot;\nget_interior_angle_BCA() =  &quot; &lt;&lt; get_interior_angle_BCA() &lt;&lt; &quot;. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are B and C with the line segment whose endpoints are C and A such that those two line segments intersect at C (and the angle measurement is in degrees and not in radians).&quot;;
-    output &lt;&lt; &quot;\nget_interior_angle_CAB() + get_interior_angle_ABC() + get_interior_angle_BCA() = &quot; &lt;&lt; get_interior_angle_CAB() + get_interior_angle_ABC() + get_interior_angle_BCA() &lt;&lt; &quot;. // sum of all three approximate interior angle measurements of the triangle represented by the caller TRIANGLE object (in degrees and not in radians)&quot;;
-    output &lt;&lt; &quot;\nget_perimeter() = a + b + c = &quot; &lt;&lt; get_perimeter() &lt;&lt; &quot;. // The method returns the sum of the three approximated side lengths of the triangle which the caller TRIANGLE object represents.&quot;;
-    output &lt;&lt; &quot;\nget_area() = &quot; &lt;&lt; get_area() &lt;&lt; &quot;. // The method returns the approximate nonnegative real number of Cartesian grid unit squares which are enclosed inside of the two-dimensional region formed by the three line segments which connect points A, B, and C.&quot;;
-    output &lt;&lt; &quot;\n--------------------------------------------------------------------------------------------------&quot;;
+    output &lt;&lt; "\n\n--------------------------------------------------------------------------------------------------";
+    output &lt;&lt; "\nthis = " &lt;&lt; this &lt;&lt; ". // The keyword named this is a pointer which stores the memory address of the first memory cell of a TRIANGLE sized chunk of contiguous memory cells which are allocated to the caller TRIANGLE object.";
+    output &lt;&lt; "\n&amp;A = " &lt;&lt; &amp;A &lt;&lt; ". // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named A.";
+    output &lt;&lt; "\n&amp;B = " &lt;&lt; &amp;B &lt;&lt; ". // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named B.";
+    output &lt;&lt; "\n&amp;C = " &lt;&lt; &amp;C &lt;&lt; ". // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named C.";
+    output &lt;&lt; "\nsizeof(int) = " &lt;&lt; sizeof(int) &lt;&lt; ". // The sizeof() operation returns the nonnegative integer number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).";
+    output &lt;&lt; "\nsizeof(POINT) = " &lt;&lt; sizeof(POINT) &lt;&lt; ". // The sizeof() operation returns the nonnegative integer number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).";
+    output &lt;&lt; "\nsizeof(TRIANGLE) = " &lt;&lt; sizeof(TRIANGLE) &lt;&lt; ". // The sizeof() operation returns the nonnegative integer number of bytes of memory which a TRIANGLE type object occupies. (Each memory cell has a data capacity of 1 byte).";
+    output &lt;&lt; "\nA = POINT(" &lt;&lt; A.get_X() &lt;&lt; "," &lt;&lt; A.get_Y() &lt;&lt; "). // A represents a point (which is neither B nor C) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).";
+    output &lt;&lt; "\nB = POINT(" &lt;&lt; B.get_X() &lt;&lt; "," &lt;&lt; B.get_Y() &lt;&lt; "). // B represents a point (which is neither A nor C) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).";
+    output &lt;&lt; "\nC = POINT(" &lt;&lt; C.get_X() &lt;&lt; "," &lt;&lt; C.get_Y() &lt;&lt; "). // C represents a point (which is neither A nor B) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).";
+    output &lt;&lt; "\na = get_side_length_BC() = " &lt;&lt; get_side_length_BC() &lt;&lt; ". // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points B and C.";
+    output &lt;&lt; "\nb = get_side_length_CA() = " &lt;&lt; get_side_length_CA() &lt;&lt; ". // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points C and A.";
+    output &lt;&lt; "\nc = get_side_length_AB() = " &lt;&lt; get_side_length_AB() &lt;&lt; ". // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points A and B.";
+    output &lt;&lt; "\nA.get_slope_of_line_to(B) = " &lt;&lt; A.get_slope_of_line_to(B) &lt;&lt; ". // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points A and B.";
+    output &lt;&lt; "\nB.get_slope_of_line_to(C) = " &lt;&lt; B.get_slope_of_line_to(C) &lt;&lt; ". // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points B and C.";
+    output &lt;&lt; "\nC.get_slope_of_line_to(A) = " &lt;&lt; C.get_slope_of_line_to(A) &lt;&lt; ". // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points C and A.";
+    output &lt;&lt; "\nget_interior_angle_CAB() =  " &lt;&lt; get_interior_angle_CAB() &lt;&lt; ". // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are C and A with the line segment whose endpoints are A and B such that those two line segments intersect at A (and the angle measurement is in degrees and not in radians).";
+    output &lt;&lt; "\nget_interior_angle_ABC() =  " &lt;&lt; get_interior_angle_ABC() &lt;&lt; ". // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are A and B with the line segment whose endpoints are B and C such that those two line segments intersect at B (and the angle measurement is in degrees and not in radians).";
+    output &lt;&lt; "\nget_interior_angle_BCA() =  " &lt;&lt; get_interior_angle_BCA() &lt;&lt; ". // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are B and C with the line segment whose endpoints are C and A such that those two line segments intersect at C (and the angle measurement is in degrees and not in radians).";
+    output &lt;&lt; "\nget_interior_angle_CAB() + get_interior_angle_ABC() + get_interior_angle_BCA() = " &lt;&lt; get_interior_angle_CAB() + get_interior_angle_ABC() + get_interior_angle_BCA() &lt;&lt; ". // sum of all three approximate interior angle measurements of the triangle represented by the caller TRIANGLE object (in degrees and not in radians)";
+    output &lt;&lt; "\nget_perimeter() = a + b + c = " &lt;&lt; get_perimeter() &lt;&lt; ". // The method returns the sum of the three approximated side lengths of the triangle which the caller TRIANGLE object represents.";
+    output &lt;&lt; "\nget_area() = " &lt;&lt; get_area() &lt;&lt; ". // The method returns the approximate nonnegative real number of Cartesian grid unit squares which are enclosed inside of the two-dimensional region formed by the three line segments which connect points A, B, and C.";
+    output &lt;&lt; "\n--------------------------------------------------------------------------------------------------";
 }
 
 /**
@@ -859,7 +863,7 @@ std::ostream &amp; operator &lt;&lt; (std::ostream &amp; output, TRIANGLE &amp; 
  */
 TRIANGLE::~TRIANGLE()
 {
-    std::cout &lt;&lt; &quot;\n\nDeleting the TRIANGLE type object whose memory address is &quot; &lt;&lt; this &lt;&lt; &quot;...&quot;;
+    std::cout &lt;&lt; "\n\nDeleting the TRIANGLE type object whose memory address is " &lt;&lt; this &lt;&lt; "...";
 }</pre>
 <hr />
 <p><strong>PROGRAM_SOURCE_CODE</strong></p>
@@ -1414,5 +1418,5 @@ End Of Program
 --------------------------------
 </pre>
 <hr />
-<p>This web page was last updated on 16_SEPTEMBER_2024. The content displayed on this web page is licensed as <a style="background: #000000;color: #ff9000" href="https://karlinaobject.wordpress.com/public_domain/" target="_blank" rel="noopener">PUBLIC_DOMAIN</a> intellectual property.</p>
-<hr />
+<p>This web page was last updated on 20_SEPTEMBER_2024. The content displayed on this web page is licensed as <a style="background: #000000;color: #ff9000" href="https://karlinaobject.wordpress.com/public_domain/" target="_blank" rel="noopener">PUBLIC_DOMAIN</a> intellectual property.</p>
+<hr />	
