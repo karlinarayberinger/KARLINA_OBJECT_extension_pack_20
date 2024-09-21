@@ -1,0 +1,13 @@
+--------------------------------
+Start Of Program
+--------------------------------
+
+Enter a nonnegative integer value to store in the variable named N which is no larger than 10000 to factor into its constituent prime number multiplicative terms: 
+
+The value which was entered for N is 144.
+
+Prime factorization of 144 is: 2 * 2 * 2 * 2 * 3 * 3.
+
+--------------------------------
+End Of Program
+--------------------------------
