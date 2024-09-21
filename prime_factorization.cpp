@@ -96,7 +96,7 @@ int main()
  * 
  * A prime number is a natural number which is larger than or equal to 2 and which is the multiplicative product of only itself and 1.
  * 
- * A composite number is a natural number which is larger than 1 and which is the multiplicative product of three or more prime numbers.
+ * A composite number is a natural number which is larger than 1 and which is the multiplicative product of two or more prime numbers.
  */
 void print_prime_factorization(int N, std::ostream& output) 
 {
