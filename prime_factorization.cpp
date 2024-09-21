@@ -94,7 +94,7 @@ int main()
 /**
  * Use an iterative method to generate each of the prime number multiplicative terms of some nonnegative integer, N.
  * 
- * A prime number is a natural number which is no smaller than 2 and which is not the multiplicative product of prime numbers other than itself and 1.
+ * A prime number is a natural number which is larger than or equal to 2 and which is the multiplicative product of only itself and 1.
  * 
  * A composite number is a natural number which is larger than 1 and which is the multiplicative product of three or more prime numbers.
  */
