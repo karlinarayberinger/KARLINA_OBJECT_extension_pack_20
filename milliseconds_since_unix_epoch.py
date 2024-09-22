@@ -1,3 +1,11 @@
+# /**
+#  * file: milliseconds_since_unix_epoch.py
+#  * type: Python
+#  * date: 21_SEPTEMBER_2024
+#  * author: karbytes
+#  * license: PUBLIC_DOMAIN
+#  */
+
 import time
 
 # Get the current time in seconds since the Unix Epoch
