@@ -1,7 +1,7 @@
 /**
  * file: sort_compare.cpp
- * type: plain-text
- * date: 21_SEPTEMBER_2024
+ * type: C++ (source file)
+ * date: 22_SEPTEMBER_2024
  * author: karbytes
  * license: PUBLIC_DOMAIN
  */
