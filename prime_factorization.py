@@ -39,7 +39,7 @@ def main():
     input_additional_values = 1
 
     # Open the output file for writing
-    with open("prime_factorization_output.txt", "w") as file:
+    with open("prime_factorization_two_output.txt", "w") as file:
 
         # Print an opening message to the console and the file
         print("\n\n--------------------------------")
