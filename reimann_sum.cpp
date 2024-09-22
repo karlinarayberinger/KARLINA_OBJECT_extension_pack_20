@@ -1,7 +1,7 @@
 /**
  * file: reimann_sum.cpp
  * type: C++ (source file)
- * date: 03_AUGUST_2024
+ * date: 22_SEPTEMBER_2024
  * author: karbytes
  * license: PUBLIC_DOMAIN
  */
